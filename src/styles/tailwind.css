@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* 你原来全局样式可以继续写在下面 */
+[v-cloak] { display: none; }
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+.container-custom { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.btn-black { background: #1a1a1a; color: #fff; padding: 12px 35px; text-transform: uppercase; font-size: 11px; font-weight: 700; border: 1px solid #1a1a1a; transition: 0.3s; }
+.btn-black:hover { background: transparent; color: #1a1a1a; }
+
+/* 这些 @apply 在 v4 仍可用（通过 Tailwind 处理），保留没问题 */
+.btn-blue { @apply bg-blue-600 text-white px-10 py-3.5 text-[11px] font-bold uppercase hover:bg-blue-700 transition-all shadow-lg shadow-blue-100; }
+.tech-tag { @apply text-[9px] font-bold uppercase text-blue-600 bg-blue-50 px-2 py-1 rounded border border-blue-100; }
+.placeholder-icon { width: 48px; height: 48px; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; }
+.section-padding { @apply py-24 lg:py-32; }
