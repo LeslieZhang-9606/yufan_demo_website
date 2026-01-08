@@ -27,8 +27,6 @@
                   class="px-3 py-1.5 rounded-lg transition-all text-[10px] font-bold uppercase"
                 >List</button>
               </div>
-              <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                已同步: {{ filteredProducts.length }} 型号
               </div>
             </div>
           </div>
