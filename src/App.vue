@@ -170,10 +170,10 @@ function submitLeadDemo() {
             <div class="flex items-center justify-between px-8 py-6 border-b border-gray-100">
               <div>
                 <div class="text-[10px] font-black uppercase tracking-[0.35em] text-blue-600">
-                  快速咨询
+                  {{ $t('leadForm.modalTitle') }}
                 </div>
                 <div class="mt-2 text-2xl font-black tracking-tight text-gray-900">
-                  获取报价与交付方案
+                  {{ $t('leadForm.modalHeading') }}
                 </div>
               </div>
               <button
@@ -186,21 +186,21 @@ function submitLeadDemo() {
 
             <div class="p-8 lg:p-10">
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <input class="h-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 focus:border-blue-600 focus:bg-white transition-all outline-none" placeholder="姓名 / 公司" />
-                <input class="h-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 focus:border-blue-600 focus:bg-white transition-all outline-none" placeholder="电话 / Telegram" />
-                <input class="h-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 lg:col-span-2 focus:border-blue-600 focus:bg-white transition-all outline-none" placeholder="邮箱" />
-                <textarea class="min-h-[140px] rounded-3xl border border-gray-100 bg-gray-50 px-6 py-4 lg:col-span-2 focus:border-blue-600 focus:bg-white transition-all outline-none" placeholder="需求说明（设备型号、数量、交付地点等）"></textarea>
+                <input class="h-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 focus:border-blue-600 focus:bg-white transition-all outline-none" :placeholder="$t('leadForm.placeholderName')" />
+                <input class="h-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 focus:border-blue-600 focus:bg-white transition-all outline-none" :placeholder="$t('leadForm.placeholderPhone')" />
+                <input class="h-14 rounded-2xl border border-gray-100 bg-gray-50 px-6 lg:col-span-2 focus:border-blue-600 focus:bg-white transition-all outline-none" :placeholder="$t('leadForm.placeholderEmail')" />
+                <textarea class="min-h-[140px] rounded-3xl border border-gray-100 bg-gray-50 px-6 py-4 lg:col-span-2 focus:border-blue-600 focus:bg-white transition-all outline-none" :placeholder="$t('leadForm.placeholderComment')"></textarea>
               </div>
 
               <button
                 class="mt-8 w-full rounded-2xl bg-blue-600 px-6 py-5 text-[11px] font-black uppercase tracking-widest text-white hover:bg-blue-700 shadow-xl shadow-blue-200 transition-all active:scale-[0.98]"
                 @click="submitLeadDemo"
               >
-                发送需求
+                {{ $t('leadForm.submit') }}
               </button>
 
               <div class="mt-6 text-center text-[10px] uppercase tracking-widest text-gray-400">
-                我们通常会在 2 小时内为您提供初步报价
+                {{ $t('leadForm.estimateTime') }}
               </div>
             </div>
           </div>
