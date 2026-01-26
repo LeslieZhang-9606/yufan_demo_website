@@ -22,12 +22,11 @@ const showLeadModal = ref(false)
 
 // 2. 更新视图映射表 (ViewMap)
 const viewMap = {
-  'home': 'home',
-  'catalog': 'catalog',
-  'solutions': 'solutions', // <--- 新增映射
-  'services': 'services',
-  'about': 'about'
-  // 'contact': 'contact' <--- 已删除，不再需要独立页面
+  'home': HomePage,           // 对应 import HomePage ...
+  'catalog': CatalogPage,     // 对应 import CatalogPage ...
+  'solutions': SolutionsPage, // 对应 import SolutionsPage ...
+  'services': ServicesPage,   // 对应 import ServicesPage ...
+  'about': AboutPage,         // 对应 import AboutPage ...
 }
 
 function go(view) {
@@ -63,7 +62,7 @@ function closeLeadModal() {
 function handleFooterNav(label) {
   // 简单映射，根据你的 i18n 这里的 label 可能是中文也可能是英文
   // 建议直接传 key，这里做演示简化处理
-  go('contact') // 实际上可以导向 about 或弹窗
+  go('contact') 
 }
 
 const showInlineLeadForm = computed(() =>
