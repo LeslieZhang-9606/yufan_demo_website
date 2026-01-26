@@ -96,6 +96,7 @@
 </template>
 
 <script setup>
+// 无需额外逻辑，通过 i18n 驱动
 </script>
 
 <style scoped>
