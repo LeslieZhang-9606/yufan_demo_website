@@ -1,171 +1,102 @@
 <template>
-  <footer id="contacts" class="bg-gray-900 text-white mt-20 border-t border-gray-800">
-    <div class="container-custom py-16 lg:py-24">
-      <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
-        <div class="space-y-6">
-          <div class="text-4xl font-black uppercase tracking-tighter">
-            YUFAN <span class="text-blue-500 italic">TECH</span>
+  <footer class="bg-[#0a0a0a] text-white pt-20 pb-10 border-t border-white/5 font-sans selection:bg-blue-500">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+        
+        <div class="lg:col-span-4 space-y-8">
+          <div class="flex flex-col leading-none">
+            <span class="text-3xl font-black tracking-tighter uppercase">
+              YUFAN <span class="text-blue-600 italic">GROUP</span>
+            </span>
+            <span class="text-[9px] text-gray-500 uppercase tracking-[0.4em] mt-2 font-bold">
+              Global AI Infrastructure
+            </span>
           </div>
-          <p class="text-gray-400 max-w-sm text-sm leading-relaxed">
-            {{ $t('footer.brand.description') }}
+          <p class="text-gray-500 text-xs leading-relaxed max-w-xs">
+            {{ $t('siteFooter.brand.description') }}
           </p>
         </div>
 
-        <div class="text-left lg:text-right space-y-4">
-          <div class="text-4xl font-black text-white tracking-tighter leading-none">+X XXX XXX XX XX</div>
-          <div class="text-blue-400 font-bold tracking-widest uppercase text-sm">INFO@YOURDOMAIN.RU</div>
-          <div class="flex lg:justify-end gap-3 mt-6">
-            <button
-              @click="emit('openLead')"
-              class="bg-blue-600 hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full text-xs font-black uppercase transition-all shadow-xl shadow-blue-900/40"
-            >
-              {{ $t('footer.contact.telegramButton') }}
-            </button>
+        <div class="lg:col-span-4 grid grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-widest border-b border-white/5 pb-2">
+              {{ $t('siteFooter.sections.hardware') }}
+            </h4>
+            <ul class="space-y-2 text-[11px] font-bold text-gray-500 uppercase">
+              <li><a href="#catalog" class="hover:text-blue-500 transition-colors">GPU Servers</a></li>
+              <li><a href="#catalog" class="hover:text-blue-500 transition-colors">Networking</a></li>
+              <li><a href="#catalog" class="hover:text-blue-500 transition-colors">Workstations</a></li>
+            </ul>
           </div>
+          <div class="space-y-4">
+            <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-widest border-b border-white/5 pb-2">
+              {{ $t('siteFooter.sections.solutions') }}
+            </h4>
+            <ul class="space-y-2 text-[11px] font-bold text-gray-500 uppercase">
+              <li><a href="#solutions" class="hover:text-blue-500 transition-colors">Leasing</a></li>
+              <li><a href="#solutions" class="hover:text-blue-500 transition-colors">Maintenance</a></li>
+              <li><a href="#solutions" class="hover:text-blue-500 transition-colors">Custom R&D</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 lg:text-right flex flex-col lg:items-end">
+          <div class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-4">
+            Representative in Russia & CIS
+          </div>
+          <a :href="'tel:' + $t('siteFooter.contact.phone')" class="text-3xl font-black hover:text-blue-500 transition-colors tabular-nums tracking-tighter">
+            {{ $t('siteFooter.contact.phone') }}
+          </a>
+          <div class="mt-2 text-sm font-bold text-gray-400 uppercase tracking-widest">
+            {{ $t('siteFooter.contact.email') }}
+          </div>
+          <div class="mt-1 text-[10px] text-gray-600 font-bold uppercase tracking-widest">
+            Director: {{ $t('siteFooter.company.director') }} | Manager: {{ $t('siteFooter.contact.person') }}
+          </div>
+          
+          <a
+            href="https://t.me/+79336739973"
+            target="_blank"
+            class="mt-8 px-10 py-3 bg-blue-600 hover:bg-white hover:text-blue-600 text-[10px] font-black uppercase tracking-widest transition-all rounded-full shadow-lg"
+          >
+            {{ $t('siteFooter.contact.telegramButton') }}
+          </a>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 border-t border-gray-800 pt-16">
-        <div v-for="col in footerCols" :key="col.title" class="lg:col-span-3">
-          <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-500 mb-8">{{ col.title }}</h4>
-          <ul class="space-y-4">
-            <li v-for="link in col.links" :key="link">
-              <button
-                @click="emit('navigate', link)"
-                class="text-sm font-medium text-gray-400 hover:text-blue-400 transition-colors text-left uppercase"
-              >
-                {{ link }}
-              </button>
-            </li>
-          </ul>
-        </div>
+      <div class="pt-10 border-t border-white/5">
+        <div class="flex flex-col lg:flex-row justify-between gap-10 items-start">
+          
+          <div class="space-y-2 lg:w-2/3">
+            <div class="text-[10px] font-black text-gray-400 uppercase italic mb-3">Юридические данные (Legal Info)</div>
+            <div class="text-[10px] text-gray-600 uppercase tracking-wider space-y-1 font-medium">
+              <p class="text-gray-300 font-bold text-sm">{{ $t('siteFooter.company.name') }}</p>
+              <p>{{ $t('siteFooter.company.address') }}</p>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 font-mono">
+                <span>ИНН: {{ $t('siteFooter.company.inn') }}</span>
+                <span>КПП: {{ $t('siteFooter.company.kpp') }}</span>
+                <span>ОГРН: {{ $t('siteFooter.company.ogrn') }}</span>
+              </div>
+            </div>
+          </div>
 
-        <div class="lg:col-span-6">
-          <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-500 mb-8">
-            {{ $t('footer.channels.title') }}
-          </h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div
-              v-for="ch in channels"
-              :key="ch.name"
-              class="bg-gray-800/40 border border-gray-800 p-4 rounded-2xl flex items-center justify-between hover:border-blue-500 hover:bg-gray-800 transition-all cursor-pointer group"
-            >
-              <div>
-                <div class="text-[10px] font-black uppercase text-gray-200 tracking-widest">
-                  {{ ch.name }}
-                </div>
-                <div class="text-[9px] text-gray-500 uppercase mt-1 italic">
-                  {{ ch.subtitle }}
-                </div>
-              </div>
-              <div
-                class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-blue-600 transition-colors"
-              >
-                <span class="text-[10px] text-white">↗</span>
-              </div>
+          <div class="lg:w-1/3 lg:text-right space-y-4">
+            <p class="text-[9px] text-gray-700 leading-relaxed uppercase tracking-widest">
+              {{ $t('siteFooter.legalNotice') }}
+            </p>
+            <div class="flex lg:justify-end gap-6 text-[9px] font-black text-gray-500 uppercase tracking-widest">
+              <a href="#" class="hover:text-blue-500 transition-colors">{{ $t('siteFooter.links.privacy') }}</a>
+              <a href="#" class="hover:text-blue-500 transition-colors">{{ $t('siteFooter.links.terms') }}</a>
             </div>
           </div>
         </div>
       </div>
-
-      <div
-        class="mt-20 pt-12 border-t border-gray-800 flex flex-col lg:flex-row justify-between gap-10 text-[11px] text-gray-500 leading-relaxed uppercase tracking-wider"
-      >
-        <div class="space-y-2">
-          <p class="text-gray-400 font-bold italic">
-            {{ $t('footer.company.name') }}
-          </p>
-          <p>{{ $t('footer.company.legalAddress') }}</p>
-          <p>{{ $t('footer.company.actualAddress') }}</p>
-        </div>
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6">
-          <div class="flex flex-col border-l border-gray-800 pl-4">
-            <span class="text-gray-600 mb-1">{{ $t('footer.company.innLabel') }}</span>
-            <span class="font-bold text-gray-300 tabular-nums">XXXXXXXXXX</span>
-          </div>
-          <div class="flex flex-col border-l border-gray-800 pl-4">
-            <span class="text-gray-600 mb-1">{{ $t('footer.company.kppLabel') }}</span>
-            <span class="font-bold text-gray-300 tabular-nums">XXXXXXXXX</span>
-          </div>
-          <div class="flex flex-col border-l border-gray-800 pl-4">
-            <span class="text-gray-600 mb-1">{{ $t('footer.company.ogrnLabel') }}</span>
-            <span class="font-bold text-gray-300 tabular-nums">XXXXXXXXXXXXX</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-black py-8 border-t border-gray-800/50">
-      <div class="container-custom flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="flex items-center gap-10 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-          <div class="h-4 w-24 bg-white/20 rounded-sm"></div>
-          <div class="h-4 w-24 bg-white/20 rounded-sm flex items-center justify-center text-[7px] font-black">
-            PARTNER LOGO
-          </div>
-          <div class="h-4 w-24 bg-white/20 rounded-sm"></div>
-        </div>
-        <div class="text-[9px] font-bold text-gray-600 uppercase tracking-[0.3em] text-center">
-          {{ $t('footer.legalNotice') }}
-        </div>
-      </div>
-    </div>
-
-    <div class="fixed bottom-8 right-8 z-[60] flex flex-col items-end gap-4">
-      <div
-        class="bg-white rounded-3xl p-4 shadow-2xl flex items-center gap-4 max-w-xs border border-blue-50 animate-bounce-subtle"
-      >
-        <div class="w-10 h-10 rounded-full bg-blue-100 overflow-hidden shrink-0 border-2 border-white">
-          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Daria" alt="Assistant" />
-        </div>
-        <div>
-          <div class="text-[10px] font-black text-gray-900 uppercase">
-            {{ $t('footer.assistant.role') }}
-          </div>
-          <div class="text-[10px] text-gray-500 leading-tight">
-            {{ $t('footer.assistant.greeting') }}
-          </div>
-        </div>
-      </div>
-      <button
-        @click="emit('openLead')"
-        class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-transform active:scale-95 shadow-blue-400"
-      >
-        <span class="text-2xl">💬</span>
-      </button>
     </div>
   </footer>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-
-const emit = defineEmits(['navigate', 'openLead'])
-
-defineProps({
-  footerCols: { type: Array, default: () => [] },
-})
-
-const { t } = useI18n()
-
-const channels = computed(() => [
-  {
-    name: t('footer.channels.stock.name'),
-    subtitle: t('footer.channels.stock.subtitle'),
-  },
-  {
-    name: t('footer.channels.news.name'),
-    subtitle: t('footer.channels.news.subtitle'),
-  },
-  {
-    name: t('footer.channels.contact.name'),
-    subtitle: t('footer.channels.contact.subtitle'),
-  },
-  {
-    name: t('footer.channels.support.name'),
-    subtitle: t('footer.channels.support.subtitle'),
-  },
-])
+// 无需额外逻辑，通过 i18n 驱动
 </script>
 
 <style scoped>
@@ -173,17 +104,5 @@ const channels = computed(() => [
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-.animate-bounce-subtle {
-  animation: bounce-subtle 4s infinite ease-in-out;
-}
-@keyframes bounce-subtle {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
 </style>
