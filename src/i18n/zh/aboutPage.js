@@ -24,14 +24,15 @@ export default {
     subTitle: '全球业务咨询',
     
     emailLabel: '商务邮箱 (Sales)',
-    email: 'Sales008@yufantech.com', // 您的真实邮箱
+    // 关键修复：将 @ 替换为 {'@'}
+    email: "Sales008{'@'}yufantech.com", 
     
     telegramLabel: '俄罗斯业务 (Derek)',
-    telegram: '+7 933 673-99-73', // 您的真实俄号
+    telegram: '+7 933 673-99-73',
     telegramLink: 'https://t.me/+79336739973',
     
     phoneLabel: '中国总部 (WeChat)',
-    phone: '+86 185 6675 0494', // 您的真实国内号
+    phone: '+86 185 6675 0494',
     
     addressLabel: '总部地址',
     addressText: '中国 · 深圳市南山区 (Shenzhen HQ)',

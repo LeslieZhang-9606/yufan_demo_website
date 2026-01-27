@@ -1,29 +1,29 @@
 export default {
   brand: {
-    description: 'YUFAN GROUP — International system integrator and provider of high-performance AI infrastructure solutions.'
+    description: 'YUFAN GROUP — A leading global system integrator and solution provider for AI computing infrastructure.'
   },
   company: {
-    name: 'YUFAN SMART COMPUTING SERVICE LLC',
-    address: '123112, Moscow, Presnenskaya nab., 12 (Moscow-City)',
+    name: 'YUFAN SMART COMPUTING SERVICE LLC (Russia Entity)',
+    address: 'Address: 12 Presnenskaya Embankment, Moscow (Moscow City)',
     inn: 'INN: 9703235933',
     kpp: 'KPP: 770301001',
     ogrn: 'OGRN: 1267700010071',
-    director: 'CEO: Zheng Dehong'
+    director: 'General Manager: Zheng Dehong'
   },
   contact: {
     phone: '+7 933 673-99-73',
     person: 'Derek Zheng',
-    email: 'Sales008@yufantech.com',
-    telegramButton: 'Contact on Telegram'
+    email: "Sales008{'@'}yufantech.com",
+    telegramButton: 'Telegram Online'
   },
   sections: {
     hardware: 'Hardware',
     solutions: 'Solutions',
-    about: 'Company'
+    about: 'About Us'
   },
-  legalNotice: '© 2026 YUFAN GROUP. All rights reserved. Information on this site is not a public offer.',
+  legalNotice: '© 2026 YUFAN GROUP. All rights reserved. This website does not constitute an offer.',
   links: {
     privacy: 'Privacy Policy',
-    terms: 'Terms of Use'
+    terms: 'Terms of Service'
   }
 }
