@@ -37,12 +37,6 @@
       <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-4">
         <button v-for="(slide, index) in slides" :key="'dot-'+index" @click="setSlide(index)" class="w-12 h-1 bg-white/20 transition-all duration-300" :class="currentSlide === index ? 'bg-blue-600 w-16' : 'hover:bg-white/40'"></button>
       </div>
-      <button @click="prevSlide" class="absolute left-8 top-1/2 -translate-y-1/2 z-30 text-white/20 hover:text-white transition-colors">
-        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7"></path></svg>
-      </button>
-      <button @click="nextSlide" class="absolute right-8 top-1/2 -translate-y-1/2 z-30 text-white/20 hover:text-white transition-colors">
-        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7"></path></svg>
-      </button>
     </section>
 
     <section id="services" class="bg-gray-50 py-24">
@@ -72,69 +66,108 @@
       </div>
     </section>
 
-    <section id="products" class="container-custom section-padding py-24">
-      <div class="flex flex-col lg:flex-row justify-between items-end mb-16">
+    <section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
+      <div class="flex flex-col lg:flex-row justify-between items-end mb-20">
         <div>
-          <span class="text-blue-600 text-[10px] font-black uppercase tracking-widest">{{ $t('homePage.products.title') }}</span>
-          <h2 class="text-4xl font-black uppercase mt-4 tracking-tighter">Flagship <span class="italic text-gray-400">Series</span></h2>
+          <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.3em]">{{ $t('homePage.products.title') }}</span>
+          <h2 class="text-4xl lg:text-5xl font-black uppercase mt-4 tracking-tighter leading-none">Flagship <span class="italic text-gray-400">Inventory</span></h2>
         </div>
-        <button class="text-xs font-bold uppercase border-b border-gray-900 pb-1">{{ $t('homePage.catalogButton') }}</button>
+        <div class="flex gap-4 mt-8 lg:mt-0">
+          <button @click="prevFeature" class="w-16 h-16 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all text-xl shadow-sm">←</button>
+          <button @click="nextFeature" class="w-16 h-16 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all text-xl shadow-sm">→</button>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div class="group relative bg-gray-900 rounded-[40px] p-10 overflow-hidden text-white h-[400px] flex flex-col justify-between cursor-pointer">
-          <div class="z-10 relative">
-            <span class="bg-blue-600 text-white text-[9px] font-bold px-2 py-1 rounded mb-4 inline-block uppercase">{{ $t('homePage.products.p1.tag') }}</span>
-            <h3 class="text-3xl font-black italic mb-2">{{ $t('homePage.products.p1.name') }}</h3>
-            <p class="text-gray-400 text-sm max-w-xs">{{ $t('homePage.products.p1.desc') }}</p>
-          </div>
-          <div class="absolute right-0 bottom-0 w-2/3 h-full bg-gradient-to-l from-blue-900/50 to-transparent"></div>
-          <img src="https://images.unsplash.com/photo-1624705024411-db345c22119e?auto=format&fit=crop&w=500&q=80" class="absolute -right-10 top-1/2 -translate-y-1/2 w-3/4 opacity-50 group-hover:opacity-80 group-hover:scale-110 transition duration-500 mix-blend-luminosity" />
-          <button class="z-10 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition-colors absolute bottom-10 right-10">↗</button>
-        </div>
+      <div class="relative mb-20">
+        <div 
+          class="flex transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] gap-10"
+          :style="{ transform: `translateX(-${featureIndex * (100 / itemsToShow)}%)` }"
+        >
+          <div 
+            v-for="product in featuredProducts" 
+            :key="product.id"
+            class="min-w-[calc(100%-2rem)] md:min-w-[calc(50%-1.25rem)] group relative rounded-[48px] p-12 overflow-hidden h-[500px] flex flex-col justify-between cursor-pointer transition-all duration-700 bg-gray-50 border border-gray-100 hover:shadow-2xl"
+          >
+            <div class="z-10 relative">
+              <span class="text-[9px] font-black px-4 py-1.5 rounded-full mb-6 inline-block uppercase tracking-[0.2em] bg-white text-blue-600 shadow-sm">
+                {{ product.brand }}
+              </span>
+              <h3 class="text-4xl font-black italic mb-4 uppercase tracking-tighter leading-none text-gray-900">{{ product.name }}</h3>
+              
+              <div class="flex flex-wrap gap-6 mt-8">
+                <div v-for="(v, k) in product.specs" :key="k" class="flex flex-col">
+                  <span class="text-[8px] uppercase opacity-40 font-black mb-1 tracking-widest text-gray-500">{{ k }}</span>
+                  <span class="text-[11px] font-black tracking-tight text-gray-900">{{ v }}</span>
+                </div>
+              </div>
+            </div>
 
-        <div class="group relative bg-gray-100 rounded-[40px] p-10 overflow-hidden text-gray-900 h-[400px] flex flex-col justify-between cursor-pointer">
-          <div class="z-10 relative">
-            <span class="bg-gray-200 text-gray-600 text-[9px] font-bold px-2 py-1 rounded mb-4 inline-block uppercase">{{ $t('homePage.products.p2.tag') }}</span>
-            <h3 class="text-3xl font-black italic mb-2">{{ $t('homePage.products.p2.name') }}</h3>
-            <p class="text-gray-500 text-sm max-w-xs">{{ $t('homePage.products.p2.desc') }}</p>
+            <img :src="product.img || 'https://via.placeholder.com/800x600?text=Product'" class="absolute -right-12 top-1/2 -translate-y-1/2 w-[80%] transition duration-1000 group-hover:scale-110 group-hover:-translate-x-8 object-contain pointer-events-none opacity-90" />
+
+            <div class="z-10 flex justify-between items-end border-t border-gray-200 pt-8">
+               <div class="flex flex-col">
+                 <span class="text-[9px] font-black uppercase opacity-40 tracking-[0.3em] mb-2 text-gray-500">Status</span>
+                 <div class="text-2xl font-black tracking-tighter text-blue-600 uppercase">
+                    Check Availability
+                 </div>
+               </div>
+               <button @click="$emit('openLead', product)" class="w-16 h-16 rounded-full border border-gray-900 text-gray-900 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all text-2xl">↗</button>
+            </div>
           </div>
-          <img src="https://images.unsplash.com/photo-1558494949-ef2bb6db8744?auto=format&fit=crop&w=500&q=80" class="absolute -right-10 top-1/2 -translate-y-1/2 w-3/4 opacity-80 group-hover:scale-110 transition duration-500 grayscale group-hover:grayscale-0" />
-          <button class="z-10 w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-black hover:text-white transition-colors absolute bottom-10 right-10">↗</button>
         </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <button 
+          @click="$emit('goCatalog')" 
+          class="group flex items-center gap-6 text-sm font-black uppercase tracking-[0.3em] text-gray-900 hover:text-blue-600 transition-all"
+        >
+          View Full Inventory
+          <span class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-500">→</span>
+        </button>
       </div>
     </section>
 
-    <section id="solutions" class="bg-blue-600 text-white py-24 overflow-hidden">
-      <div class="container-custom">
-        <div class="flex flex-col lg:flex-row gap-16 items-center">
+    <div class="h-48 bg-gradient-to-b from-white via-white to-[#0052FF]"></div>
+
+    <section id="solutions" class="relative bg-[#0052FF] py-32 overflow-hidden text-white">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.2)_0%,transparent_50%)]"></div>
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="flex flex-col lg:flex-row gap-20 items-center">
           <div class="lg:w-1/2">
-            <h2 class="text-4xl lg:text-5xl font-black uppercase mb-6 tracking-tighter">{{ $t('homePage.solutionsTitle') }}</h2>
-            <p class="text-blue-100 text-sm leading-loose mb-10 max-w-md border-l border-blue-400 pl-6">
+            <h2 class="text-5xl lg:text-7xl font-black uppercase mb-8 tracking-tighter leading-[0.9]">
+              {{ $t('homePage.solutionsTitle') }}
+            </h2>
+            <p class="text-blue-100/80 text-lg leading-relaxed mb-12 max-w-md border-l border-blue-400 pl-6">
               {{ $t('homePage.solutionsDesc') }}
             </p>
-            <div class="space-y-4">
-              <div class="flex items-center gap-4 p-4 bg-blue-500/20 rounded-xl border border-blue-400/30">
-                <div class="w-8 h-8 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-xs">01</div>
-                <div class="text-xs font-bold uppercase tracking-wider">Infiniband (IB) Network Design</div>
-              </div>
-              <div class="flex items-center gap-4 p-4 bg-blue-500/20 rounded-xl border border-blue-400/30">
-                <div class="w-8 h-8 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-xs">02</div>
-                <div class="text-xs font-bold uppercase tracking-wider">ROCE v2 Low Latency Fabric</div>
+            <div class="grid gap-4">
+              <div v-for="(item, idx) in ['INFINIBAND (IB) NETWORK DESIGN', 'ROCE V2 LOW LATENCY FABRIC']" :key="idx" 
+                   class="flex items-center gap-6 p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
+                <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-black italic shadow-lg">0{{idx+1}}</div>
+                <div class="text-sm font-black uppercase tracking-widest group-hover:translate-x-2 transition-transform">{{ item }}</div>
               </div>
             </div>
           </div>
-          <div class="lg:w-1/2">
-             <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-2 rounded-xl">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=800&q=80" class="rounded-lg opacity-80 mix-blend-overlay" />
-             </div>
+
+          <div class="lg:w-1/2 relative mt-16 lg:mt-0">
+            <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform duration-700">
+               <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=1200&q=80" class="w-full h-auto opacity-90" />
+               <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl text-gray-900 max-w-[200px] hidden md:block">
+                  <div class="text-[10px] font-black text-blue-600 uppercase mb-2">Technical Core</div>
+                  <div class="text-xl font-black tracking-tighter">SLA 24/7 Guaranteed</div>
+               </div>
+            </div>
+            <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-400/20 blur-[100px] rounded-full"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="global" class="py-24 bg-gray-900 text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-20 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-no-repeat bg-center bg-contain"></div>
+    <section id="global" class="py-32 bg-gray-900 text-white relative overflow-hidden">
       <div class="container-custom relative z-10 text-center">
         <h2 class="text-3xl font-black uppercase tracking-widest mb-16">{{ $t('homePage.globalTitle') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-gray-700">
@@ -154,24 +187,21 @@
       </div>
     </section>
 
-    <section class="py-16 border-b border-gray-100">
+    <section class="py-16 border-b border-gray-100 bg-white">
       <div class="container-custom">
         <p class="text-center text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-10">{{ $t('homePage.partnersTitle') }}</p>
         <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-          <div class="h-8 w-24 bg-gray-200 rounded flex items-center justify-center font-bold text-gray-400 text-xs">NVIDIA</div>
-          <div class="h-8 w-24 bg-gray-200 rounded flex items-center justify-center font-bold text-gray-400 text-xs">DELL</div>
-          <div class="h-8 w-24 bg-gray-200 rounded flex items-center justify-center font-bold text-gray-400 text-xs">LENOVO</div>
-          <div class="h-8 w-24 bg-gray-200 rounded flex items-center justify-center font-bold text-gray-400 text-xs">CISCO</div>
-          <div class="h-8 w-24 bg-gray-200 rounded flex items-center justify-center font-bold text-gray-400 text-xs">SUPERMICRO</div>
+          <div v-for="brand in ['NVIDIA', 'DELL', 'LENOVO', 'CISCO', 'SUPERMICRO']" :key="brand" 
+               class="h-8 w-24 bg-gray-50 rounded flex items-center justify-center font-bold text-gray-400 text-[10px] tracking-widest">{{ brand }}</div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white">
+    <section id="contact" class="py-32 bg-white">
       <div class="container-custom max-w-4xl text-center">
-        <h2 class="text-4xl font-black uppercase mb-4">{{ $t('leadForm.sectionTitle') }}</h2>
-        <p class="text-gray-500 mb-10">{{ $t('leadForm.description') }}</p>
-        <button class="bg-black text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-blue-600 transition-colors shadow-xl">
+        <h2 class="text-5xl font-black uppercase mb-6 tracking-tighter">{{ $t('leadForm.sectionTitle') }}</h2>
+        <p class="text-gray-500 mb-12 text-lg max-w-2xl mx-auto">{{ $t('leadForm.description') }}</p>
+        <button @click="$emit('openLead')" class="bg-black text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-blue-600 transition-all shadow-2xl hover:-translate-y-1">
           {{ $t('leadForm.submit') }}
         </button>
       </div>
@@ -180,118 +210,66 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { siteData } from '../data/siteData.js'
 
-// 【修正】Script 部分的 Keys 也要全部由 home -> homePage
-const servicesLocal = [
-  { 
-    id: 'hardware', 
-    icon: 'GPU', 
-    image: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=500&q=80',
-    // 修正这里：
-    titleKey: 'homePage.services.hardware.title', 
-    descKey: 'homePage.services.hardware.desc' 
-  },
-  { 
-    id: 'custom', 
-    icon: 'R&D', 
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=500&q=80',
-    titleKey: 'homePage.services.custom.title', 
-    descKey: 'homePage.services.custom.desc' 
-  },
-  { 
-    id: 'maintenance', 
-    icon: 'FIX', 
-    image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80',
-    titleKey: 'homePage.services.maintenance.title', 
-    descKey: 'homePage.services.maintenance.desc' 
-  },
-  { 
-    id: 'solutions', 
-    icon: 'NET', 
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=500&q=80',
-    titleKey: 'homePage.services.solutions.title', 
-    descKey: 'homePage.services.solutions.desc' 
-  },
+const emit = defineEmits(['openLead', 'goCatalog'])
+
+// --- 联动逻辑：旗舰库存 ---
+const products = siteData.products
+const featuredProducts = computed(() => {
+  return siteData.featuredIds
+    .map(id => products.find(p => p.id === id))
+    .filter(Boolean)
+})
+
+const featureIndex = ref(0)
+const itemsToShow = ref(2)
+const updateItemsToShow = () => { itemsToShow.value = window.innerWidth < 768 ? 1 : 2 }
+
+const nextFeature = () => {
+  const max = featuredProducts.value.length - itemsToShow.value
+  featureIndex.value = featureIndex.value >= max ? 0 : featureIndex.value + 1
+}
+const prevFeature = () => {
+  const max = featuredProducts.value.length - itemsToShow.value
+  featureIndex.value = featureIndex.value <= 0 ? max : featureIndex.value - 1
+}
+
+// --- 静态内容与原始文案键值 ---
+const slides = [
+  { image: 'https://images.unsplash.com/photo-1558494949-ef2bb6db8744?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s1.tag', title1Key: 'homePage.hero.s1.title1', title2Key: 'homePage.hero.s1.title2', descKey: 'homePage.hero.s1.desc', btnKey: 'homePage.hero.s1.btn' },
+  { image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s2.tag', title1Key: 'homePage.hero.s2.title1', title2Key: 'homePage.hero.s2.title2', descKey: 'homePage.hero.s2.desc', btnKey: 'homePage.hero.s2.btn' },
+  { image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s3.tag', title1Key: 'homePage.hero.s3.title1', title2Key: 'homePage.hero.s3.title2', descKey: 'homePage.hero.s3.desc', btnKey: 'homePage.hero.s3.btn' }
 ]
 
-const slides = [
-  {
-    image: 'https://images.unsplash.com/photo-1558494949-ef2bb6db8744?q=80&w=2070&auto=format&fit=crop',
-    // 修正这里：
-    tagKey: 'homePage.hero.s1.tag',
-    title1Key: 'homePage.hero.s1.title1',
-    title2Key: 'homePage.hero.s1.title2',
-    descKey: 'homePage.hero.s1.desc',
-    btnKey: 'homePage.hero.s1.btn'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=2070&auto=format&fit=crop',
-    tagKey: 'homePage.hero.s2.tag',
-    title1Key: 'homePage.hero.s2.title1',
-    title2Key: 'homePage.hero.s2.title2',
-    descKey: 'homePage.hero.s2.desc',
-    btnKey: 'homePage.hero.s2.btn'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop',
-    tagKey: 'homePage.hero.s3.tag',
-    title1Key: 'homePage.hero.s3.title1',
-    title2Key: 'homePage.hero.s3.title2',
-    descKey: 'homePage.hero.s3.desc',
-    btnKey: 'homePage.hero.s3.btn'
-  }
+const servicesLocal = [
+  { id: 'hardware', icon: 'GPU', image: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.hardware.title', descKey: 'homePage.services.hardware.desc' },
+  { id: 'custom', icon: 'R&D', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.custom.title', descKey: 'homePage.services.custom.desc' },
+  { id: 'maintenance', icon: 'FIX', image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.maintenance.title', descKey: 'homePage.services.maintenance.desc' },
+  { id: 'solutions', icon: 'NET', image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.solutions.title', descKey: 'homePage.services.solutions.desc' },
 ]
 
 const currentSlide = ref(0)
 let timer = null
-
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % slides.length
-}
-
-const prevSlide = () => {
-  currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length
-}
-
-const setSlide = (index) => {
-  currentSlide.value = index
-  clearInterval(timer)
-  timer = setInterval(nextSlide, 5000)
-}
+const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides.length }
+const setSlide = (i) => { currentSlide.value = i; clearInterval(timer); timer = setInterval(nextSlide, 5000) }
 
 onMounted(() => {
   timer = setInterval(nextSlide, 5000)
+  updateItemsToShow()
+  window.addEventListener('resize', updateItemsToShow)
 })
-
 onUnmounted(() => {
   clearInterval(timer)
+  window.removeEventListener('resize', updateItemsToShow)
 })
 </script>
 
 <style scoped>
-.container-custom {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-}
-
+.container-custom { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }

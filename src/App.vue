@@ -1,5 +1,6 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue' // 增加了 watch
+import { useI18n } from 'vue-i18n' // 引入 i18n 工具
 
 // 组件导入
 import SiteHeader from './components/SiteHeader.vue'
@@ -11,38 +12,72 @@ import HomePage from './pages/HomePage.vue'
 import CatalogPage from './pages/CatalogPage.vue'
 import ServicesPage from './pages/ServicesPage.vue'
 import AboutPage from './pages/AboutPage.vue'
-// 1. 引入新页面
-import SolutionsPage from './pages/SolutionsPage.vue' 
+import SolutionsPage from './pages/SolutionsPage.vue'
 
 // 数据导入
 import { siteData } from './data/siteData'
 
+const { t, locale } = useI18n()
 const currentView = ref('home')
 const showLeadModal = ref(false)
 
-// 2. 更新视图映射表 (ViewMap)
 const viewMap = {
-  'home': HomePage,           // 对应 import HomePage ...
-  'catalog': CatalogPage,     // 对应 import CatalogPage ...
-  'solutions': SolutionsPage, // 对应 import SolutionsPage ...
-  'services': ServicesPage,   // 对应 import ServicesPage ...
-  'about': AboutPage,         // 对应 import AboutPage ...
+  'home': HomePage,
+  'catalog': CatalogPage,
+  'solutions': SolutionsPage,
+  'services': ServicesPage,
+  'about': AboutPage,
 }
+
+// --- 新增：动态标题逻辑 ---
+
+/**
+ * 更新网页标题的函数
+ */
+function updatePageTitle() {
+  const brand = 'YUFAN GROUP'
+  // 根据当前视图 key 去 i18n 找翻译 (例如 menu.catalog)
+  const pageKey = `menu.${currentView.value}`
+  const translatedName = t(pageKey)
+
+  // 如果翻译后的内容和 key 一样，说明没找到翻译，只显示品牌名
+  if (translatedName === pageKey || currentView.value === 'home') {
+    document.title = brand
+  } else {
+    document.title = `${translatedName} | ${brand}`
+  }
+}
+
+// 监听视图切换，自动改标题
+watch(currentView, () => {
+  updatePageTitle()
+})
+
+// 监听语言切换，自动改标题
+watch(locale, () => {
+  updatePageTitle()
+})
+
+// --- 原有路由逻辑 ---
 
 function go(view) {
   currentView.value = view
-  window.location.hash = viewMap[view] || ''
+  window.location.hash = view
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function handleHashChange() {
   const hash = window.location.hash.replace('#', '')
-  const targetView = Object.keys(viewMap).find(key => viewMap[key] === hash) || 'home'
-  currentView.value = targetView
+  if (viewMap[hash]) {
+    currentView.value = hash
+  } else {
+    currentView.value = 'home'
+  }
 }
 
 onMounted(() => {
   handleHashChange()
+  updatePageTitle() // 初始化时执行一次标题设置
   window.addEventListener('hashchange', handleHashChange)
 })
 
@@ -58,15 +93,11 @@ function closeLeadModal() {
   showLeadModal.value = false
 }
 
-// 底部导航逻辑更新
 function handleFooterNav(label) {
-  // 简单映射，根据你的 i18n 这里的 label 可能是中文也可能是英文
-  // 建议直接传 key，这里做演示简化处理
   go('contact') 
 }
 
 const showInlineLeadForm = computed(() =>
-  // 3. 决定哪些页面底部显示大表单 (通常关于页面不需要)
   ['home', 'catalog', 'services', 'solutions'].includes(currentView.value)
 )
 
