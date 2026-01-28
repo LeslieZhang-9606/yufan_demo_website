@@ -1,39 +1,39 @@
 <template>
   <div class="bg-white min-h-screen font-sans selection:bg-blue-100">
-    <div class="max-w-[1440px] mx-auto px-8 py-12 lg:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 py-12 lg:py-16">
       
-      <header class="mb-16 border-b border-gray-100 pb-10">
+      <header class="mb-12 border-b border-gray-100 pb-8">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div>
-            <h1 class="text-sm font-black text-blue-600 uppercase tracking-[0.3em] mb-4">
+            <h1 class="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-3">
               {{ $t('catalogPage.header.subTitle') }}
             </h1>
-            <h2 class="text-5xl lg:text-6xl font-black text-gray-900 tracking-tighter uppercase">
+            <h2 class="text-4xl lg:text-5xl font-black text-gray-900 tracking-tighter uppercase">
               {{ $t('catalogPage.header.mainTitle') }}
             </h2>
           </div>
           <div class="text-right">
-            <p class="text-gray-400 text-sm max-w-sm leading-relaxed italic mb-4 ml-auto">
+            <p class="text-gray-400 text-xs max-w-sm leading-relaxed italic mb-4 ml-auto">
               {{ $t('catalogPage.header.description') }}
             </p>
             <div class="flex items-center justify-end gap-4">
-              <div class="flex bg-gray-100 p-1 rounded-xl">
+              <div class="flex bg-gray-100 p-1 rounded-lg">
                 <button 
                   @click="viewMode = 'grid'" 
-                  :class="viewMode === 'grid' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-400'"
-                  class="px-3 py-1.5 rounded-lg transition-all text-[10px] font-bold uppercase"
+                  :class="viewMode === 'grid' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-400 hover:text-gray-600'"
+                  class="p-2 rounded-md transition-all duration-300"
                 >
-                  {{ $t('catalogPage.view.grid') }}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                 </button>
                 <button 
                   @click="viewMode = 'list'" 
-                  :class="viewMode === 'list' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-400'"
-                  class="px-3 py-1.5 rounded-lg transition-all text-[10px] font-bold uppercase"
+                  :class="viewMode === 'list' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-400 hover:text-gray-600'"
+                  class="p-2 rounded-md transition-all duration-300"
                 >
-                  {{ $t('catalogPage.view.list') }}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
                 </button>
               </div>
-              <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+              <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
                 {{ $t('catalogPage.header.synced', { count: filteredProducts.length }) }}
               </div>
             </div>
@@ -41,157 +41,225 @@
         </div>
       </header>
 
-      <div class="flex flex-col lg:flex-row gap-16">
+      <div class="flex flex-col lg:flex-row gap-12">
+        
         <aside class="w-full lg:w-64 shrink-0">
-          <div class="sticky top-24 space-y-12">
+          <div class="sticky top-24 space-y-10">
             
             <div>
-              <div class="flex items-center justify-between mb-6">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-300">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
                   {{ $t('catalogPage.filter.categories') }}
                 </h3>
-                <button @click="resetFilter" class="text-[10px] text-blue-600 font-bold">
+                <button @click="resetFilter" v-if="filterType !== 'all'" class="text-[10px] text-blue-600 font-bold hover:underline">
                   {{ $t('catalogPage.filter.reset') }}
                 </button>
               </div>
-              <nav class="flex flex-col gap-1">
+              
+              <div class="space-y-1">
+                <!-- 修改处：删除了这里的 span 计数标签 -->
                 <button
-                  v-for="cat in categoryList"
+                  @click="handleFilter('category', 'All Hardware')"
+                  class="w-full flex items-center justify-between py-2 px-3 rounded-lg text-left transition-all duration-200"
+                  :class="(filterType === 'all' || (filterType === 'category' && filterValue === 'All Hardware')) ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-50'"
+                >
+                  <span class="text-xs font-bold uppercase">{{ $t('catalogPage.filter.allHardware') }}</span>
+                </button>
+
+                <button
+                  v-for="cat in uniqueCategories"
                   :key="cat"
                   @click="handleFilter('category', cat)"
-                  class="flex items-center justify-between py-2.5 px-4 rounded-xl text-left transition-all"
-                  :class="filterValue === cat ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-500 hover:bg-gray-50'"
+                  class="w-full flex items-center justify-between py-2 px-3 rounded-lg text-left transition-all duration-200"
+                  :class="(filterType === 'category' && filterValue === cat) ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-50'"
                 >
-                  <span class="text-sm font-bold uppercase tracking-tight">{{ resolveCategory(cat) }}</span>
+                  <span class="text-xs font-medium uppercase truncate max-w-[160px]" :title="resolveCategory(cat)">
+                    {{ resolveCategory(cat) }}
+                  </span>
                 </button>
-              </nav>
+              </div>
             </div>
 
             <div>
-              <h3 class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-300 mb-6 border-t border-gray-100 pt-8">
+              <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-4 pt-6 border-t border-gray-100">
                 {{ $t('catalogPage.filter.brands') }}
               </h3>
-              <div class="grid grid-cols-2 gap-2">
+              <div class="grid grid-cols-2 gap-2 max-h-[300px] overflow-y-auto custom-scrollbar pr-1">
                 <button
                   v-for="brand in brandList"
                   :key="brand"
                   @click="handleFilter('brand', brand)"
-                  class="py-2 px-3 rounded-lg border text-[10px] font-black transition-all uppercase text-center"
-                  :class="filterValue === brand ? 'border-blue-600 text-blue-600 bg-blue-50' : 'border-gray-100 text-gray-400 hover:border-gray-300'"
+                  class="py-1.5 px-2 rounded border text-[9px] font-bold uppercase transition-all truncate hover:border-gray-300"
+                  :class="(filterType === 'brand' && filterValue === brand) ? 'border-blue-600 bg-blue-600 text-white shadow-md' : 'border-gray-100 text-gray-500 bg-white'"
+                  :title="brand"
                 >
                   {{ brand }}
                 </button>
               </div>
             </div>
+
           </div>
         </aside>
 
-        <main class="flex-1">
-          <div v-if="viewMode === 'grid'" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 mb-16">
+        <main class="flex-1 min-w-0">
+          
+          <div v-if="viewMode === 'grid'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
             <div 
               v-for="product in currentItems" 
-              :key="product.id" 
-              class="flex flex-col group bg-white border border-gray-100 p-6 rounded-[40px] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              :key="product.id"
+              class="group flex flex-col bg-white rounded-2xl border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1"
             >
-              <div class="aspect-[4/3] mb-8 flex items-center justify-center p-6 bg-gray-50 rounded-[30px] overflow-hidden relative">
-                <img :src="product.img" :alt="product.name" class="max-h-full max-w-full object-contain group-hover:scale-110 transition duration-700" />
-                <div class="absolute top-4 right-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-[9px] font-black uppercase text-blue-600 border border-blue-50">
-                  {{ product.brand }}
-                </div>
-              </div>
-              <div class="mb-4">
-                <h3 class="text-lg font-black text-gray-900 leading-[1.2] h-14 overflow-hidden uppercase tracking-tighter">
-                  {{ product.name }}
-                </h3>
-              </div>
-              <div class="space-y-2 mb-8 border-t border-gray-50 pt-6">
-                <div v-for="(value, key) in product.specs" :key="key" class="flex justify-between items-start text-[11px] leading-tight pb-1 border-b border-gray-50/50 last:border-0">
-                  <span class="text-gray-400 font-medium w-1/3 shrink-0 uppercase tracking-tighter">{{ key }}</span>
-                  <span class="text-gray-900 font-bold text-right ml-4">{{ value }}</span>
-                </div>
-              </div>
-              <div class="mt-auto">
-                <div class="flex items-baseline gap-1 mb-6">
-                  <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    {{ $t('catalogPage.product.estPrice') }}
-                  </span>
-                  <span class="text-2xl font-black text-blue-600 tracking-tighter tabular-nums">
-                    {{ product.price }}
-                  </span>
-                  <span v-if="product.price !== '咨询获取'" class="text-sm font-bold text-blue-600 ml-1">
-                    {{ $t('catalogPage.product.currency') }}
+              <div class="aspect-[4/3] p-4 flex items-center justify-center bg-gray-50/50 rounded-t-2xl relative overflow-hidden">
+                <img 
+                  v-if="product.img" 
+                  :src="product.img" 
+                  :alt="product.name" 
+                  loading="lazy"
+                  class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105" 
+                />
+                <span v-else class="text-4xl text-gray-200 font-black">{{ product.brand ? product.brand[0] : '?' }}</span>
+                
+                <div class="absolute top-3 left-3">
+                  <span class="bg-white/90 backdrop-blur px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-gray-800 rounded border border-gray-100 shadow-sm">
+                    {{ product.brand }}
                   </span>
                 </div>
-                <button 
-                  @click="$emit('openLead', product)" 
-                  class="w-full bg-gray-900 text-white py-4 rounded-2xl font-black uppercase text-xs tracking-[0.2em] hover:bg-blue-600 transition-all"
-                >
-                  {{ $t('catalogPage.product.inquire') }}
-                </button>
               </div>
-            </div>
-          </div>
 
-          <div v-else class="space-y-4 mb-16">
-            <div v-for="product in currentItems" :key="product.id" class="flex items-center gap-8 bg-white border border-gray-100 p-6 rounded-3xl hover:border-blue-600 transition-all">
-              <div class="w-24 h-24 bg-gray-50 rounded-2xl flex items-center justify-center p-2">
-                <img :src="product.img" class="max-h-full object-contain" />
-              </div>
-              <div class="flex-1">
-                <div class="text-[10px] font-black text-blue-600 uppercase mb-1">{{ product.brand }}</div>
-                <h3 class="text-lg font-black text-gray-900 uppercase tracking-tighter">{{ product.name }}</h3>
-                <div class="flex gap-4 mt-2">
-                  <div v-for="(v, k) in product.specs" :key="k" class="text-[10px] text-gray-500 bg-gray-50 px-2 py-1 rounded">
-                    <span class="font-bold opacity-60 mr-1">{{ k }}:</span> {{ v }}
+              <div class="p-4 flex flex-col flex-1">
+                <div class="mb-3">
+                  <h3 class="text-sm font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[2.5em]" :title="product.name">
+                    {{ formatProductName(product) }}
+                  </h3>
+                </div>
+
+                <div class="space-y-1 mb-4">
+                  <div v-for="(val, key, idx) in product.specs" :key="key" v-show="idx < 2" class="flex justify-between items-center text-[10px] border-b border-gray-50 pb-1 last:border-0">
+                    <span class="text-gray-400 font-medium uppercase truncate w-1/3">{{ key }}</span>
+                    <span class="text-gray-700 font-bold truncate w-2/3 text-right">{{ val }}</span>
                   </div>
                 </div>
-              </div>
-              <div class="text-right w-48">
-                <div class="text-xl font-black text-blue-600 tabular-nums mb-2">
-                  {{ product.price }} 
-                  <span v-if="product.price !== '咨询获取'" class="text-xs">{{ $t('catalogPage.product.currency') }}</span>
+
+                <div class="mt-auto pt-3 border-t border-gray-50 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[9px] font-bold text-gray-400 uppercase">
+                      {{ $t('catalogPage.product.estPrice') }}
+                    </span>
+                    <span class="text-xs font-black text-gray-900 tabular-nums">
+                      {{ $t('catalogPage.product.priceOnRequest') }}
+                    </span>
+                  </div>
+                  <button 
+                    @click="$emit('openLead', product)" 
+                    class="px-3 py-1.5 bg-gray-900 text-white text-[10px] font-bold uppercase rounded-md shadow-md hover:bg-blue-600 transition-colors whitespace-nowrap"
+                  >
+                    {{ $t('catalogPage.product.inquireShort') }}
+                  </button>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div v-else class="space-y-3 mb-12">
+            <div 
+              v-for="product in currentItems" 
+              :key="product.id"
+              class="group flex items-center gap-6 bg-white p-4 rounded-xl border border-gray-100 transition-all hover:shadow-lg hover:border-blue-200"
+            >
+              <div class="w-20 h-20 shrink-0 bg-gray-50 rounded-lg flex items-center justify-center p-2">
+                 <img v-if="product.img" :src="product.img" class="max-w-full max-h-full object-contain"/>
+              </div>
+              
+              <div class="flex-1 min-w-0 grid grid-cols-12 gap-6 items-center">
+                <div class="col-span-4">
+                   <div class="text-[10px] font-bold text-blue-600 uppercase mb-0.5">{{ product.brand }}</div>
+                   <h3 class="text-base font-bold text-gray-900 truncate">{{ formatProductName(product) }}</h3>
+                </div>
+                
+                <div class="col-span-4 flex flex-wrap gap-x-4 gap-y-1">
+                   <div v-for="(val, key, idx) in product.specs" :key="key" v-show="idx < 3" class="flex items-center gap-1 text-[10px]">
+                      <span class="text-gray-400 uppercase font-medium">{{ key }}:</span>
+                      <span class="text-gray-700 font-bold truncate max-w-[80px]">{{ val }}</span>
+                   </div>
+                </div>
+
+                <div class="col-span-4 flex items-center justify-end gap-4">
+                  <span class="text-xs font-bold text-gray-500">
+                    {{ $t('catalogPage.product.priceOnRequest') }}
+                  </span>
+                  <button 
+                    @click="$emit('openLead', product)" 
+                    class="px-5 py-2 bg-gray-900 text-white text-xs font-bold uppercase rounded-lg hover:bg-blue-600 transition-colors shadow-sm"
+                  >
+                    {{ $t('catalogPage.product.inquire') }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div v-if="totalPages > 1" class="border-t border-gray-100 pt-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+            
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest order-2 lg:order-1">
+               {{ $t('catalogPage.pagination.showing', { 
+                  start: (currentPage - 1) * pageSize + 1, 
+                  end: Math.min(currentPage * pageSize, filteredProducts.length), 
+                  total: filteredProducts.length 
+               }) }}
+            </span>
+            
+            <div class="flex items-center gap-6 order-1 lg:order-2">
+              <div class="flex items-center gap-1.5">
+                <button @click="handlePageChange(currentPage - 1)" :disabled="currentPage === 1" class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 hover:border-blue-600 disabled:opacity-30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+
+                <template v-for="(page, index) in visiblePages" :key="index">
+                  <span v-if="page === '...'" class="w-8 h-8 flex items-center justify-center text-gray-400 text-xs">...</span>
+                  <button
+                    v-else
+                    @click="handlePageChange(page)"
+                    class="w-8 h-8 flex items-center justify-center rounded-lg text-xs font-bold transition-all"
+                    :class="currentPage === page ? 'bg-gray-900 text-white shadow-md' : 'text-gray-500 hover:bg-gray-50'"
+                  >
+                    {{ page }}
+                  </button>
+                </template>
+
+                <button @click="handlePageChange(currentPage + 1)" :disabled="currentPage === totalPages" class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 hover:border-blue-600 disabled:opacity-30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <div class="hidden sm:flex items-center gap-2 pl-6 border-l border-gray-100 h-8">
+                <input 
+                  v-model.number="jumpPage" 
+                  type="number" 
+                  min="1" 
+                  :max="totalPages"
+                  placeholder="Go"
+                  class="w-12 h-8 rounded-lg border border-gray-200 text-center text-xs font-bold focus:border-blue-600 focus:ring-0 outline-none transition-all placeholder:text-gray-300"
+                  @keyup.enter="handleJump"
+                />
                 <button 
-                  @click="$emit('openLead', product)" 
-                  class="text-[10px] font-black uppercase bg-gray-900 text-white px-6 py-2.5 rounded-xl hover:bg-blue-600 transition-all"
+                  @click="handleJump"
+                  class="h-8 px-3 rounded-lg bg-gray-50 text-gray-500 text-[10px] font-black uppercase hover:bg-gray-900 hover:text-white transition-all"
                 >
-                  {{ $t('catalogPage.product.inquireShort') }}
+                  Go
                 </button>
               </div>
             </div>
-          </div>
 
-          <div v-if="totalPages > 1" class="flex justify-center items-center gap-2 pt-10 border-t border-gray-100">
-            <button 
-              @click="handlePageChange(currentPage - 1)" 
-              :disabled="currentPage === 1"
-              class="p-3 rounded-xl border border-gray-100 text-gray-400 disabled:opacity-30 transition-all text-xs font-bold"
-            >
-              {{ $t('catalogPage.pagination.prev') }}
-            </button>
-            <div class="flex gap-1">
-              <button
-                v-for="i in totalPages"
-                :key="i"
-                @click="handlePageChange(i)"
-                class="w-10 h-10 rounded-xl font-bold text-sm transition-all"
-                :class="currentPage === i ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-400 hover:bg-gray-50'"
-              >{{ i }}</button>
-            </div>
-            <button 
-              @click="handlePageChange(currentPage + 1)" 
-              :disabled="currentPage === totalPages"
-              class="p-3 rounded-xl border border-gray-100 text-gray-400 disabled:opacity-30 transition-all text-xs font-bold"
-            >
-              {{ $t('catalogPage.pagination.next') }}
+          </div>
+          
+          <div v-if="filteredProducts.length === 0" class="py-32 text-center bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+            <div class="text-4xl mb-4">🔍</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">{{ $t('catalogPage.empty.title') }}</h3>
+            <button @click="resetFilter" class="mt-4 px-6 py-2 bg-blue-600 text-white text-xs font-bold uppercase rounded-lg shadow-lg hover:bg-blue-700 transition-all">
+              {{ $t('catalogPage.empty.reset') }}
             </button>
           </div>
 
-          <div v-if="filteredProducts.length === 0" class="py-40 text-center bg-gray-50 rounded-[60px] border-2 border-dashed border-gray-100 mt-4">
-            <p class="text-gray-400 font-bold italic uppercase tracking-widest">
-              {{ $t('catalogPage.empty') }}
-            </p>
-          </div>
         </main>
       </div>
     </div>
@@ -200,73 +268,122 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue';
-import { useI18n } from 'vue-i18n'; // 1. 引入 i18n
-import { siteData } from '../data/siteData.js';
+import { useI18n } from 'vue-i18n';
+import { siteData } from '../data/siteData.js'; 
 
-const { t, tm } = useI18n(); // 2. 解构 t 和 tm
+const { t, te } = useI18n();
 const emit = defineEmits(['openLead']);
-const products = siteData.products;
+
+const products = siteData.products || [];
 
 const viewMode = ref('grid');
 const currentPage = ref(1);
 const pageSize = 12;
-
 const filterType = ref('all');
 const filterValue = ref('All Hardware');
 
-const categoryList = computed(() => ['All Hardware', ...new Set(products.map(p => p.category))]);
-const brandList = computed(() => [...new Set(products.map(p => p.brand).filter(Boolean))].sort());
+// 新增跳转页码的 ref
+const jumpPage = ref('');
 
-// --- 核心优化：翻译分类名称 ---
-// siteData 里的 category 是英文 "GPU Servers"，我们尝试把它转成 "GPU 服务器"
-function resolveCategory(catOriginalName) {
-  if (catOriginalName === 'All Hardware') return t('catalogPage.filter.categories'); // 这里简单处理，或者专门加一个 all 键
-  
-  // 1. 尝试把 "GPU Servers" 变成 "gpu_server" 这种 key
-  // 简易映射逻辑，或者你可以直接在 siteData 里就把 category 字段改成 key
-  const keyMap = {
-    'GPU Servers': 'gpu_server',
-    'Networking': 'switch',
-    'Storage': 'component', // 暂时映射到这，你可以去 common.js 加 storage
-    'Workstations': 'workstation'
-  };
+const brandList = computed(() => {
+  const brands = products.map(p => p.brand).filter(b => b && b.trim() !== '');
+  return [...new Set(brands)].sort();
+});
 
-  const key = keyMap[catOriginalName];
-  if (key) {
-    // 2. 去 common.categories 里找翻译
-    return t(`common.categories.${key}`);
+const uniqueCategories = computed(() => {
+  const cats = products.map(p => p.category).filter(c => c && c.trim() !== '');
+  return [...new Set(cats)].sort();
+});
+
+const resolveCategory = (catRaw) => {
+  if (!catRaw || catRaw === 'All Hardware') return t('catalogPage.filter.allHardware');
+  const rawLower = catRaw.toLowerCase();
+  const i18nKey = `catalogPage.categoryMap.${rawLower}`;
+  return te(i18nKey) ? t(i18nKey) : catRaw;
+};
+
+const formatProductName = (product) => {
+  if (!product.name || !product.brand) return product.name;
+  const brand = product.brand.toLowerCase();
+  const name = product.name.toLowerCase();
+  if (name.startsWith(brand)) {
+    return product.name.slice(brand.length).trim(); 
   }
-  
-  // 3. 找不到就显示原文
-  return catOriginalName;
-}
+  return product.name;
+};
 
 const filteredProducts = computed(() => {
   return products.filter(p => {
-    if (filterValue.value === 'All Hardware') return true;
-    if (filterType.value === 'category') return p.category === filterValue.value;
+    if (filterType.value === 'all') return true;
+    if (filterType.value === 'category') {
+       if (filterValue.value === 'All Hardware') return true;
+       return p.category === filterValue.value;
+    }
     if (filterType.value === 'brand') return p.brand === filterValue.value;
     return true;
   });
 });
 
 const totalPages = computed(() => Math.ceil(filteredProducts.value.length / pageSize));
+
+// 智能分页逻辑
+const visiblePages = computed(() => {
+  const total = totalPages.value;
+  const current = currentPage.value;
+  const delta = 1; 
+  const range = [];
+  const rangeWithDots = [];
+  let l;
+  for (let i = 1; i <= total; i++) {
+    if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
+      range.push(i);
+    }
+  }
+  for (let i of range) {
+    if (l) {
+      if (i - l === 2) rangeWithDots.push(l + 1);
+      else if (i - l !== 1) rangeWithDots.push('...');
+    }
+    rangeWithDots.push(i);
+    l = i;
+  }
+  return rangeWithDots;
+});
+
 const currentItems = computed(() => {
   const start = (currentPage.value - 1) * pageSize;
   return filteredProducts.value.slice(start, start + pageSize);
 });
 
-watch([filterType, filterValue], () => {
-  currentPage.value = 1;
-});
+watch([filterType, filterValue], () => { currentPage.value = 1; });
+
+// 🔥🔥🔥 新增：跳转处理逻辑 🔥🔥🔥
+const handleJump = () => {
+  // 1. 转为数字
+  const p = parseInt(jumpPage.value);
+  // 2. 验证有效性 (必须是数字，且在 1 到 总页数 之间)
+  if (!isNaN(p) && p >= 1 && p <= totalPages.value) {
+    currentPage.value = p;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    jumpPage.value = ''; // 跳转后清空输入框
+  } else {
+    // 可选：输入错误时清空或提示，这里直接清空
+    jumpPage.value = '';
+  }
+};
 
 const handleFilter = (type, value) => {
+  if (type === 'brand' && filterType.value === 'brand' && filterValue.value === value) {
+    resetFilter();
+    return;
+  }
   filterType.value = type;
   filterValue.value = value;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 const handlePageChange = (page) => {
+  if (page === '...') return;
   currentPage.value = page;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
@@ -278,5 +395,15 @@ const resetFilter = () => {
 </script>
 
 <style scoped>
-button { cursor: pointer; }
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: #e5e7eb; border-radius: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background-color: #d1d5db; }
+
+/* 隐藏数字输入框的上下箭头 */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 </style>

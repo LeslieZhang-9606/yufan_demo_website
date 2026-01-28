@@ -18,7 +18,7 @@
             
             <h1 class="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-8 animate-fade-in-up delay-100 break-words w-full">
               {{ $t(slide.title1Key) }} <br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-white italic">
+              <span class="box-decoration-clone text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-white italic pr-3 py-1">
                 {{ $t(slide.title2Key) }}
               </span>
             </h1>
@@ -187,23 +187,52 @@
       </div>
     </section>
 
-    <section class="py-16 border-b border-gray-100 bg-white">
+    <section class="py-24 border-b border-gray-100 bg-white overflow-hidden">
       <div class="container-custom">
-        <p class="text-center text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-10">{{ $t('homePage.partnersTitle') }}</p>
-        <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-          <div v-for="brand in ['NVIDIA', 'DELL', 'LENOVO', 'CISCO', 'SUPERMICRO']" :key="brand" 
-               class="h-8 w-24 bg-gray-50 rounded flex items-center justify-center font-bold text-gray-400 text-[10px] tracking-widest">{{ brand }}</div>
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <p class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600 mb-2">
+              {{ $t('homePage.partnersTitle') }}
+            </p>
+            <h2 class="text-3xl font-black uppercase tracking-tighter text-gray-900">
+              Trusted <span class="text-gray-300 italic">Network</span>
+            </h2>
+          </div>
+          
+          <div class="flex gap-2">
+             <div v-for="i in totalBrandPages" :key="i" 
+                  class="h-1 w-8 transition-all duration-300 rounded-full cursor-pointer"
+                  :class="brandPage === (i-1) ? 'bg-blue-600' : 'bg-gray-200'"
+                  @click="setBrandPage(i-1)">
+             </div>
+          </div>
         </div>
-      </div>
-    </section>
+        
+        <div class="relative min-h-[280px]"> 
+          <Transition mode="out-in" name="fade-slide">
+            <div :key="brandPage" class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-6">
+              <div 
+                v-for="brand in visibleBrands" 
+                :key="brand" 
+                class="group flex flex-col items-center justify-center h-32 border border-gray-100 rounded-2xl hover:border-blue-200 hover:shadow-xl transition-all duration-500 cursor-pointer bg-white"
+              >
+                <div class="mb-3 opacity-20 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110 transform">
+                   <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/></svg>
+                </div>
+                
+                <span class="text-xs font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors truncate w-3/4 text-center">
+                  {{ brand }}
+                </span>
+              </div>
+            </div>
+          </Transition>
+        </div>
 
-    <section id="contact" class="py-32 bg-white">
-      <div class="container-custom max-w-4xl text-center">
-        <h2 class="text-5xl font-black uppercase mb-6 tracking-tighter">{{ $t('leadForm.sectionTitle') }}</h2>
-        <p class="text-gray-500 mb-12 text-lg max-w-2xl mx-auto">{{ $t('leadForm.description') }}</p>
-        <button @click="$emit('openLead')" class="bg-black text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-blue-600 transition-all shadow-2xl hover:-translate-y-1">
-          {{ $t('leadForm.submit') }}
-        </button>
+        <div class="flex justify-center mt-12">
+            <button class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 hover:text-blue-600 border-b border-transparent hover:border-blue-600 pb-1 transition-all">
+                View All Partners & Cases →
+            </button>
+        </div>
       </div>
     </section>
   </div>
@@ -236,6 +265,38 @@ const prevFeature = () => {
   featureIndex.value = featureIndex.value <= 0 ? max : featureIndex.value - 1
 }
 
+// --- 品牌墙逻辑开始 ---
+const brandList = [
+  'HUAWEI', 'xFusion', 'H3C', 'WUZHOU', 'Great Wall', 'Lenovo', 
+  'KunLun', 'DELL', 'Changjiang', 'HP', 'IBM', 'Juniper',
+  'BIOBASE', 'PowerLeader', 'NVIDIA', 'Tongfang', 'AMD', 'Apple',
+  'Intel', 'TianHui', 'KunTai', 'CISCO', 'Acer', 'BROADCOM', 
+  'Seagate', 'Microsoft', 'ASUS', 'SAMSUNG', 'TOSHIBA', 'Inspur'
+]
+
+const brandPage = ref(0)
+const itemsPerPage = 8 // 2行 * 4列
+const totalBrandPages = computed(() => Math.ceil(brandList.length / itemsPerPage))
+
+const visibleBrands = computed(() => {
+  const start = brandPage.value * itemsPerPage
+  // 确保每一页都尽量填满（最后一页除外）
+  return brandList.slice(start, start + itemsPerPage)
+})
+
+// 自动轮播控制
+let brandTimer = null
+const nextBrandPage = () => {
+  brandPage.value = (brandPage.value + 1) % totalBrandPages.value
+}
+const setBrandPage = (index) => {
+  brandPage.value = index
+  // 点击手动切换时，重置计时器，避免立即自动跳转
+  clearInterval(brandTimer)
+  brandTimer = setInterval(nextBrandPage, 4000)
+}
+// --- 品牌墙逻辑结束 ---
+
 // --- 静态内容与原始文案键值 ---
 const slides = [
   { image: 'https://images.unsplash.com/photo-1558494949-ef2bb6db8744?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s1.tag', title1Key: 'homePage.hero.s1.title1', title2Key: 'homePage.hero.s1.title2', descKey: 'homePage.hero.s1.desc', btnKey: 'homePage.hero.s1.btn' },
@@ -256,12 +317,19 @@ const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides
 const setSlide = (i) => { currentSlide.value = i; clearInterval(timer); timer = setInterval(nextSlide, 5000) }
 
 onMounted(() => {
+  // Hero 轮播
   timer = setInterval(nextSlide, 5000)
+  
+  // Brand 品牌墙轮播 (4秒一次)
+  brandTimer = setInterval(nextBrandPage, 4000)
+
   updateItemsToShow()
   window.addEventListener('resize', updateItemsToShow)
 })
+
 onUnmounted(() => {
   clearInterval(timer)
+  clearInterval(brandTimer)
   window.removeEventListener('resize', updateItemsToShow)
 })
 </script>
@@ -273,4 +341,20 @@ onUnmounted(() => {
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
+
+/* 品牌墙过渡动画 */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
 </style>
