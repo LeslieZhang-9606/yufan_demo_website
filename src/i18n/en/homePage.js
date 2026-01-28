@@ -1,67 +1,65 @@
 export default {
   hero: {
     s1: {
-      tag: 'Global Stock',
-      title1: 'High-Performance',
-      title2: 'Compute Supply',
-      desc: 'Spot supply of NVIDIA H100 / A100 / H800 & Brand Servers. Direct shipping from SZ/HK, global T+3 delivery.',
-      btn: 'Check Inventory'
+      tag: 'Brand Image & Core Strength',
+      title1: 'Global AI Infrastructure',
+      title2: 'Lifecycle Service Expert',
+      desc: '20 years of supply chain experience | Covering core global markets (Shenzhen, Russia, USA, SE Asia) | Ultimate compute power guarantee.',
+      btn: 'About Yufan Intelligence'
     },
     s2: {
-      tag: 'Technical Solutions',
-      title1: '512+ Node',
-      title2: 'Cluster Design',
-      desc: 'HPC cluster planning based on IB / ROCE networks. One-stop delivery from topology design to on-site cabling.',
-      btn: 'Explore Solutions'
+      tag: 'Spot Supply & Customization',
+      title1: 'Top-tier Computing Hardware',
+      title2: 'H100 / B200 / H20',
+      desc: 'Aggregating the full NVIDIA series & proprietary high-performance AI servers to meet urgent resource needs for procurement and integrators.',
+      btn: 'View Product Catalog'
     },
     s3: {
-      tag: 'After-sales Support',
-      title1: 'Chip-level Repair',
-      title2: '& Global Spares',
-      desc: 'Own 1000㎡ repair lab with BGA/CSP capabilities. NBD spare parts service system in key global hubs.',
-      btn: 'Service Network'
+      tag: 'Cost Reduction & Warranty',
+      title1: 'Chip-level GPU Repair',
+      title2: '& Global Warranty Solutions',
+      desc: '1000+㎡ professional repair factory | 4-hour spare part response | Reduce O&M costs by 70%. Solving the industry pain point of "sales without service".',
+      btn: 'Get Maintenance Quote'
+    },
+    s4: {
+      tag: 'Instant Deployment & Scaling',
+      title1: 'High-Performance Bare Metal',
+      title2: 'Compute Leasing Services',
+      desc: 'H100 / A100 / 4090 Clusters | Elastic Scaling | Full-stack Technical Support for startups and R&D teams.',
+      btn: 'Consult on Compute Power'
     }
   },
   
-  catalogButton: 'Check Inventory',
-  quoteButton: 'Get Quote',
-  
-  aboutTitle: 'About Us',
-  expertise: '20+ Years Expertise',
-  aboutText1: 'Headquartered in Shenzhen, we have established mature cross-border service systems in the US, Russia, and Indonesia.',
-  aboutText2: 'We operate a 1000+ sqm professional repair lab with chip-level BGA/CSP capabilities and provide SLA-level spare parts services.',
-  
-  stat1: '20+ Years Exp',
-  stat2: '112 Cities NBD',
-  stat3: '4-Hour Delivery',
-
   services: {
     hardware: { 
-      title: 'Standard GPU Hardware', 
-      desc: 'Spot supply of NVIDIA H200/H100/A100. Full range of SXM/PCIE modules and Dell/Supermicro brand servers.' 
+      title: 'Hardware & GPU Supply', 
+      desc: 'Direct supply of NVIDIA H100/H800 & servers. Owned inventory, authenticity guaranteed.' 
     },
     custom: { 
       title: 'R&D & Customization', 
-      desc: 'Cost-effective proprietary H100 94G/96G GPUs, and custom liquid/air-cooled server development.' 
+      desc: 'Architecture development for your AI tasks. Optimizing equipment costs.' 
     },
     maintenance: { 
-      title: 'Chip-Level Maintenance', 
-      desc: '1000㎡ lab with BGA/CSP repair capabilities. Global NBD spare parts warehouses and SLA support.' 
+      title: 'Service Center & Repair', 
+      desc: 'Component-level repair (BGA) of any complexity. Global spare parts inventory.' 
     },
     solutions: { 
-      title: 'Networking & Rental', 
-      desc: '512+ node large-scale cluster planning (IB/ROCE), bare metal rental, and remote O&M support.' 
+      title: 'HPC Clusters & Leasing', 
+      desc: 'Bare metal server leasing and 512+ node cluster setup. Quick launch.' 
     },
   },
 
   products: {
-    title: 'Featured Products',
-    p1: { name: 'NVIDIA OEM H100 94G', desc: '94GB HBM3 | 26 TFLOPS | Cost-effective', tag: 'Proprietary' },
-    p2: { name: 'ROCE AI Switch', desc: '64x 800GE | 51.2T Throughput | Mellanox Compatible', tag: 'Low Latency' },
+    title: 'Flagship Recommendations'
   },
 
-  solutionsTitle: 'Full-Stack Solutions',
-  solutionsDesc: 'From asset auditing to IB/ROCE tuning, we provide turnkey technical support.',
+  solutionsTitle: 'Full-Stack Network Solutions',
+  solutionsDesc: 'From asset auditing and hardware health checks to IB/ROCE network tuning, we provide turnkey technical support.',
+  
   globalTitle: 'Global Service Network',
+  stat1: 'Years Experience',
+  stat2: 'Cities NBD Service',
+  stat3: 'Global 4H Spares',
+  
   partnersTitle: 'Trusted Partners',
 }

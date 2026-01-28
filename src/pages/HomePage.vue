@@ -1,44 +1,82 @@
 <template>
   <div class="bg-white">
-    <section id="hero" class="relative w-full h-[768px] overflow-hidden bg-gray-900 text-white">
+    <!-- Hero Section -->
+    <section id="hero" class="relative w-full h-[768px] overflow-hidden bg-gray-900 text-white group">
+      <!-- Slides -->
       <div 
         v-for="(slide, index) in slides" 
         :key="index"
         class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
         :class="currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'"
       >
-        <div class="absolute inset-0 bg-black/30 z-10"></div>
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
+        
+        <!-- Background Image -->
         <img :src="slide.image" class="absolute inset-0 w-full h-full object-cover transform scale-105" alt="Hero Background" />
         
-        <div class="container-custom h-full flex items-center justify-end relative z-20">
-          <div class="max-w-2xl pr-4 lg:pr-12 pt-20 flex flex-col items-start text-left">
-            <div class="inline-block py-1 px-3 border border-blue-500 text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-8 animate-fade-in-up">
+        <!-- Content -->
+        <div class="container-custom h-full flex items-center relative z-20">
+          <div class="max-w-3xl pt-20 flex flex-col items-start text-left pl-4 lg:pl-0">
+            <!-- Tag -->
+            <div class="inline-block py-1 px-3 border border-blue-500 bg-blue-900/30 backdrop-blur-sm text-blue-400 text-[11px] font-black uppercase tracking-[0.2em] mb-6 animate-fade-in-up">
               {{ $t(slide.tagKey) }}
             </div>
             
-            <h1 class="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-8 animate-fade-in-up delay-100 break-words w-full">
+            <!-- Title -->
+            <h1 class="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[1.1] mb-6 animate-fade-in-up delay-100 break-words w-full shadow-black drop-shadow-lg">
               {{ $t(slide.title1Key) }} <br />
-              <span class="box-decoration-clone text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-white italic pr-3 py-1">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white italic">
                 {{ $t(slide.title2Key) }}
               </span>
             </h1>
             
-            <p class="text-gray-200 text-lg leading-relaxed mb-12 max-w-lg border-l-4 border-blue-600 pl-6 animate-fade-in-up delay-200">
+            <!-- Description -->
+            <p class="text-gray-200 text-lg lg:text-xl leading-relaxed mb-10 max-w-xl border-l-4 border-blue-600 pl-6 animate-fade-in-up delay-200 bg-black/20 backdrop-blur-sm py-2 rounded-r-lg">
               {{ $t(slide.descKey) }}
             </p>
             
-            <button class="bg-blue-600 hover:bg-white hover:text-blue-900 text-white px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-blue-900/50 animate-fade-in-up delay-300">
+            <!-- CTA Button -->
+            <button class="bg-blue-600 hover:bg-white hover:text-blue-900 text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-xl shadow-blue-900/50 hover:shadow-blue-500/30 animate-fade-in-up delay-300 flex items-center gap-2">
               {{ $t(slide.btnKey) }}
+              <span>→</span>
             </button>
           </div>
         </div>
       </div>
 
-      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-4">
-        <button v-for="(slide, index) in slides" :key="'dot-'+index" @click="setSlide(index)" class="w-12 h-1 bg-white/20 transition-all duration-300" :class="currentSlide === index ? 'bg-blue-600 w-16' : 'hover:bg-white/40'"></button>
+      <!-- Navigation Arrows (Left/Right) -->
+      <button 
+        @click="prevSlide" 
+        class="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-[-20px] group-hover:translate-x-0"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+
+      <button 
+        @click="nextSlide" 
+        class="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-[20px] group-hover:translate-x-0"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
+      <!-- Bottom Dots Indicators -->
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+        <button 
+          v-for="(slide, index) in slides" 
+          :key="'dot-'+index" 
+          @click="setSlide(index)" 
+          class="h-1 rounded-full transition-all duration-300" 
+          :class="currentSlide === index ? 'bg-blue-500 w-12' : 'bg-white/30 w-8 hover:bg-white/60'"
+        ></button>
       </div>
     </section>
 
+    <!-- Services Section (Unchanged) -->
     <section id="services" class="bg-gray-50 py-24">
       <div class="container-custom">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -66,6 +104,7 @@
       </div>
     </section>
 
+    <!-- Products Section (Unchanged) -->
     <section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
       <div class="flex flex-col lg:flex-row justify-between items-end mb-20">
         <div>
@@ -130,6 +169,7 @@
 
     <div class="h-48 bg-gradient-to-b from-white via-white to-[#0052FF]"></div>
 
+    <!-- Solutions Section (Unchanged) -->
     <section id="solutions" class="relative bg-[#0052FF] py-32 overflow-hidden text-white">
       <div class="absolute inset-0 opacity-10 pointer-events-none">
         <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.2)_0%,transparent_50%)]"></div>
@@ -167,6 +207,7 @@
       </div>
     </section>
 
+    <!-- Global Stats Section (Unchanged) -->
     <section id="global" class="py-32 bg-gray-900 text-white relative overflow-hidden">
       <div class="container-custom relative z-10 text-center">
         <h2 class="text-3xl font-black uppercase tracking-widest mb-16">{{ $t('homePage.globalTitle') }}</h2>
@@ -187,6 +228,7 @@
       </div>
     </section>
 
+    <!-- Partners Section (Unchanged) -->
     <section class="py-24 border-b border-gray-100 bg-white overflow-hidden">
       <div class="container-custom">
         <div class="flex justify-between items-end mb-12">
@@ -265,7 +307,7 @@ const prevFeature = () => {
   featureIndex.value = featureIndex.value <= 0 ? max : featureIndex.value - 1
 }
 
-// --- 品牌墙逻辑开始 ---
+// --- 品牌墙逻辑 ---
 const brandList = [
   'HUAWEI', 'xFusion', 'H3C', 'WUZHOU', 'Great Wall', 'Lenovo', 
   'KunLun', 'DELL', 'Changjiang', 'HP', 'IBM', 'Juniper',
@@ -275,33 +317,63 @@ const brandList = [
 ]
 
 const brandPage = ref(0)
-const itemsPerPage = 8 // 2行 * 4列
+const itemsPerPage = 8 
 const totalBrandPages = computed(() => Math.ceil(brandList.length / itemsPerPage))
 
 const visibleBrands = computed(() => {
   const start = brandPage.value * itemsPerPage
-  // 确保每一页都尽量填满（最后一页除外）
   return brandList.slice(start, start + itemsPerPage)
 })
 
-// 自动轮播控制
 let brandTimer = null
 const nextBrandPage = () => {
   brandPage.value = (brandPage.value + 1) % totalBrandPages.value
 }
 const setBrandPage = (index) => {
   brandPage.value = index
-  // 点击手动切换时，重置计时器，避免立即自动跳转
   clearInterval(brandTimer)
   brandTimer = setInterval(nextBrandPage, 4000)
 }
-// --- 品牌墙逻辑结束 ---
 
-// --- 静态内容与原始文案键值 ---
+// --- Hero Banner 逻辑 (已更新) ---
+// 注意：这里的图片 URL 仅为示例，请替换为您 PPT 中的真实图片或本地资源
 const slides = [
-  { image: 'https://images.unsplash.com/photo-1558494949-ef2bb6db8744?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s1.tag', title1Key: 'homePage.hero.s1.title1', title2Key: 'homePage.hero.s1.title2', descKey: 'homePage.hero.s1.desc', btnKey: 'homePage.hero.s1.btn' },
-  { image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s2.tag', title1Key: 'homePage.hero.s2.title1', title2Key: 'homePage.hero.s2.title2', descKey: 'homePage.hero.s2.desc', btnKey: 'homePage.hero.s2.btn' },
-  { image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop', tagKey: 'homePage.hero.s3.tag', title1Key: 'homePage.hero.s3.title1', title2Key: 'homePage.hero.s3.title2', descKey: 'homePage.hero.s3.desc', btnKey: 'homePage.hero.s3.btn' }
+  { 
+    // Banner 1: 品牌形象 - 深色科技感世界地图
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop', 
+    tagKey: 'homePage.hero.s1.tag', 
+    title1Key: 'homePage.hero.s1.title1', 
+    title2Key: 'homePage.hero.s1.title2', 
+    descKey: 'homePage.hero.s1.desc', 
+    btnKey: 'homePage.hero.s1.btn' 
+  },
+  { 
+    // Banner 2: 核心硬件 - 芯片特写/服务器
+    image: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=2070&auto=format&fit=crop', 
+    tagKey: 'homePage.hero.s2.tag', 
+    title1Key: 'homePage.hero.s2.title1', 
+    title2Key: 'homePage.hero.s2.title2', 
+    descKey: 'homePage.hero.s2.desc', 
+    btnKey: 'homePage.hero.s2.btn' 
+  },
+  { 
+    // Banner 3: 维修服务 - 实验室/显微镜
+    image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=2070&auto=format&fit=crop', 
+    tagKey: 'homePage.hero.s3.tag', 
+    title1Key: 'homePage.hero.s3.title1', 
+    title2Key: 'homePage.hero.s3.title2', 
+    descKey: 'homePage.hero.s3.desc', 
+    btnKey: 'homePage.hero.s3.btn' 
+  },
+  { 
+    // Banner 4: 算力租赁 - 抽象数据流/云端
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=2070&auto=format&fit=crop', 
+    tagKey: 'homePage.hero.s4.tag', 
+    title1Key: 'homePage.hero.s4.title1', 
+    title2Key: 'homePage.hero.s4.title2', 
+    descKey: 'homePage.hero.s4.desc', 
+    btnKey: 'homePage.hero.s4.btn' 
+  }
 ]
 
 const servicesLocal = [
@@ -313,16 +385,31 @@ const servicesLocal = [
 
 const currentSlide = ref(0)
 let timer = null
-const nextSlide = () => { currentSlide.value = (currentSlide.value + 1) % slides.length }
-const setSlide = (i) => { currentSlide.value = i; clearInterval(timer); timer = setInterval(nextSlide, 5000) }
+
+// 重置计时器，防止手动切换后立即自动切换
+const resetTimer = () => {
+  clearInterval(timer)
+  timer = setInterval(nextSlide, 6000) // 稍微延长一点自动轮播时间
+}
+
+const nextSlide = () => { 
+  currentSlide.value = (currentSlide.value + 1) % slides.length 
+  resetTimer()
+}
+
+const prevSlide = () => {
+  currentSlide.value = currentSlide.value === 0 ? slides.length - 1 : currentSlide.value - 1
+  resetTimer()
+}
+
+const setSlide = (i) => { 
+  currentSlide.value = i
+  resetTimer()
+}
 
 onMounted(() => {
-  // Hero 轮播
-  timer = setInterval(nextSlide, 5000)
-  
-  // Brand 品牌墙轮播 (4秒一次)
+  timer = setInterval(nextSlide, 6000)
   brandTimer = setInterval(nextBrandPage, 4000)
-
   updateItemsToShow()
   window.addEventListener('resize', updateItemsToShow)
 })
@@ -342,17 +429,14 @@ onUnmounted(() => {
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 
-/* 品牌墙过渡动画 */
 .fade-slide-enter-active,
 .fade-slide-leave-active {
   transition: all 0.5s ease;
 }
-
 .fade-slide-enter-from {
   opacity: 0;
   transform: translateX(20px);
 }
-
 .fade-slide-leave-to {
   opacity: 0;
   transform: translateX(-20px);
