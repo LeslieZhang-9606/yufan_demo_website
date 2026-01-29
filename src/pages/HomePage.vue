@@ -1,29 +1,22 @@
 <template>
   <div class="bg-white">
-    <!-- Hero Section -->
     <section id="hero" class="relative w-full h-[768px] overflow-hidden bg-gray-900 text-white group">
-      <!-- Slides -->
       <div 
         v-for="(slide, index) in slides" 
         :key="index"
         class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
         :class="currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'"
       >
-        <!-- Overlay for better text readability -->
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
         
-        <!-- Background Image -->
         <img :src="slide.image" class="absolute inset-0 w-full h-full object-cover transform scale-105" alt="Hero Background" />
         
-        <!-- Content -->
         <div class="container-custom h-full flex items-center relative z-20">
           <div class="max-w-3xl pt-20 flex flex-col items-start text-left pl-4 lg:pl-0">
-            <!-- Tag -->
             <div class="inline-block py-1 px-3 border border-blue-500 bg-blue-900/30 backdrop-blur-sm text-blue-400 text-[11px] font-black uppercase tracking-[0.2em] mb-6 animate-fade-in-up">
               {{ $t(slide.tagKey) }}
             </div>
             
-            <!-- Title -->
             <h1 class="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[1.1] mb-6 animate-fade-in-up delay-100 break-words w-full shadow-black drop-shadow-lg">
               {{ $t(slide.title1Key) }} <br />
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white italic">
@@ -31,12 +24,10 @@
               </span>
             </h1>
             
-            <!-- Description -->
             <p class="text-gray-200 text-lg lg:text-xl leading-relaxed mb-10 max-w-xl border-l-4 border-blue-600 pl-6 animate-fade-in-up delay-200 bg-black/20 backdrop-blur-sm py-2 rounded-r-lg">
               {{ $t(slide.descKey) }}
             </p>
             
-            <!-- CTA Button -->
             <button class="bg-blue-600 hover:bg-white hover:text-blue-900 text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-xl shadow-blue-900/50 hover:shadow-blue-500/30 animate-fade-in-up delay-300 flex items-center gap-2">
               {{ $t(slide.btnKey) }}
               <span>→</span>
@@ -45,7 +36,6 @@
         </div>
       </div>
 
-      <!-- Navigation Arrows (Left/Right) -->
       <button 
         @click="prevSlide" 
         class="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-[-20px] group-hover:translate-x-0"
@@ -64,7 +54,6 @@
         </svg>
       </button>
 
-      <!-- Bottom Dots Indicators -->
       <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3">
         <button 
           v-for="(slide, index) in slides" 
@@ -76,7 +65,6 @@
       </div>
     </section>
 
-    <!-- Services Section (Unchanged) -->
     <section id="services" class="bg-gray-50 py-24">
       <div class="container-custom">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -104,7 +92,6 @@
       </div>
     </section>
 
-    <!-- Products Section (Unchanged) -->
     <section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
       <div class="flex flex-col lg:flex-row justify-between items-end mb-20">
         <div>
@@ -169,7 +156,6 @@
 
     <div class="h-48 bg-gradient-to-b from-white via-white to-[#0052FF]"></div>
 
-    <!-- Solutions Section (Unchanged) -->
     <section id="solutions" class="relative bg-[#0052FF] py-32 overflow-hidden text-white">
       <div class="absolute inset-0 opacity-10 pointer-events-none">
         <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.2)_0%,transparent_50%)]"></div>
@@ -195,7 +181,7 @@
 
           <div class="lg:w-1/2 relative mt-16 lg:mt-0">
             <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform duration-700">
-               <img src="/yufan_demo_website/images/Server_render.png" class="w-full h-auto opacity-90" />
+               <img :src="`${basePath}images/Server_render.png`" class="w-full h-auto opacity-90" />
                <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl text-gray-900 max-w-[200px] hidden md:block">
                   <div class="text-[10px] font-black text-blue-600 uppercase mb-2">Technical Core</div>
                   <div class="text-xl font-black tracking-tighter">SLA 24/7 Guaranteed</div>
@@ -207,7 +193,6 @@
       </div>
     </section>
 
-    <!-- Global Stats Section (Unchanged) -->
     <section id="global" class="py-32 bg-gray-900 text-white relative overflow-hidden">
       <div class="container-custom relative z-10 text-center">
         <h2 class="text-3xl font-black uppercase tracking-widest mb-16">{{ $t('homePage.globalTitle') }}</h2>
@@ -228,7 +213,6 @@
       </div>
     </section>
 
-    <!-- Partners Section (UPDATED: Logo Wall) -->
     <section class="py-24 border-b border-gray-100 bg-white overflow-hidden">
       <div class="container-custom">
         <div class="flex justify-between items-end mb-12">
@@ -258,7 +242,6 @@
                 :key="brand.name" 
                 class="group flex flex-col items-center justify-center h-32 border border-gray-100 rounded-2xl hover:border-blue-200 hover:shadow-xl transition-all duration-500 cursor-pointer bg-white p-4"
               >
-                <!-- Logo Image -->
                 <img 
                   :src="brand.logo" 
                   :alt="brand.name"
@@ -266,7 +249,6 @@
                   @error="(e) => { e.target.style.display='none'; e.target.nextElementSibling.style.display='block'; }"
                 />
                 
-                <!-- Fallback Text (Hidden by default, shows if image fails) -->
                 <span class="hidden text-xs font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors truncate w-3/4 text-center">
                   {{ brand.name }}
                 </span>
@@ -288,6 +270,9 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { siteData } from '../data/siteData.js'
+
+// 【关键修改】获取基础路径（自动适配本地和线上）
+const basePath = import.meta.env.BASE_URL
 
 const emit = defineEmits(['openLead', 'goCatalog'])
 
@@ -321,10 +306,10 @@ const rawBrandNames = [
   'Seagate', 'Microsoft', 'ASUS', 'SAMSUNG', 'TOSHIBA', 'Inspur'
 ]
 
-// 自动生成图片路径：/logos/huawei.png
+// 【关键修改】自动生成图片路径，前面拼接了 basePath
 const brandList = rawBrandNames.map(name => ({
   name: name,
-  logo: `/yufan_demo_website/logos/${name.toLowerCase().replace(/\s+/g, '')}.png`
+  logo: `${basePath}logos/${name.toLowerCase().replace(/\s+/g, '')}.png`
 }))
 
 const brandPage = ref(0)
@@ -382,11 +367,36 @@ const slides = [
   }
 ]
 
+// 【关键修改】数据数组里的本地图片，全都加上了 ${basePath}
 const servicesLocal = [
-  { id: 'hardware', icon: 'GPU', image: '/yufan_demo_website/images/Parts_supply.png', titleKey: 'homePage.services.hardware.title', descKey: 'homePage.services.hardware.desc' },
-  { id: 'custom', icon: 'R&D', image: '/yufan_demo_website/images/H100_module.png', titleKey: 'homePage.services.custom.title', descKey: 'homePage.services.custom.desc' },
-  { id: 'maintenance', icon: 'FIX', image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.maintenance.title', descKey: 'homePage.services.maintenance.desc' },
-  { id: 'solutions', icon: 'NET', image: '/yufan_demo_website/images/Server_3D_render.jpg', titleKey: 'homePage.services.solutions.title', descKey: 'homePage.services.solutions.desc' },
+  { 
+    id: 'hardware', 
+    icon: 'GPU', 
+    image: `${basePath}images/Parts_supply.png`, 
+    titleKey: 'homePage.services.hardware.title', 
+    descKey: 'homePage.services.hardware.desc' 
+  },
+  { 
+    id: 'custom', 
+    icon: 'R&D', 
+    image: `${basePath}images/H100_module.png`, 
+    titleKey: 'homePage.services.custom.title', 
+    descKey: 'homePage.services.custom.desc' 
+  },
+  { 
+    id: 'maintenance', 
+    icon: 'FIX', 
+    image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80', 
+    titleKey: 'homePage.services.maintenance.title', 
+    descKey: 'homePage.services.maintenance.desc' 
+  },
+  { 
+    id: 'solutions', 
+    icon: 'NET', 
+    image: `${basePath}images/Server_3D_render.jpg`, 
+    titleKey: 'homePage.services.solutions.title', 
+    descKey: 'homePage.services.solutions.desc' 
+  },
 ]
 
 const currentSlide = ref(0)
