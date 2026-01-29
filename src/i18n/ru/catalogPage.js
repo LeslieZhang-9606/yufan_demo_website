@@ -11,6 +11,7 @@ export default {
     list: 'Список'
   },
   filter: {
+    title: 'Фильтры',
     categories: 'Категории',
     brands: 'Бренды',
     reset: 'Сброс',

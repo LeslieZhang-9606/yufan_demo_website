@@ -17,6 +17,14 @@
               {{ $t('catalogPage.header.description') }}
             </p>
             <div class="flex items-center justify-end gap-4">
+              
+              <button 
+                @click="showMobileFilter = true"
+                class="lg:hidden px-4 py-2 bg-gray-900 text-white rounded-lg text-xs font-bold uppercase shadow-md hover:bg-gray-800 transition-colors flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                <span>{{ $t('catalogPage.filter.title') || 'Filter' }}</span>
+              </button>
               <div class="flex bg-gray-100 p-1 rounded-lg">
                 <button 
                   @click="viewMode = 'grid'" 
@@ -33,7 +41,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
                 </button>
               </div>
-              <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+              <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest hidden sm:block">
                 {{ $t('catalogPage.header.synced', { count: filteredProducts.length }) }}
               </div>
             </div>
@@ -43,8 +51,26 @@
 
       <div class="flex flex-col lg:flex-row gap-12">
         
-        <aside class="w-full lg:w-64 shrink-0">
-          <div class="sticky top-24 space-y-10">
+        <div 
+          v-if="showMobileFilter" 
+          @click="showMobileFilter = false"
+          class="fixed inset-0 bg-gray-900/50 z-40 lg:hidden backdrop-blur-sm transition-opacity"
+        ></div>
+
+        <aside 
+          class="fixed inset-y-0 left-0 z-50 w-[280px] bg-white p-6 shadow-2xl transform transition-transform duration-300 ease-in-out lg:static lg:w-64 lg:p-0 lg:shadow-none lg:bg-transparent lg:translate-x-0 shrink-0 overflow-y-auto"
+          :class="showMobileFilter ? 'translate-x-0' : '-translate-x-full'"
+        >
+          <div class="flex items-center justify-between mb-8 lg:hidden pb-4 border-b border-gray-100">
+            <span class="text-xs font-black uppercase tracking-widest text-gray-900">
+              {{ $t('catalogPage.filter.title') || 'Filters' }}
+            </span>
+            <button @click="showMobileFilter = false" class="p-2 -mr-2 text-gray-400 hover:text-red-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+
+          <div class="lg:sticky lg:top-24 space-y-10">
             
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -57,7 +83,6 @@
               </div>
               
               <div class="space-y-1">
-                <!-- 修改处：删除了这里的 span 计数标签 -->
                 <button
                   @click="handleFilter('category', 'All Hardware')"
                   class="w-full flex items-center justify-between py-2 px-3 rounded-lg text-left transition-all duration-200"
@@ -164,26 +189,26 @@
             <div 
               v-for="product in currentItems" 
               :key="product.id"
-              class="group flex items-center gap-6 bg-white p-4 rounded-xl border border-gray-100 transition-all hover:shadow-lg hover:border-blue-200"
+              class="group flex flex-col sm:flex-row items-center gap-6 bg-white p-4 rounded-xl border border-gray-100 transition-all hover:shadow-lg hover:border-blue-200"
             >
-              <div class="w-20 h-20 shrink-0 bg-gray-50 rounded-lg flex items-center justify-center p-2">
+              <div class="w-full sm:w-20 h-40 sm:h-20 shrink-0 bg-gray-50 rounded-lg flex items-center justify-center p-2">
                  <img v-if="product.img" :src="product.img" class="max-w-full max-h-full object-contain"/>
               </div>
               
-              <div class="flex-1 min-w-0 grid grid-cols-12 gap-6 items-center">
-                <div class="col-span-4">
+              <div class="flex-1 min-w-0 grid grid-cols-12 gap-4 sm:gap-6 items-center w-full">
+                <div class="col-span-12 sm:col-span-4">
                    <div class="text-[10px] font-bold text-blue-600 uppercase mb-0.5">{{ product.brand }}</div>
                    <h3 class="text-base font-bold text-gray-900 truncate">{{ formatProductName(product) }}</h3>
                 </div>
                 
-                <div class="col-span-4 flex flex-wrap gap-x-4 gap-y-1">
+                <div class="col-span-12 sm:col-span-4 flex flex-wrap gap-x-4 gap-y-1">
                    <div v-for="(val, key, idx) in product.specs" :key="key" v-show="idx < 3" class="flex items-center gap-1 text-[10px]">
                       <span class="text-gray-400 uppercase font-medium">{{ key }}:</span>
                       <span class="text-gray-700 font-bold truncate max-w-[80px]">{{ val }}</span>
                    </div>
                 </div>
 
-                <div class="col-span-4 flex items-center justify-end gap-4">
+                <div class="col-span-12 sm:col-span-4 flex items-center justify-between sm:justify-end gap-4">
                   <span class="text-xs font-bold text-gray-500">
                     {{ $t('catalogPage.product.priceOnRequest') }}
                   </span>
@@ -281,9 +306,9 @@ const currentPage = ref(1);
 const pageSize = 12;
 const filterType = ref('all');
 const filterValue = ref('All Hardware');
-
-// 新增跳转页码的 ref
 const jumpPage = ref('');
+// 🔥 新增：控制手机端筛选栏显示
+const showMobileFilter = ref(false); 
 
 const brandList = computed(() => {
   const brands = products.map(p => p.brand).filter(b => b && b.trim() !== '');
@@ -326,7 +351,6 @@ const filteredProducts = computed(() => {
 
 const totalPages = computed(() => Math.ceil(filteredProducts.value.length / pageSize));
 
-// 智能分页逻辑
 const visiblePages = computed(() => {
   const total = totalPages.value;
   const current = currentPage.value;
@@ -355,19 +379,20 @@ const currentItems = computed(() => {
   return filteredProducts.value.slice(start, start + pageSize);
 });
 
-watch([filterType, filterValue], () => { currentPage.value = 1; });
+// 监听筛选变化
+watch([filterType, filterValue], () => { 
+  currentPage.value = 1; 
+  // 🔥 新增：在手机端，选中筛选项后自动关闭筛选抽屉
+  showMobileFilter.value = false;
+});
 
-// 🔥🔥🔥 新增：跳转处理逻辑 🔥🔥🔥
 const handleJump = () => {
-  // 1. 转为数字
   const p = parseInt(jumpPage.value);
-  // 2. 验证有效性 (必须是数字，且在 1 到 总页数 之间)
   if (!isNaN(p) && p >= 1 && p <= totalPages.value) {
     currentPage.value = p;
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    jumpPage.value = ''; // 跳转后清空输入框
+    jumpPage.value = ''; 
   } else {
-    // 可选：输入错误时清空或提示，这里直接清空
     jumpPage.value = '';
   }
 };
@@ -400,7 +425,6 @@ const resetFilter = () => {
 .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #e5e7eb; border-radius: 4px; }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover { background-color: #d1d5db; }
 
-/* 隐藏数字输入框的上下箭头 */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 

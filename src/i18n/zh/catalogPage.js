@@ -11,6 +11,7 @@ export default {
     list: '列表'
   },
   filter: {
+    title: "筛选",
     categories: '产品分类',
     brands: '品牌筛选',
     reset: '重置',
