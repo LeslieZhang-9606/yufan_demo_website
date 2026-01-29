@@ -8,7 +8,7 @@ export default {
     inn: '税号 (INN): 9703235933',
     kpp: '机构代码 (KPP): 770301001',
     ogrn: '注册号 (OGRN): 1267700010071',
-    director: '总经理: 陈德鸿'
+    director: '总经理: 郑德宏'
   },
   contact: {
     phone: '+7 933 673-99-73',

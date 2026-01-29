@@ -25,7 +25,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA A100 40G OEM.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA A100 40G OEM.jpg",
     "intro": {
       "cn": "面向OEM的高性能A100 40G GPU，适用于AI与HPC集成方案。",
       "en": "High‑performance A100 40G GPU for OEM integration, ideal for AI and HPC workloads.",
@@ -47,7 +47,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA H100 80GB PCIE.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA H100 80GB PCIE.jpg",
     "intro": {
       "cn": "旗舰级H100 80GB PCIe GPU，面向AI与HPC的高性能计算。",
       "en": "Flagship H100 80GB PCIe GPU built for advanced AI and HPC workloads.",
@@ -71,7 +71,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA A100 96GB OEM PCIE.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA A100 96GB OEM PCIE.jpg",
     "intro": {
       "cn": "A100 96GB OEM PCIe，Ampere架构高性能GPU，适用于AI与HPC任务。",
       "en": "A100 96GB OEM PCIe GPU with Ampere architecture for high‑performance AI and HPC.",
@@ -94,7 +94,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA A100 80GB PCIE.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA A100 80GB PCIE.jpg",
     "intro": {
       "cn": "高性能A100 80GB PCIe GPU，面向AI训练、推理与HPC加速",
       "en": "High‑performance A100 80GB PCIe GPU for AI training, inference, and HPC",
@@ -114,7 +114,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA A100 40G Original.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA A100 40G Original.jpg",
     "intro": {
       "cn": "A100 40GB 原版，基于Ampere架构的高性能AI与HPC加速卡。",
       "en": "A100 40GB Original GPU for high‑performance AI and HPC workloads.",
@@ -135,7 +135,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA H100 80GB OEM PCIE.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA H100 80GB OEM PCIE.jpg",
     "intro": {
       "cn": "H100 80GB GPU，基于Hopper架构，面向AI与HPC的高性能OEM方案",
       "en": "H100 80GB GPU with Hopper architecture for high‑performance AI and HPC OEM systems",
@@ -158,7 +158,7 @@ products: [
     "brand": "NVIDIA",
     "category": "GPUВидеокарты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/GPUВидеокарты/NVIDIA A100 80GB OEM PCIE.jpg",
+    "img": "/yufan_demo_website/products/GPUВидеокарты/NVIDIA A100 80GB OEM PCIE.jpg",
     "intro": {
       "cn": "面向OEM与云服务的A100 80GB GPU，适用于AI与HPC高性能计算。",
       "en": "A100 80GB OEM GPU for AI, ML, deep learning and HPC integration.",
@@ -181,7 +181,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "WLAN контроллеры",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/WLAN контроллеры/Контроллер HPE JW679A  Aruba 7000.jpg",
+    "img": "/yufan_demo_website/products/WLAN контроллеры/Контроллер HPE JW679A  Aruba 7000.jpg",
     "intro": {
       "cn": "紧凑型企业无线控制器，支持最多16个AP并提供基础安全功能。",
       "en": "Compact WLAN controller for up to 16 APs with basic security and stable performance.",
@@ -218,7 +218,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "WLAN контроллеры",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/WLAN контроллеры/Контроллер HPE JX927A  Aruba.jpg",
+    "img": "/yufan_demo_website/products/WLAN контроллеры/Контроллер HPE JX927A  Aruba.jpg",
     "intro": {
       "cn": "集中管理Aruba无线网络，支持高可用与高性能。",
       "en": "Centralized control for Aruba wireless networks with high availability.",
@@ -255,7 +255,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "WLAN контроллеры",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/WLAN контроллеры/HPE JW633A  Aruba 7000.jpg",
+    "img": "/yufan_demo_website/products/WLAN контроллеры/HPE JW633A  Aruba 7000.jpg",
     "intro": {
       "cn": "Aruba 7000 控制器可管理大量AP并提升无线网络效率。",
       "en": "Aruba 7000 controller manages many APs and improves wireless network efficiency.",
@@ -291,7 +291,7 @@ products: [
     "brand": "Ericsson",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Ericsson 2219 B1 KRC 161 622.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Ericsson 2219 B1 KRC 161 622.jpg",
     "intro": {
       "cn": "紧凑高效的LTE B1远程射频单元，提升覆盖和容量。",
       "en": "Compact, efficient LTE Band 1 RRU improving network coverage and capacity.",
@@ -313,7 +313,7 @@ products: [
     "brand": "Ericsson",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Ericsson INF 903 603707.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Ericsson INF 903 603707.jpg",
     "intro": {
       "cn": "高性能干扰滤波与接口板，用于爱立信光网络系统",
       "en": "High‑performance interference filter and interface board for Ericsson optical systems",
@@ -334,7 +334,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia AZNA 473914A.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia AZNA 473914A.jpg",
     "intro": {
       "cn": "AirScale远端射频头，支持Band 40与4T4R，高功率覆盖，适用于4.5G Pro网络。",
       "en": "AirScale RRH for Band 40 with 4T4R and high power, boosting 4.5G Pro coverage and capacity.",
@@ -357,7 +357,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia FXED 472924A FLEXI RF MODULE 6TX 1800.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia FXED 472924A FLEXI RF MODULE 6TX 1800.jpg",
     "intro": {
       "cn": "6发射Flexi射频模块，支持1800MHz与2G/3G/4G网络扩容",
       "en": "6‑TX Flexi RF module for 1800 MHz, boosting 2G/3G/4G coverage and capacity",
@@ -380,7 +380,7 @@ products: [
     "brand": "Ericsson",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Ericsson INF 903 603707.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Ericsson INF 903 603707.jpg",
     "intro": {
       "cn": "高性能干扰滤波与接口板，用于爱立信光网络系统",
       "en": "High‑performance interference filter and interface board for Ericsson optical systems",
@@ -401,7 +401,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/NOKIA FXED 472924A.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/NOKIA FXED 472924A.jpg",
     "intro": {
       "cn": "高性能宽带接入平台，支持GPON/XGS-PON，具备高密度与灵活可扩展性。",
       "en": "High‑performance broadband access platform with GPON/XGS‑PON, high density, and scalability.",
@@ -420,7 +420,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/4G 5G Nokia FXED RRU 1800.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/4G 5G Nokia FXED RRU 1800.jpg",
     "intro": {
       "cn": "适用于4G/5G的高性能1800MHz诺基亚远端射频单元。",
       "en": "High‑performance 1800 MHz Nokia RRU for enhanced 4G/5G coverage.",
@@ -443,7 +443,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia RRU 473484A AHGA 474254A202.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia RRU 473484A AHGA 474254A202.jpg",
     "intro": {
       "cn": "高性能远端射频单元，支持4G与5G，提升覆盖与容量。",
       "en": "High‑performance RRU for 4G/5G, improving coverage and network capacity.",
@@ -467,7 +467,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia 5G Flexi RRU FHEB 472650A.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia 5G Flexi RRU FHEB 472650A.jpg",
     "intro": {
       "cn": "Nokia 5G Flexi RRU FHEB提供高性能与灵活性，适用于5G网络部署。",
       "en": "Nokia 5G Flexi RRU FHEB offers high performance and flexibility for 5G deployments.",
@@ -488,7 +488,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia Base 3G4G5G Station Router FRGU 472956A.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia Base 3G4G5G Station Router FRGU 472956A.jpg",
     "intro": {
       "cn": "高性能3G/4G/5G基站路由器，提供高带宽与灵活安全的传输能力",
       "en": "High‑performance 3G/4G/5G base station router with scalable, secure transport",
@@ -502,7 +502,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia 5G FRGX 473440A101 Nokia FRGX 473440A Flexi RFM 3-pipe 2100 240W.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia 5G FRGX 473440A101 Nokia FRGX 473440A Flexi RFM 3-pipe 2100 240W.jpg",
     "intro": {
       "cn": "高功率240W的诺基亚5G模块组合，支持2100MHz并提升网络覆盖与容量。",
       "en": "Nokia 240W 5G module combo supporting 2100MHz for enhanced coverage and capacity.",
@@ -524,7 +524,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia RRU FRGY Flexi MCPA FRGY 472854A.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia RRU FRGY Flexi MCPA FRGY 472854A.jpg",
     "intro": {
       "cn": "高性能远端射频单元，用于扩展覆盖并提升移动网络容量。",
       "en": "High‑performance RRU for expanding coverage and boosting mobile network capacity.",
@@ -543,7 +543,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia FXEB 472501A103 Flexi FXEB 472501A.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia FXEB 472501A103 Flexi FXEB 472501A.jpg",
     "intro": {
       "cn": "高性能扩展模块，用于提升Nokia Flexi基站容量与灵活性。",
       "en": "High‑performance expansion module enhancing Nokia Flexi base station capacity and flexibility.",
@@ -565,7 +565,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia 4G 1800 MHz.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia 4G 1800 MHz.jpg",
     "intro": {
       "cn": "高性能1800MHz 4G远程射频单元，提升覆盖与容量。",
       "en": "High‑performance 1800 MHz 4G RRU enhancing coverage and capacity.",
@@ -587,7 +587,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia 5G FRGX Nokia FRGX.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia 5G FRGX Nokia FRGX.jpg",
     "intro": {
       "cn": "高性能5G射频模块，支持2100MHz与3-pipe配置，提升覆盖与容量。",
       "en": "High‑performance 5G RF module with 2100MHz and 3‑pipe design for enhanced coverage.",
@@ -610,7 +610,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia Base Station RRU FRGY.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia Base Station RRU FRGY.jpg",
     "intro": {
       "cn": "高性能5G远端射频单元，提升容量并易于部署。",
       "en": "High‑performance 5G RRU offering improved capacity and flexible deployment.",
@@ -624,7 +624,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia FXED 472924A FLEXI RF.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia FXED 472924A FLEXI RF.jpg",
     "intro": {
       "cn": "紧凑高性能的1800MHz六发射Flexi射频模块。",
       "en": "Compact high‑performance 1800MHz Flexi RF module with 6 transmitters.",
@@ -645,7 +645,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia FRGU 472956A102 Flexi 6TX 2100 RF.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia FRGU 472956A102 Flexi 6TX 2100 RF.jpg",
     "intro": {
       "cn": "面向2100MHz频段的6发射Flexi射频模块，提升3G/4G容量与覆盖。",
       "en": "6TX 2100 MHz Flexi RF module boosting 3G/4G capacity and coverage.",
@@ -665,7 +665,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia RRU FXEB FXDA FXDB FXEF FXED.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia RRU FXEB FXDA FXDB FXEF FXED.jpg",
     "intro": {
       "cn": "Nokia RRU FX系列支持高性能4G/5G远端射频部署，功率高、效率强。",
       "en": "Nokia FX RRU series enables high‑performance 4G/5G deployment with high power and efficiency.",
@@ -679,7 +679,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia AHGA RRU 473484A AHGA 474254A202.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia AHGA RRU 473484A AHGA 474254A202.jpg",
     "intro": {
       "cn": "高效RRU设备，支持多频段与4G/5G网络部署，提升覆盖与容量。",
       "en": "High‑efficiency RRU units for 4G/5G deployment, offering strong output and improved coverage.",
@@ -700,7 +700,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia RRU FHEB AZNA FHDB FXEB FXEB FRGT FXDB FXEF.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia RRU FHEB AZNA FHDB FXEB FXEB FRGT FXDB FXEF.jpg",
     "intro": {
       "cn": "Nokia RRU系列支持多频段部署，具备高功率与高性能无线覆盖能力。",
       "en": "Nokia RRU series offers high‑power, multi‑band units for efficient mobile network deployment.",
@@ -722,7 +722,7 @@ products: [
     "brand": "Nokia",
     "category": "Базовые станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Базовые станции/Nokia AHGA RRU 473484A AHGA 474254A202.jpg",
+    "img": "/yufan_demo_website/products/Базовые станции/Nokia AHGA RRU 473484A AHGA 474254A202.jpg",
     "intro": {
       "cn": "高效RRU设备，支持多频段与4G/5G网络部署，提升覆盖与容量。",
       "en": "High‑efficiency RRU units for 4G/5G deployment, offering strong output and improved coverage.",
@@ -743,7 +743,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-920-AC-AFO.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-920-AC-AFO.jpg",
     "intro": {
       "cn": "920W交流电源，适用于Juniper MX/PTX，支持AFO气流与高可靠性。",
       "en": "920W AC PSU for Juniper MX/PTX routers with AFO airflow and high reliability.",
@@ -765,7 +765,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-600-AC-AFO.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-600-AC-AFO.jpg",
     "intro": {
       "cn": "600W 交流供电模块，支持反向风道，适用于Juniper设备。",
       "en": "600W AC power supply with reverse airflow for Juniper networking devices.",
@@ -786,7 +786,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-150-AC-AFO.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-150-AC-AFO.jpg",
     "intro": {
       "cn": "紧凑150W交流电源，具备反向气流设计，适用于Juniper EX系列交换机。",
       "en": "Compact 150W AC power supply with reverse airflow for Juniper EX switches.",
@@ -809,7 +809,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-1100-AC-AFO.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-1100-AC-AFO.jpg",
     "intro": {
       "cn": "1100W 交流电源模块，适用于MX系列，支持AFO气流与高可靠性。",
       "en": "1100W AC PSU for Juniper MX routers with AFO airflow and high reliability.",
@@ -832,7 +832,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-350-AC-AFO.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-350-AC-AFO.jpg",
     "intro": {
       "cn": "350W 交流电源，适用于反向气流的 Juniper 设备。",
       "en": "350W AC power supply with AFO airflow for Juniper network devices.",
@@ -854,7 +854,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-400W-AC.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-400W-AC.jpg",
     "intro": {
       "cn": "适用于Juniper EX系列的400W交流电源，稳定可靠。",
       "en": "400W AC PSU for Juniper EX switches, stable and reliable.",
@@ -876,7 +876,7 @@ products: [
     "brand": "Juniper",
     "category": "Блоки питания",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Блоки питания/Juniper JPSU-715-AC-AFO.jpg",
+    "img": "/yufan_demo_website/products/Блоки питания/Juniper JPSU-715-AC-AFO.jpg",
     "intro": {
       "cn": "715W 高性能AC电源，适用于Juniper MX系列，支持AFO反向气流与冗余。",
       "en": "715W high‑performance AC PSU for Juniper MX Series with AFO airflow and redundancy.",
@@ -900,7 +900,7 @@ products: [
     "brand": "Supermicro",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/Supermicro Nvidia H100 SYS-821GE-TNHR.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/Supermicro Nvidia H100 SYS-821GE-TNHR.jpg",
     "intro": {
       "cn": "搭载8颗NVIDIA H100的高性能AI与HPC服务器，具备强大算力与扩展性。",
       "en": "High‑performance server with 8 NVIDIA H100 GPUs for advanced AI and HPC workloads.",
@@ -924,7 +924,7 @@ products: [
     "brand": "Inspur",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/Inspur Nvidia H200 AI Server Bundle 10.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/Inspur Nvidia H200 AI Server Bundle 10.jpg",
     "intro": {
       "cn": "Inspur 集成 NVIDIA H200 的一体化 AI 服务器套装，适用于高性能 AI 部署。",
       "en": "Integrated Inspur server with NVIDIA H200 GPUs for high‑performance AI deployment.",
@@ -948,7 +948,7 @@ products: [
     "brand": "NVIDIA",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/NVIDIA H100 8 GPU.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/NVIDIA H100 8 GPU.jpg",
     "intro": {
       "cn": "搭载8块NVIDIA H100的高性能AI与HPC计算系统。",
       "en": "High‑performance system with 8 NVIDIA H100 GPUs for AI and HPC workloads.",
@@ -971,7 +971,7 @@ products: [
     "brand": "Dell",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/Dell PowerEdge XE9680.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/Dell PowerEdge XE9680.jpg",
     "intro": {
       "cn": "高性能AI与HPC服务器，配8×H200、双Xeon、2TB DDR5与400Gb网络。",
       "en": "High‑performance AI/HPC server with 8×H200 GPUs, dual Xeon CPUs and fast NVMe/IB.",
@@ -994,7 +994,7 @@ products: [
     "brand": "Supermicro",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/Supermicro Nvidia H200 SYS-821GE-TNHR.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/Supermicro Nvidia H200 SYS-821GE-TNHR.jpg",
     "intro": {
       "cn": "8U高性能服务器，支持8×NVIDIA H200 GPU与双路至强，适用于AI与HPC。",
       "en": "8U high‑performance server with 8×NVIDIA H200 GPUs and dual Xeon for AI and HPC.",
@@ -1018,7 +1018,7 @@ products: [
     "brand": "Inspur",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/Inspur Nvidia H100 AI Server Bundle 9.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/Inspur Nvidia H100 AI Server Bundle 9.jpg",
     "intro": {
       "cn": "Inspur整机方案，含8×NVIDIA H100 GPU，适用于AI训练与推理。",
       "en": "Inspur turnkey server with 8×NVIDIA H100 GPUs for high‑performance AI workloads.",
@@ -1040,7 +1040,7 @@ products: [
     "brand": "Asus",
     "category": "Высокопроизводительные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Высокопроизводительные серверы/Asus Nvidia H200 AI Server Bundle11.jpg",
+    "img": "/yufan_demo_website/products/Высокопроизводительные серверы/Asus Nvidia H200 AI Server Bundle11.jpg",
     "intro": {
       "cn": "Asus搭载8×NVIDIA H200 GPU的AI服务器套装，适合AI训练与数据分析。",
       "en": "Asus AI server bundle with 8 NVIDIA H200 GPUs for high‑performance AI workloads.",
@@ -1062,7 +1062,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper MPC7E-MRATE-RTU.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper MPC7E-MRATE-RTU.jpg",
     "intro": {
       "cn": "高性能可扩展的Juniper MX系列多速率接口模块。",
       "en": "High-performance multi-rate interface module for Juniper MX routers.",
@@ -1084,7 +1084,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper MPC10E-15C-P-BASE.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper MPC10E-15C-P-BASE.jpg",
     "intro": {
       "cn": "高密度15×100GE接口卡，适用于Juniper MX路由器的高性能网络部署。",
       "en": "High‑density 15×100GE interface card for Juniper MX routers, built for high performance.",
@@ -1107,7 +1107,7 @@ products: [
     "brand": "ZTE",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/ZTE ZXA10 C320  платформа оптической линии.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/ZTE ZXA10 C320  платформа оптической линии.jpg",
     "intro": {
       "cn": "紧凑型低能耗OLT平台，提供高密度GPON/EPON端口与灵活上行配置。",
       "en": "Compact low‑power OLT with high‑density GPON/EPON ports and flexible uplink options.",
@@ -1138,7 +1138,7 @@ products: [
     "brand": "ZTE",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Модуль управления ZTE ZXMP M721 DX61.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Модуль управления ZTE ZXMP M721 DX61.jpg",
     "intro": {
       "cn": "ZTE DX61控制模块，适用于ZXMP M700，实现集中管理与E300 NMS集成。",
       "en": "ZTE DX61 control module for ZXMP M700 with centralized management and E300 NMS integration.",
@@ -1167,7 +1167,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper MPC7E-10G.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper MPC7E-10G.jpg",
     "intro": {
       "cn": "高性能10GbE接口模块，适用于Juniper MX路由器，提供高带宽与灵活配置。",
       "en": "High‑performance 10GbE interface module for Juniper MX routers with high bandwidth and flexibility.",
@@ -1193,7 +1193,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper MPC4E-3D-2CGE-8XGE БУ.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper MPC4E-3D-2CGE-8XGE БУ.jpg",
     "intro": {
       "cn": "双100GE与八10GE端口的高性能Juniper MX路由器线卡，适用于扩容与替换。",
       "en": "High‑performance MX router line card with 2x100GE and 8x10GE ports for expansion or replacement.",
@@ -1217,7 +1217,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper MPC7E-10G 40 портов 10GE SFPP БУ.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper MPC7E-10G 40 портов 10GE SFPP БУ.jpg",
     "intro": {
       "cn": "Juniper MPC7E-10G，40口10GE SFPP，用于MX路由器的高密度接口卡。",
       "en": "Juniper MPC7E-10G, 40x10GE SFPP line card for MX routers, high‑density and reliable.",
@@ -1239,7 +1239,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper MPC3E-3D-NG-Q БУ.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper MPC3E-3D-NG-Q БУ.jpg",
     "intro": {
       "cn": "高性能 Juniper MX 系列用模块化线卡，支持10/40/100GE，可靠适用。",
       "en": "High‑performance modular Juniper MX line card with 10/40/100GE support and high reliability.",
@@ -1264,7 +1264,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper RE-S-X6-64G-LT-S БУ.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper RE-S-X6-64G-LT-S БУ.jpg",
     "intro": {
       "cn": "高性能MX系列路由引擎，64GB内存，带保修，适用于大型网络。",
       "en": "High‑performance MX Series routing engine with 64GB RAM, tested and warrantied.",
@@ -1288,7 +1288,7 @@ products: [
     "brand": "Huawei",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Huawei H902CSHF 16-port XGS-PON.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Huawei H902CSHF 16-port XGS-PON.jpg",
     "intro": {
       "cn": "华为H902CSHF，16口XGS-PON板卡，适用于MA5800，提供10G对称高带宽。",
       "en": "Huawei H902CSHF 16-port XGS-PON board for MA5800 with 10G symmetric bandwidth.",
@@ -1310,7 +1310,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper EX-UM-4X4SFP.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper EX-UM-4X4SFP.jpg",
     "intro": {
       "cn": "通用接口模块，提供4×10GE和4×1GE灵活连接能力。",
       "en": "Universal interface module with 4×10GE and 4×1GE for flexible connectivity.",
@@ -1332,7 +1332,7 @@ products: [
     "brand": "Juniper",
     "category": "Интерфейсные модули",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Интерфейсные модули/Juniper EX-UM-8X8SFP.jpg",
+    "img": "/yufan_demo_website/products/Интерфейсные модули/Juniper EX-UM-8X8SFP.jpg",
     "intro": {
       "cn": "通用接口模块，提供8×10GE与8×1GE灵活扩展能力。",
       "en": "Universal module offering flexible expansion with 8×10GE and 8×1GE ports.",
@@ -1355,7 +1355,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7050SX3-48C8-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7050SX3-48C8-F.jpg",
     "intro": {
       "cn": "高性能数据中心交换机，提供48×10GbE和8×100GbE端口。",
       "en": "High‑performance switch with 48×10GbE and 8×100GbE for modern data centers.",
@@ -1376,7 +1376,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5120-32C-AFI.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5120-32C-AFI.jpg",
     "intro": {
       "cn": "高性能100GbE数据中心交换机，具备低时延与自动化能力。",
       "en": "High‑performance 100GbE data center switch with low latency and automation.",
@@ -1398,7 +1398,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX2300-24T-DC.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX2300-24T-DC.jpg",
     "intro": {
       "cn": "高性能可靠的DC供电24口千兆接入交换机，适用于企业与数据中心。",
       "en": "High‑performance DC‑powered 24‑port access switch for enterprise and data‑center use.",
@@ -1422,7 +1422,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX2300-24P.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX2300-24P.jpg",
     "intro": {
       "cn": "支持PoE+的24口千兆接入交换机，适用于现代企业网络。",
       "en": "24-port Gigabit access switch with PoE+, ideal for modern enterprise networks.",
@@ -1445,7 +1445,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX3400-24T.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX3400-24T.jpg",
     "intro": {
       "cn": "高性能接入层交换机，提供24GE端口与10GE上行及虚拟机箱功能。",
       "en": "High‑performance access switch with 24GE ports, 10GE uplinks, and Virtual Chassis.",
@@ -1469,7 +1469,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5120-32C-AFO.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5120-32C-AFO.jpg",
     "intro": {
       "cn": "高性能数据中心交换机，支持AFO气流和32个100G端口。",
       "en": "High‑performance data‑center switch with AFO airflow and 32×100G ports.",
@@ -1495,7 +1495,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX4300-24P.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX4300-24P.jpg",
     "intro": {
       "cn": "EX4300-24P是一款支持PoE+的高性能接入交换机，适用于现代企业网络。",
       "en": "EX4300-24P is a high‑performance PoE+ access switch for modern enterprise networks.",
@@ -1519,7 +1519,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX4300-24T.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX4300-24T.jpg",
     "intro": {
       "cn": "高性能24口千兆交换机，具备虚拟化与二三层功能，适合企业网络。",
       "en": "High‑performance 24‑port Gigabit switch with L2/L3 features and virtualization for enterprises.",
@@ -1542,7 +1542,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX4300-48P.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX4300-48P.jpg",
     "intro": {
       "cn": "EX4300-48P为现代网络提供高密度PoE+接入与虚拟化能力",
       "en": "EX4300-48P delivers high‑density PoE+ access with virtualization for modern networks",
@@ -1564,7 +1564,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5110-48S-AFI2.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5110-48S-AFI2.jpg",
     "intro": {
       "cn": "高密度10GbE端口的1U数据中心接入与汇聚交换机。",
       "en": "1U access/aggregation switch with high‑density 10GbE for modern data centers.",
@@ -1588,7 +1588,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5110-48S-AFO2.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5110-48S-AFO2.jpg",
     "intro": {
       "cn": "高密度10GbE与40GbE的数据中心交换机，采用AFO2前热后排气流设计。",
       "en": "High-density 10GbE/40GbE data center switch with AFO2 reverse airflow cooling.",
@@ -1611,7 +1611,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX4300-48T.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX4300-48T.jpg",
     "intro": {
       "cn": "高密度千兆端口的企业级高性能接入与汇聚交换机。",
       "en": "High-performance enterprise switch with high-density Gigabit ports and L2/L3 features.",
@@ -1632,7 +1632,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX3400-48T.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX3400-48T.jpg",
     "intro": {
       "cn": "高密度端口的企业级接入/汇聚交换机，性能强大且易管理。",
       "en": "High‑density enterprise access/aggregation switch with strong performance and easy management.",
@@ -1657,7 +1657,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5120-48Y-AFO2.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5120-48Y-AFO2.jpg",
     "intro": {
       "cn": "高密度25GbE并具反向气流AFO2的数据中心交换机",
       "en": "High‑density 25GbE data center switch with reverse airflow AFO2",
@@ -1680,7 +1680,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5210-64C-AFO2.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5210-64C-AFO2.jpg",
     "intro": {
       "cn": "高性能100G数据中心交换机，支持64端口与AFO2反向气流。",
       "en": "High‑performance 100G data‑center switch with 64 ports and AFO2 reverse airflow.",
@@ -1704,7 +1704,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX3400-24P.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX3400-24P.jpg",
     "intro": {
       "cn": "EX3400-24P是支持PoE+的高性能接入交换机，适用于企业网络。",
       "en": "EX3400-24P is a PoE+ access switch offering high performance and flexible uplinks.",
@@ -1728,7 +1728,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper EX2300-24T.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper EX2300-24T.jpg",
     "intro": {
       "cn": "Juniper EX2300-24T是一款高性能企业级接入交换机，具备高可靠性与灵活扩展性。",
       "en": "Juniper EX2300-24T is a reliable, high-performance access switch for modern enterprise networks.",
@@ -1751,7 +1751,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper BASE EX9204.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper BASE EX9204.jpg",
     "intro": {
       "cn": "EX9204 为大型网络提供高性能可扩展模块化交换机底盘。",
       "en": "EX9204 is a high‑performance modular chassis for scalable core/aggregation networks.",
@@ -1775,7 +1775,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper BASE EX9214.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper BASE EX9214.jpg",
     "intro": {
       "cn": "高性能模块化机箱，为大型网络提供灵活扩展与高可靠性。",
       "en": "High‑performance modular chassis offering scalable, reliable networking for large systems.",
@@ -1801,7 +1801,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper BASE EX9208.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper BASE EX9208.jpg",
     "intro": {
       "cn": "高性能模块化底盘，适用于大规模EX9200网络的可靠核心平台。",
       "en": "High‑performance modular chassis for scalable EX9200 core and aggregation networks.",
@@ -1824,7 +1824,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX10002.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX10002.jpg",
     "intro": {
       "cn": "高性能核心与汇聚交换机，具备高速端口、低时延和丰富网络特性。",
       "en": "High‑performance core and aggregation switch with high‑speed ports and low latency.",
@@ -1846,7 +1846,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Коммутатор  HPE JL075A  Aruba 3810.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Коммутатор  HPE JL075A  Aruba 3810.jpg",
     "intro": {
       "cn": "支持PoE+与堆叠的HPE Aruba 3810M企业级三层交换机。",
       "en": "HPE Aruba 3810M L3 switch with PoE+ and stacking for enterprise networks.",
@@ -1881,7 +1881,7 @@ products: [
     "brand": "HPE",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Коммутатор HPE J9772A  Aruba 2530.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Коммутатор HPE J9772A  Aruba 2530.jpg",
     "intro": {
       "cn": "经济可靠的24口千兆二层交换机，适合预算有限的中小型网络。",
       "en": "Affordable and reliable 24-port Gigabit Layer 2 switch for small and midsize networks.",
@@ -1913,7 +1913,7 @@ products: [
     "brand": "HPE",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Коммутатор  HPE JL072A  Aruba 3810.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Коммутатор  HPE JL072A  Aruba 3810.jpg",
     "intro": {
       "cn": "灵活高性能的三层交换机，支持堆叠，适合快速成长型网络。",
       "en": "Flexible high‑performance Layer 3 switch with stacking for growing networks.",
@@ -1950,7 +1950,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE8850-64CQ-EI.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE8850-64CQ-EI.jpg",
     "intro": {
       "cn": "64口100GE数据中心交换机，支持VXLAN/EVPN，性能强大可靠",
       "en": "64-port 100GE data center switch with high throughput and VXLAN/EVPN support",
@@ -1972,7 +1972,7 @@ products: [
     "brand": "NVIDIA Mellanox",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/NVIDIA Mellanox MQM9790-NS2F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/NVIDIA Mellanox MQM9790-NS2F.jpg",
     "intro": {
       "cn": "高性能HDR InfiniBand交换机，40端口，超低延迟，适用于HPC与AI集群。",
       "en": "High‑performance HDR InfiniBand switch with 40 ports and ultra‑low latency for HPC and AI.",
@@ -1997,7 +1997,7 @@ products: [
     "brand": "NVIDIA Mellanox",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/NVIDIA Mellanox MQM9790-NS2R.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/NVIDIA Mellanox MQM9790-NS2R.jpg",
     "intro": {
       "cn": "高性能HDR InfiniBand交换机，低时延、可扩展，适用于HPC与AI网络。",
       "en": "High‑performance HDR InfiniBand switch with low latency and scalability for HPC and AI.",
@@ -2022,7 +2022,7 @@ products: [
     "brand": "NVIDIA Mellanox",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/NVIDIA Mellanox MQM9700-NS2R.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/NVIDIA Mellanox MQM9700-NS2R.jpg",
     "intro": {
       "cn": "高性能InfiniBand EDR交换机，提供40端口、低延迟与高带宽，适用于HPC与AI。",
       "en": "High‑performance InfiniBand EDR switch with 40 ports, low latency and high bandwidth for HPC/AI.",
@@ -2046,7 +2046,7 @@ products: [
     "brand": "NVIDIA Mellanox",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/NVIDIA Mellanox MQM9700-NS2F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/NVIDIA Mellanox MQM9700-NS2F.jpg",
     "intro": {
       "cn": "高性能 InfiniBand 交换机，适用于HPC与AI，具备高带宽、低延迟与强大扩展性。",
       "en": "High‑performance InfiniBand switch for HPC and AI with high bandwidth, low latency, and scalability.",
@@ -2068,7 +2068,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7130-48LBAS-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7130-48LBAS-F.jpg",
     "intro": {
       "cn": "高性能10GbE交换机，48×10G与6×40G端口，低时延并支持EOS。",
       "en": "High‑performance 10GbE switch with 48×10G and 6×40G ports, low latency and EOS support.",
@@ -2093,7 +2093,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7050CX3-32S-R.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7050CX3-32S-R.jpg",
     "intro": {
       "cn": "32端口100GbE数据中心交换机，低延迟高性能，支持VXLAN与EOS。",
       "en": "32-port 100GbE data center switch with low latency, high performance, VXLAN and EOS support.",
@@ -2118,7 +2118,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7280SR-48C6-R.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7280SR-48C6-R.jpg",
     "intro": {
       "cn": "高性能DC交换机，配48个25GbE与6个100GbE端口，低时延并支持VXLAN/MLAG。",
       "en": "High‑performance DC switch with 48×25GbE and 6×100GbE, low latency, VXLAN/MLAG.",
@@ -2143,7 +2143,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7050CX3-32S-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7050CX3-32S-F.jpg",
     "intro": {
       "cn": "32端口100GbE高性能数据中心交换机，低时延，支持VXLAN与EOS。",
       "en": "32‑port 100GbE high‑performance data‑center switch with low latency and VXLAN support.",
@@ -2168,7 +2168,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7060DX5-64S-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7060DX5-64S-F.jpg",
     "intro": {
       "cn": "高密度40/100GbE交换机，64端口，低时延，适用于数据中心与云环境。",
       "en": "High‑density 40/100GbE switch with 64 ports and low latency for modern data centers.",
@@ -2194,7 +2194,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE8851-32CQ8DQ-PB.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE8851-32CQ8DQ-PB.jpg",
     "intro": {
       "cn": "高性能数据中心交换机，提供32×100GE与8×40GE/400GE端口，低时延可扩展。",
       "en": "High-performance data‑center switch with 32×100GE and 8×40GE/400GE, low latency, scalable.",
@@ -2218,7 +2218,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei OLT MA5800x2.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei OLT MA5800x2.jpg",
     "intro": {
       "cn": "新一代华为MA5800-X2 OLT，支持GPON/10G-PON等高带宽接入。",
       "en": "Huawei MA5800-X2 is a next‑gen OLT with high bandwidth and multi‑PON support.",
@@ -2240,7 +2240,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE8850-EI-F-B0B.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE8850-EI-F-B0B.jpg",
     "intro": {
       "cn": "高性能10/40/100GE交换机，具备灵活端口与高级安全功能，适用于数据中心。",
       "en": "High‑performance 10/40/100GE switch with flexible ports and advanced features for data centers.",
@@ -2261,7 +2261,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE8855-32CQ4BQ-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE8855-32CQ4BQ-F.jpg",
     "intro": {
       "cn": "新一代高性能数据中心交换机，支持100/400GE，高密度端口与低时延。",
       "en": "Next‑gen high‑performance data center switch with 100/400GE and high port density.",
@@ -2284,7 +2284,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE6866-48S8CQ-PB.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE6866-48S8CQ-PB.jpg",
     "intro": {
       "cn": "高密度25GE/100GE数据中心交换机，支持VXLAN和iStack，性能强大。",
       "en": "High‑density 25GE/100GE data center switch with VXLAN and iStack support.",
@@ -2307,7 +2307,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE8850E-32CQ-EI-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE8850E-32CQ-EI-F.jpg",
     "intro": {
       "cn": "高密度32×100GE数据中心交换机，低时延高性能，支持SDN与VXLAN。",
       "en": "High‑density 32×100GE data‑center switch with low latency and SDN/VXLAN support.",
@@ -2331,7 +2331,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei S6730-H48Y6C-V2.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei S6730-H48Y6C-V2.jpg",
     "intro": {
       "cn": "新一代10GE交换机，48×10GE与6×40GE端口，安全可靠且可扩展。",
       "en": "Next‑gen 10GE switch with 48×10GE and 6×40GE ports, secure, reliable, scalable.",
@@ -2356,7 +2356,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei S5732-H48XUM2CC.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei S5732-H48XUM2CC.jpg",
     "intro": {
       "cn": "高密度10GE接入交换机，48×10GE，2×40GE，2×100GE，性能强大。",
       "en": "High‑density 10GE switch with 48×10GE, 2×40GE, 2×100GE; powerful and flexible.",
@@ -2381,7 +2381,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE6885-48YS8CQ-B.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE6885-48YS8CQ-B.jpg",
     "intro": {
       "cn": "高密度25GE/100GE数据中心交换机，48×25GE与8×100GE，低时延支持VXLAN。",
       "en": "High‑density 25GE/100GE data‑center switch with 48×25GE, 8×100GE, low latency, VXLAN.",
@@ -2402,7 +2402,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE6855-48XS8CQ-B.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE6855-48XS8CQ-B.jpg",
     "intro": {
       "cn": "新一代10GE/40GE数据中心交换机，48×10GE与8×40GE端口，支持VXLAN与高性能转发。",
       "en": "Next‑gen 10GE/40GE switch with 48×10GE, 8×40GE, VXLAN support and high performance.",
@@ -2424,7 +2424,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE6857F-48T6CQ-B.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE6857F-48T6CQ-B.jpg",
     "intro": {
       "cn": "高性能接入交换机，提供丰富10GE端口与先进安全和虚拟化能力。",
       "en": "High‑performance access switch with dense 10GE ports, advanced security, and virtualization.",
@@ -2446,7 +2446,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7280CR3-32P4-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7280CR3-32P4-F.jpg",
     "intro": {
       "cn": "高性能100/400GbE数据中心交换机，32×100G与4×400G端口，低时延与高扩展性。",
       "en": "High‑performance 100/400GbE switch with 32×100G and 4×400G ports, low latency and high scalability.",
@@ -2471,7 +2471,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7050DX4-32S-R.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7050DX4-32S-R.jpg",
     "intro": {
       "cn": "高性能数据中心交换机，支持多速率并具备低时延与高扩展性。",
       "en": "High‑performance data center switch with multi‑speed ports and low‑latency design.",
@@ -2494,7 +2494,7 @@ products: [
     "brand": "Arista",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Arista DCS-7050SX3-48YC8-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Arista DCS-7050SX3-48YC8-F.jpg",
     "intro": {
       "cn": "高性能数据中心交换机，配备48个25GbE和8个100/400GbE端口。",
       "en": "High‑performance data‑center switch with 48×25GbE and 8×100/400GbE ports.",
@@ -2517,7 +2517,7 @@ products: [
     "brand": "Huawei",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Huawei CE8875-24BQ8DQ-F.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Huawei CE8875-24BQ8DQ-F.jpg",
     "intro": {
       "cn": "高性能核心交换机，具备24×100GE与8×400GE端口，适用于数据中心。",
       "en": "High‑performance core switch with 24×100GE and 8×400GE for modern data centers.",
@@ -2540,7 +2540,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX5700 AC BASE SYSTEM NO LINECARDS.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX5700 AC BASE SYSTEM NO LINECARDS.jpg",
     "intro": {
       "cn": "高性能可扩展的数据中心交换平台，提供高密度端口与低时延。",
       "en": "High‑performance scalable DC switch platform with high port density and low latency.",
@@ -2563,7 +2563,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX10008 CHASSIS.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX10008 CHASSIS.jpg",
     "intro": {
       "cn": "高性能模块化机箱，适用于数据中心和大型企业网络。",
       "en": "High‑performance modular chassis for data centers and large networks.",
@@ -2583,7 +2583,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX10016 CHASSIS.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX10016 CHASSIS.jpg",
     "intro": {
       "cn": "高性能模块化机箱，适用于数据中心与大型网络的核心与汇聚交换。",
       "en": "High‑performance modular chassis for core and aggregation switches in large networks.",
@@ -2606,7 +2606,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper 128X100G 4U DC AFO.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper 128X100G 4U DC AFO.jpg",
     "intro": {
       "cn": "高密度128×100G数据中心交换机，具备DC供电与AFO气流设计。",
       "en": "High‑density 128×100G data center switch with DC power and AFO airflow.",
@@ -2627,7 +2627,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX10002 TAA-COMPLIANT 36-PORT 40G QSFP.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX10002 TAA-COMPLIANT 36-PORT 40G QSFP.jpg",
     "intro": {
       "cn": "高性能TAA合规的36端口40G QSFP+数据中心交换机",
       "en": "High‑performance TAA‑compliant 36‑port 40G QSFP+ data center switch",
@@ -2652,7 +2652,7 @@ products: [
     "brand": "Juniper",
     "category": "Коммутаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Коммутаторы/Juniper QFX10002 SWITCH 60 100GE PORTS AC PS.jpg",
+    "img": "/yufan_demo_website/products/Коммутаторы/Juniper QFX10002 SWITCH 60 100GE PORTS AC PS.jpg",
     "intro": {
       "cn": "高性能可扩展的QFX10002，配备60个100GE端口与AC电源，适用数据中心。",
       "en": "High‑performance scalable QFX10002 with 60×100GE ports and AC PS for data centers.",
@@ -2676,7 +2676,7 @@ products: [
     "brand": "HPE",
     "category": "Ленточные библиотеки",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ленточные библиотеки/HPE StoreEver LTO-7 Ultrium 15000 External Type Drive BB874A.jpg",
+    "img": "/yufan_demo_website/products/Ленточные библиотеки/HPE StoreEver LTO-7 Ultrium 15000 External Type Drive BB874A.jpg",
     "intro": {
       "cn": "外置式LTO-7磁带机，最高15TB容量与高速传输，用于备份与归档。",
       "en": "External LTO‑7 tape drive with up to 15TB capacity and fast data transfer for backup.",
@@ -2702,7 +2702,7 @@ products: [
     "brand": "HPE",
     "category": "Ленточные библиотеки",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ленточные библиотеки/HPE StoreEver MSL LTO9 Ultrium 45000 SAS Drive Upgrade Kit R6Q75A.jpg",
+    "img": "/yufan_demo_website/products/Ленточные библиотеки/HPE StoreEver MSL LTO9 Ultrium 45000 SAS Drive Upgrade Kit R6Q75A.jpg",
     "intro": {
       "cn": "高容量高性能的外置LTO‑7磁带机，适用于备份与归档。",
       "en": "External LTO‑7 tape drive offering high capacity and performance for backup and archiving.",
@@ -2725,7 +2725,7 @@ products: [
     "brand": "HPE",
     "category": "Ленточные библиотеки",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ленточные библиотеки/HPE StoreEver MSL 18 G2 0-drive Tape Autoloader R1R75A.jpg",
+    "img": "/yufan_demo_website/products/Ленточные библиотеки/HPE StoreEver MSL 18 G2 0-drive Tape Autoloader R1R75A.jpg",
     "intro": {
       "cn": "紧凑型1U磁带自动加载机，适用于SMB备份与归档。",
       "en": "Compact 1U tape autoloader designed for SMB backup and archiving.",
@@ -2746,7 +2746,7 @@ products: [
     "brand": "HPE",
     "category": "Ленточные библиотеки",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ленточные библиотеки/HPE Ultrium LTO8 Data Cartridge 30TB RW.jpg",
+    "img": "/yufan_demo_website/products/Ленточные библиотеки/HPE Ultrium LTO8 Data Cartridge 30TB RW.jpg",
     "intro": {
       "cn": "LTO-8磁带，30TB容量，高速可靠，适合备份与归档。",
       "en": "LTO-8 tape with 30TB capacity and high speed for backup and archiving.",
@@ -2770,7 +2770,7 @@ products: [
     "brand": "HPE",
     "category": "Ленточные библиотеки",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ленточные библиотеки/HPE MSL LTO-8 Ultrium 30750 SAS Half Height Drive Q6Q68A.jpg",
+    "img": "/yufan_demo_website/products/Ленточные библиотеки/HPE MSL LTO-8 Ultrium 30750 SAS Half Height Drive Q6Q68A.jpg",
     "intro": {
       "cn": "适用于HPE MSL库的LTO-8磁带机，30TB容量，SAS接口，高速可靠备份。",
       "en": "LTO-8 drive for HPE MSL libraries, 30TB capacity, SAS interface, fast and reliable.",
@@ -2796,7 +2796,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper MPC7E-MRATE-RTU.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper MPC7E-MRATE-RTU.jpg",
     "intro": {
       "cn": "高性能可扩展的Juniper MX系列多速率接口模块。",
       "en": "High-performance multi-rate interface module for Juniper MX routers.",
@@ -2818,7 +2818,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper MPC10E-15C-P-BASE.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper MPC10E-15C-P-BASE.jpg",
     "intro": {
       "cn": "高密度15×100GE接口卡，适用于Juniper MX路由器的高性能网络部署。",
       "en": "High‑density 15×100GE interface card for Juniper MX routers, built for high performance.",
@@ -2841,7 +2841,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper MPC7E-10G.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper MPC7E-10G.jpg",
     "intro": {
       "cn": "高性能10GbE接口模块，适用于Juniper MX路由器，提供高带宽与灵活配置。",
       "en": "High‑performance 10GbE interface module for Juniper MX routers with high bandwidth and flexibility.",
@@ -2867,7 +2867,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper SCBE2-MX with 2xRE-S-X6-128G БУ.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper SCBE2-MX with 2xRE-S-X6-128G БУ.jpg",
     "intro": {
       "cn": "SCBE2-MX含2个RE-S‑X6‑128G控制板，提供高性能与冗余，适用于MX路由器。",
       "en": "SCBE2-MX with 2 RE-S‑X6‑128G offers high performance and redundancy for MX routers.",
@@ -2890,7 +2890,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper MPC5EQ-40G10G БУ.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper MPC5EQ-40G10G БУ.jpg",
     "intro": {
       "cn": "提供4×40GE与10×10GE端口的高性能MX系列接口卡，适用于扩容与替换。",
       "en": "High‑performance MX‑series interface card with 4×40GE and 10×10GE ports.",
@@ -2913,7 +2913,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper MPC4E-3D-2CGE-8XGE БУ.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper MPC4E-3D-2CGE-8XGE БУ.jpg",
     "intro": {
       "cn": "双100GE与八10GE端口的高性能Juniper MX路由器线卡，适用于扩容与替换。",
       "en": "High‑performance MX router line card with 2x100GE and 8x10GE ports for expansion or replacement.",
@@ -2937,7 +2937,7 @@ products: [
     "brand": "Huawei",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Huawei H902CSHF 16-port XGS-PON.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Huawei H902CSHF 16-port XGS-PON.jpg",
     "intro": {
       "cn": "华为H902CSHF，16口XGS-PON板卡，适用于MA5800，提供10G对称高带宽。",
       "en": "Huawei H902CSHF 16-port XGS-PON board for MA5800 with 10G symmetric bandwidth.",
@@ -2959,7 +2959,7 @@ products: [
     "brand": "Juniper",
     "category": "Линейные карты",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Линейные карты/Juniper MX10K-LC9600-BASE.jpg",
+    "img": "/yufan_demo_website/products/Линейные карты/Juniper MX10K-LC9600-BASE.jpg",
     "intro": {
       "cn": "面向MX10008的高性能线卡，支持高密度400GbE与可扩展带宽。",
       "en": "High‑performance line card for MX10008 with scalable 400GbE port density.",
@@ -2984,7 +2984,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper MX204-HW-BASE.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper MX204-HW-BASE.jpg",
     "intro": {
       "cn": "Juniper MX204：紧凑高性能路由器，适用于电信与数据中心网络。",
       "en": "Juniper MX204: compact high‑performance router for telecom and data‑center networks.",
@@ -3007,7 +3007,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper MX304-PREMIUM-DC.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper MX304-PREMIUM-DC.jpg",
     "intro": {
       "cn": "高性能紧凑型MX304路由器，适用于新一代网络和数据中心。",
       "en": "High‑performance compact MX304 router for next‑generation networks and data centers.",
@@ -3021,7 +3021,7 @@ products: [
     "brand": "ZTE",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/ZTE ZXA10 C300  платформа OLT большой емкости.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/ZTE ZXA10 C300  платформа OLT большой емкости.jpg",
     "intro": {
       "cn": "高密度端口、低能耗、灵活配置的旗舰级OLT平台。",
       "en": "High‑density, energy‑efficient OLT platform with flexible configuration.",
@@ -3047,7 +3047,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper PTX10001-36MR-AC.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper PTX10001-36MR-AC.jpg",
     "intro": {
       "cn": "高性能可扩展运营级路由器，适用于骨干网与数据中心。",
       "en": "High‑performance scalable carrier-grade router for backbone and data center use.",
@@ -3071,7 +3071,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper MX10003 Premium.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper MX10003 Premium.jpg",
     "intro": {
       "cn": "高性能3U通用边缘路由器，支持400GbE及先进MPLS/EVPN特性，适用于运营级网络。",
       "en": "High‑performance 3U universal edge router with 400GbE and advanced MPLS/EVPN features.",
@@ -3091,7 +3091,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper MX10003 Base Discount price.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper MX10003 Base Discount price.jpg",
     "intro": {
       "cn": "Juniper MX10003基础款，3U高性能路由器，支持10/25/40/100GbE和MPLS等协议。",
       "en": "Juniper MX10003 base model, 3U high‑performance router with 10/25/40/100GbE support.",
@@ -3114,7 +3114,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper PTX10002 36 QSFP-DD800.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper PTX10002 36 QSFP-DD800.jpg",
     "intro": {
       "cn": "高性能核心路由器，配备36个QSFP‑DD800端口，单端口速率达800G。",
       "en": "High‑performance core router with 36 QSFP‑DD800 ports, up to 800G per port.",
@@ -3137,7 +3137,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Juniper MX-204 USED.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Juniper MX-204 USED.jpg",
     "intro": {
       "cn": "紧凑高性能的MX‑204二手边缘路由器，提供4×100GbE与4×10GbE端口，可靠省成本。",
       "en": "Compact high‑performance MX‑204 used edge router with 4×100GbE and 4×10GbE ports, reliable and cost‑efficient.",
@@ -3159,7 +3159,7 @@ products: [
     "brand": "Huawei",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/Huawei AR8140-12G10XG.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/Huawei AR8140-12G10XG.jpg",
     "intro": {
       "cn": "企业级高性能路由器，配备12个GE与10个10GE端口，支持VPN与QoS。",
       "en": "Enterprise router with 12 GE and 10 10GE ports, high performance and security.",
@@ -3182,7 +3182,7 @@ products: [
     "brand": "Juniper",
     "category": "Маршрутизаторы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Маршрутизаторы/MX10008-PREMIUM-DC.jpg",
+    "img": "/yufan_demo_website/products/Маршрутизаторы/MX10008-PREMIUM-DC.jpg",
     "intro": {
       "cn": "高性能模块化DC路由器，具备卓越吞吐、扩展性与可靠性。",
       "en": "High‑performance modular DC router with excellent throughput and reliability.",
@@ -3206,7 +3206,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX380-P-SYS-JB-AC.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX380-P-SYS-JB-AC.jpg",
     "intro": {
       "cn": "高性能次世代防火墙，集成威胁防护与SD‑WAN，适用于分支与中小企业。",
       "en": "High‑performance NGFW with threat protection and SD‑WAN for branches and SMBs.",
@@ -3228,7 +3228,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX4100-SYS-JB-AC.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX4100-SYS-JB-AC.jpg",
     "intro": {
       "cn": "高性能NGFW，40Gbps吞吐，支持SD‑WAN，适合中型企业与分支部署。",
       "en": "High‑performance NGFW with 40Gbps throughput and SD‑WAN for midsize enterprises.",
@@ -3253,7 +3253,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX4100-SYS-JB-AC USED.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX4100-SYS-JB-AC USED.jpg",
     "intro": {
       "cn": "高性能NGFW，40Gbps吞吐，支持SD‑WAN与高级威胁防护，适用中型企业。",
       "en": "High‑performance NGFW with 40Gbps throughput and SD‑WAN for mid‑size enterprises.",
@@ -3276,7 +3276,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX300.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX300.jpg",
     "intro": {
       "cn": "SRX300为中小企业提供整合路由与安全的NGFW设备，体积小性能稳。",
       "en": "SRX300 is a compact NGFW for SMBs, combining routing and security with easy management.",
@@ -3290,7 +3290,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX4600-SYS-JB-AC.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX4600-SYS-JB-AC.jpg",
     "intro": {
       "cn": "高性能NGFW，最高达480Gbps吞吐，支持SD-WAN与网络分段，适用中大型企业。",
       "en": "High‑performance NGFW with up to 480Gbps throughput, SD‑WAN, and AC power for enterprises.",
@@ -3313,7 +3313,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX345-SYS-JB-2AC.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX345-SYS-JB-2AC.jpg",
     "intro": {
       "cn": "高性能中小企业防火墙，提供全面威胁防护与双AC电源冗余。",
       "en": "SMB firewall with strong security, high performance, and dual AC power redundancy.",
@@ -3336,7 +3336,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX1500-SYS-JB-AC.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX1500-SYS-JB-AC.jpg",
     "intro": {
       "cn": "高性能企业级SRX防火墙，提供先进安全与高吞吐量。",
       "en": "High‑performance SRX firewall for enterprises with advanced security and throughput.",
@@ -3360,7 +3360,7 @@ products: [
     "brand": "Juniper",
     "category": "Межсетевые экраны",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Межсетевые экраны/Juniper SRX340-SYS-JB.jpg",
+    "img": "/yufan_demo_website/products/Межсетевые экраны/Juniper SRX340-SYS-JB.jpg",
     "intro": {
       "cn": "面向中小企业的高性能SRX防火墙，提供全面威胁防护和灵活连接能力。",
       "en": "High‑performance SRX firewall for SMB with comprehensive threat protection and flexible connectivity.",
@@ -3384,7 +3384,7 @@ products: [
     "brand": "ZTE",
     "category": "Мультиплексоры",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Мультиплексоры/Мультиплексор ZTE ZXMP M721 CX63A.jpg",
+    "img": "/yufan_demo_website/products/Мультиплексоры/Мультиплексор ZTE ZXMP M721 CX63A.jpg",
     "intro": {
       "cn": "紧凑型STM-4复用器，支持E1与以太网汇聚并具备MSP 1+1保护。",
       "en": "Compact STM-4 multiplexer with E1/Ethernet aggregation and MSP 1+1 protection.",
@@ -3414,7 +3414,7 @@ products: [
     "brand": "ZTE",
     "category": "Мультиплексоры",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Мультиплексоры/Мультиплексор ZTE ZXMP M721 CX66A.jpg",
+    "img": "/yufan_demo_website/products/Мультиплексоры/Мультиплексор ZTE ZXMP M721 CX66A.jpg",
     "intro": {
       "cn": "运营级高速光复用设备，支持STM-64和TDM/Ethernet混合传输。",
       "en": "Carrier‑grade multiplexer with STM‑64 and hybrid TDM/Ethernet support.",
@@ -3444,7 +3444,7 @@ products: [
     "brand": "ZTE",
     "category": "Мультиплексоры",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Мультиплексоры/Мультиплексор ZTE ZXMP M721 CX62A.jpg",
+    "img": "/yufan_demo_website/products/Мультиплексоры/Мультиплексор ZTE ZXMP M721 CX62A.jpg",
     "intro": {
       "cn": "紧凑型STM-16复用器，支持TDM与以太网高可靠传输。",
       "en": "Compact STM-16 multiplexer with reliable TDM and Ethernet transport.",
@@ -3475,7 +3475,7 @@ products: [
     "brand": "Getac",
     "category": "Ноутбукимобильные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ноутбукимобильные серверы/Getac B360 G2.jpg",
+    "img": "/yufan_demo_website/products/Ноутбукимобильные серверы/Getac B360 G2.jpg",
     "intro": {
       "cn": "坚固型B360 G2，适用于极端环境，配i7、32GB内存与2TB SSD。",
       "en": "Rugged B360 G2 with i7 CPU, 32GB RAM and 2TB SSD for harsh environments.",
@@ -3498,7 +3498,7 @@ products: [
     "brand": "Getac",
     "category": "Ноутбукимобильные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ноутбукимобильные серверы/Getac B360 G2 Pro.jpg",
+    "img": "/yufan_demo_website/products/Ноутбукимобильные серверы/Getac B360 G2 Pro.jpg",
     "intro": {
       "cn": "专业加固型笔记本，适用于严苛环境，性能强劲且可靠。",
       "en": "Rugged professional laptop built for harsh environments with strong performance.",
@@ -3523,7 +3523,7 @@ products: [
     "brand": "Getac",
     "category": "Ноутбукимобильные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ноутбукимобильные серверы/Getac X600 Pro.jpg",
+    "img": "/yufan_demo_website/products/Ноутбукимобильные серверы/Getac X600 Pro.jpg",
     "intro": {
       "cn": "超强防护X600 Pro，配i7处理器、128GB内存与4TB SSD，适用严苛环境",
       "en": "Rugged X600 Pro with i7 CPU, 128GB RAM, 4TB SSD, RTX3000 for harsh environments",
@@ -3549,7 +3549,7 @@ products: [
     "brand": "Getac",
     "category": "Ноутбукимобильные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ноутбукимобильные серверы/Getac V110 G7.jpg",
+    "img": "/yufan_demo_website/products/Ноутбукимобильные серверы/Getac V110 G7.jpg",
     "intro": {
       "cn": "坚固可旋转变形本，耐冲击防水，适用于工业与野外任务。",
       "en": "Rugged convertible laptop with touch display for harsh environments and field work.",
@@ -3573,7 +3573,7 @@ products: [
     "brand": "Getac",
     "category": "Ноутбукимобильные серверы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Ноутбукимобильные серверы/Getac X600 Server RAID Expansion.jpg",
+    "img": "/yufan_demo_website/products/Ноутбукимобильные серверы/Getac X600 Server RAID Expansion.jpg",
     "intro": {
       "cn": "坚固型X600服务器扩展，支持RAID，适合严苛环境的高性能移动存储方案。",
       "en": "Rugged X600 server RAID expansion with high performance storage for extreme environments.",
@@ -3600,7 +3600,7 @@ products: [
     "brand": "Lenovo",
     "category": "Рабочие станции",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Рабочие станции/Lenovo ThinkStation P720.jpg",
+    "img": "/yufan_demo_website/products/Рабочие станции/Lenovo ThinkStation P720.jpg",
     "intro": {
       "cn": "双路至强与专业显卡的高性能塔式工作站",
       "en": "High‑performance dual‑Xeon tower workstation with pro graphics",
@@ -3624,7 +3624,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL360 Gen11 8SFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL360 Gen11 8SFF NC CTO Server.jpg",
     "intro": {
       "cn": "紧凑1U的DL360 Gen11，具8个SFF槽位，支持灵活配置以满足多种应用需求。",
       "en": "Compact 1U DL360 Gen11 with 8 SFF bays and flexible CTO configuration for demanding workloads.",
@@ -3645,7 +3645,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5280M6 1235 серверная платформа.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5280M6 1235 серверная платформа.jpg",
     "intro": {
       "cn": "NF5280M6为2U可扩展服务器，支持灵活配置处理器、内存与存储。",
       "en": "NF5280M6 is a flexible 2U server platform allowing custom CPU, memory, and storage setup.",
@@ -3667,7 +3667,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5280M6 2525 серверная платформа.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5280M6 2525 серверная платформа.jpg",
     "intro": {
       "cn": "可扩展的2U空载服务器平台，支持自定义CPU、内存与存储配置。",
       "en": "Scalable 2U empty server platform offering full flexibility for CPU, memory and storage.",
@@ -3688,7 +3688,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5280M6 412 NVME серверная платформа.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5280M6 412 NVME серверная платформа.jpg",
     "intro": {
       "cn": "2U高性能存储优化服务器，支持12个NVMe与4个SATA/SAS硬盘，配置灵活。",
       "en": "High‑performance 2U server with 12 NVMe bays, 4 SATA/SAS bays, and flexible configuration.",
@@ -3709,7 +3709,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF8260M6 825 серверная платформа.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF8260M6 825 серверная платформа.jpg",
     "intro": {
       "cn": "2U空机型服务器，支持双路Xeon，8个2.5寸盘位，灵活自选配置。",
       "en": "2U empty server chassis with dual Xeon support and 8×2.5 bays for flexible customization.",
@@ -3731,7 +3731,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5466M6 2435 серверная платформа.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5466M6 2435 серверная платформа.jpg",
     "intro": {
       "cn": "4U可扩展服务器，支持24个3.5硬盘，空机型可自由配置组件。",
       "en": "Scalable 4U server with 24×3.5 bays; empty chassis for full custom configuration.",
@@ -3753,7 +3753,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5266M6 2435 серверная платформа.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5266M6 2435 серверная платформа.jpg",
     "intro": {
       "cn": "2U可扩展存储服务器，支持24个3.5英寸盘位，空机型便于灵活配置。",
       "en": "2U scalable storage server with 24x3.5 bays; empty chassis for flexible configuration.",
@@ -3775,7 +3775,7 @@ products: [
     "brand": "Lenovo",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Lenovo SR630V2 Double Hashing 1U 825.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Lenovo SR630V2 Double Hashing 1U 825.jpg",
     "intro": {
       "cn": "高性能1U服务器，支持虚拟化与云计算，配备8个2.5英寸硬盘位。",
       "en": "High‑performance 1U server with 8×2.5 bays, optimized for virtualization and cloud workloads.",
@@ -3797,7 +3797,7 @@ products: [
     "brand": "Lenovo",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Lenovo SR630V2 Double Hashing 1U 1025.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Lenovo SR630V2 Double Hashing 1U 1025.jpg",
     "intro": {
       "cn": "高密度1U服务器，支持10个2.5英寸盘与Xeon处理器，性能与扩展性强。",
       "en": "High-density 1U server with 10×2.5 bays and Xeon CPUs, built for performance and scalability.",
@@ -3818,7 +3818,7 @@ products: [
     "brand": "Lenovo",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Lenovo SR650V2 Double Hashing 2U 825.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Lenovo SR650V2 Double Hashing 2U 825.jpg",
     "intro": {
       "cn": "Lenovo SR650V2 2U服务器，含8个2.5寸盘位与Double Hashing功能。",
       "en": "Lenovo SR650V2 2U server with 8x2.5 bays and Double Hashing support.",
@@ -3839,7 +3839,7 @@ products: [
     "brand": "Lenovo",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Lenovo  SR630V3 Double Hashing 2U 825.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Lenovo  SR630V3 Double Hashing 2U 825.jpg",
     "intro": {
       "cn": "可扩展2U服务器，支持8个2.5硬盘与双哈希功能，适用于数据中心与云环境。",
       "en": "Scalable 2U server with 8x2.5 bays and Double Hashing for modern data‑center workloads.",
@@ -3860,7 +3860,7 @@ products: [
     "brand": "Lenovo",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Lenovo SR630V3 Double Hashing 2U 1025.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Lenovo SR630V3 Double Hashing 2U 1025.jpg",
     "intro": {
       "cn": "高性能2U服务器，适用于虚拟化、数据库与AI工作负载，支持10个2.5英寸盘位。",
       "en": "High‑performance 2U server for virtualization, databases, and AI with 10×2.5\" bays.",
@@ -3881,7 +3881,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE ProLiant DL380 Gen10 12 LFF NC.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE ProLiant DL380 Gen10 12 LFF NC.jpg",
     "intro": {
       "cn": "高性能2U服务器，支持双路Xeon、12个3.5硬盘位，适合虚拟化与数据库。",
       "en": "High‑performance 2U server with dual Xeon, 12 LFF bays; ideal for virtualization and databases.",
@@ -3903,7 +3903,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE ProLiant DL380 Gen10 24 SFF NC.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE ProLiant DL380 Gen10 24 SFF NC.jpg",
     "intro": {
       "cn": "高性能2U服务器，支持24个SFF盘位，适合虚拟化与云环境。",
       "en": "High‑performance 2U server with 24 SFF bays ideal for virtualization and cloud.",
@@ -3925,7 +3925,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL560 G10 5215 2P 64G P408i-a 8SFF 1600W.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL560 G10 5215 2P 64G P408i-a 8SFF 1600W.jpg",
     "intro": {
       "cn": "高性能2U双路服务器，配双Intel 5215、64GB内存、8盘位与1600W电源。",
       "en": "High‑performance 2U server with dual 5215 CPUs, 64GB RAM, 8 bays and 1600W PSU.",
@@ -3947,7 +3947,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL560 Gen10 CTO Svr.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL560 Gen10 CTO Svr.jpg",
     "intro": {
       "cn": "HPE DL560 Gen10，双Xeon 5215，64GB内存，8个SFF位，适用于虚拟化与企业应用。",
       "en": "HPE DL560 Gen10 with dual Xeon 5215, 64GB RAM, 8 SFF bays; built for virtualization and enterprise use.",
@@ -3969,7 +3969,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL580 Gen10 CTO Svr.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL580 Gen10 CTO Svr.jpg",
     "intro": {
       "cn": "4U高扩展CTO服务器，支持4路Xeon与大容量内存，适用于虚拟化和HPC。",
       "en": "4U scalable CTO server with 4‑socket Xeon support for virtualization and HPC workloads.",
@@ -3991,7 +3991,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 1288HV5 825SFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 1288HV5 825SFF Empty machine.jpg",
     "intro": {
       "cn": "2U空机型服务器，支持双路Xeon及8个2.5寸盘位，灵活按需配置。",
       "en": "2U empty server with dual Xeon support and 8×2.5in bays for flexible custom configs.",
@@ -4014,7 +4014,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 1288HV5 435LFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 1288HV5 435LFF Empty machine.jpg",
     "intro": {
       "cn": "可灵活配置的2U服务器，支持4个3.5寸盘位与双路Xeon处理器。",
       "en": "Flexible 2U server with 4×3.5'' bays and dual Intel Xeon support.",
@@ -4035,7 +4035,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV5 825SFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV5 825SFF Empty machine.jpg",
     "intro": {
       "cn": "灵活的2U机架服务器，空机型支持自定义CPU、内存与存储配置。",
       "en": "Flexible 2U server chassis allowing full customization of CPU, RAM, and storage.",
@@ -4057,7 +4057,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV5 1235LFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV5 1235LFF Empty machine.jpg",
     "intro": {
       "cn": "可扩展2U机架式服务器，支持12个3.5寸硬盘位，空机型便于自定义配置",
       "en": "Scalable 2U server with 12×3.5\" bays; empty model for fully custom configuration",
@@ -4078,7 +4078,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 1288HV6 825SFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 1288HV6 825SFF Empty machine.jpg",
     "intro": {
       "cn": "可扩展2U服务器，空机型提供最大化配置灵活性。",
       "en": "Scalable 2U server in empty‑machine form for maximum configuration flexibility.",
@@ -4101,7 +4101,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 1288HV6 435LFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 1288HV6 435LFF Empty machine.jpg",
     "intro": {
       "cn": "2U机型，提供4个3.5寸盘位，裸机配置便于自定义组件。",
       "en": "2U server with four 3.5-inch bays; empty unit for fully customized components.",
@@ -4124,7 +4124,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV6 825SFF Empty machine16 memory slots.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV6 825SFF Empty machine16 memory slots.jpg",
     "intro": {
       "cn": "灵活可扩展的2U服务器，支持16内存槽和8个2.5寸盘位，适合多场景部署。",
       "en": "Flexible 2U server with 16 memory slots and 8×2.5\" bays, ideal for scalable workloads.",
@@ -4145,7 +4145,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV6 1235LFF Empty machine16 memory slots.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV6 1235LFF Empty machine16 memory slots.jpg",
     "intro": {
       "cn": "2U机架式空载服务器，支持12盘位与16内存槽，便于灵活配置与扩展。",
       "en": "2U barebones server with 12 drive bays and 16 DIMM slots for flexible expansion.",
@@ -4165,7 +4165,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV7 825SFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV7 825SFF Empty machine.jpg",
     "intro": {
       "cn": "2U空机型服务器，支持双路Xeon与8个2.5寸盘位，配置灵活可定制",
       "en": "2U barebone server with dual Xeon support and 8×2.5\" bays, offering full config flexibility",
@@ -4185,7 +4185,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV7 1235LFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV7 1235LFF Empty machine.jpg",
     "intro": {
       "cn": "2U机架式服务器，12盘位，高扩展性与灵活配置的空机方案。",
       "en": "2U server with 12 LFF bays, scalable and fully customizable empty‑machine design.",
@@ -4208,7 +4208,7 @@ products: [
     "brand": "Huawei",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Huawei Xfusion 2288HV7 2525SFF Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Huawei Xfusion 2288HV7 2525SFF Empty machine.jpg",
     "intro": {
       "cn": "2U可扩展服务器，25个2.5盘位，空机型支持自定义配置",
       "en": "2U scalable server with 25x2.5 bays; empty config for flexible customization",
@@ -4231,7 +4231,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5180M6 435 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5180M6 435 Empty machine.jpg",
     "intro": {
       "cn": "1U 空机型服务器，支持灵活选配，适合中小企业与分支机构。",
       "en": "1U empty‑config server with flexible component choice for SMB and branch offices.",
@@ -4252,7 +4252,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5270M6 435 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5270M6 435 Empty machine.jpg",
     "intro": {
       "cn": "2U机型，提供灵活配置的空机版，支持双路Xeon与4个3.5硬盘位。",
       "en": "2U flexible empty server with dual Xeon support and four 3.5-inch drive bays.",
@@ -4273,7 +4273,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5280M5 435 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5280M5 435 Empty machine.jpg",
     "intro": {
       "cn": "2U机型，空载配置，可自选CPU/内存/硬盘，适合SMB与分支场景。",
       "en": "2U barebone server with flexible CPU, RAM, and storage options for SMB and branch use.",
@@ -4294,7 +4294,7 @@ products: [
     "brand": "Inspur",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Inspur NF5280M6 435 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Inspur NF5280M6 435 Empty machine.jpg",
     "intro": {
       "cn": "经济灵活的2U机架式空载服务器，适用于中小企业与分支机构。",
       "en": "Economical and flexible 2U bare server for SMBs and branch offices.",
@@ -4315,7 +4315,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 8LFF NC CTO server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 8LFF NC CTO server.jpg",
     "intro": {
       "cn": "高性能可扩展的2U服务器，支持8个3.5英寸硬盘并提供灵活配置。",
       "en": "High-performance scalable 2U server with 8 LFF bays and flexible CTO configuration.",
@@ -4338,7 +4338,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 12LFF NC CTO server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 12LFF NC CTO server.jpg",
     "intro": {
       "cn": "高性能可扩展的2U服务器，支持Xeon和12盘位，适合关键业务与虚拟化。",
       "en": "High‑performance scalable 2U server with Xeon CPUs and 12 LFF bays for critical workloads.",
@@ -4361,7 +4361,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 8SFF NC CTO server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 8SFF NC CTO server.jpg",
     "intro": {
       "cn": "强大的2U企业级服务器，支持8个SFF硬盘，适合虚拟化与高负载应用。",
       "en": "Powerful 2U server with 8 SFF bays, ideal for virtualization and demanding workloads.",
@@ -4385,7 +4385,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 24SFF NC CTO server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL380 G10 PLUS 24SFF NC CTO server.jpg",
     "intro": {
       "cn": "2U机架式服务器，24个SFF硬盘位，适合虚拟化与数据密集型工作负载。",
       "en": "2U scalable server with 24 SFF bays, ideal for virtualization and data-heavy workloads.",
@@ -4408,7 +4408,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL380 G10 PLUS.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL380 G10 PLUS.jpg",
     "intro": {
       "cn": "2U高性能可扩展服务器，适用于虚拟化和各类关键业务。",
       "en": "2U high‑performance scalable server for virtualization and critical workloads.",
@@ -4422,7 +4422,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL360 Gen10 Plus 8 SFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL360 Gen10 Plus 8 SFF NC CTO Server.jpg",
     "intro": {
       "cn": "紧凑1U高性能服务器，支持8个SFF盘位，适用于虚拟化与数据中心部署。",
       "en": "Compact 1U high‑performance server with 8 SFF bays, ideal for virtualization and data centers.",
@@ -4445,7 +4445,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE ProLiant DL380 Gen11 8LFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE ProLiant DL380 Gen11 8LFF NC CTO Server.jpg",
     "intro": {
       "cn": "2U服务器，支持8个LFF硬盘位，性能强劲且可定制，适用于多种数据中心应用。",
       "en": "2U server with 8 LFF bays, high performance and scalable design for modern data centers.",
@@ -4467,7 +4467,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE ProLiant DL380 Gen11 12LFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE ProLiant DL380 Gen11 12LFF NC CTO Server.jpg",
     "intro": {
       "cn": "2U服务器，支持12个LFF硬盘，性能强大且可灵活定制。",
       "en": "2U server with 12 LFF bays, high performance and fully configurable.",
@@ -4481,7 +4481,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE ProLiant DL380 Gen11 8SFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE ProLiant DL380 Gen11 8SFF NC CTO Server.jpg",
     "intro": {
       "cn": "高性能2U机架服务器，支持CTO配置和8个SFF硬盘位。",
       "en": "High‑performance 2U server with CTO flexibility and 8 SFF bays.",
@@ -4502,7 +4502,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE Proliant DL360 Gen10 4210R 1P 16G P408i-a NC 8SFF 500W PS Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE Proliant DL360 Gen10 4210R 1P 16G P408i-a NC 8SFF 500W PS Server.jpg",
     "intro": {
       "cn": "紧凑1U服务器，配Xeon 4210R、16GB内存和P408i-a控制器，适合多种业务应用。",
       "en": "Compact 1U server with Xeon 4210R, 16GB RAM and P408i-a controller for versatile workloads.",
@@ -4525,7 +4525,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL360 Gen10 4 LFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL360 Gen10 4 LFF NC CTO Server.jpg",
     "intro": {
       "cn": "HPE DL360 Gen10 1U服务器，支持4个LFF盘位，适合中小企业与远程办公。",
       "en": "HPE DL360 Gen10 1U server with 4 LFF bays, ideal for SMB and remote offices.",
@@ -4545,7 +4545,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL360 Gen10 8 SFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL360 Gen10 8 SFF NC CTO Server.jpg",
     "intro": {
       "cn": "紧凑1U机型，支持8个SFF硬盘，灵活CTO配置，适合虚拟化与高性能负载。",
       "en": "Compact 1U server with 8 SFF bays and flexible CTO options for virtualization and HPC.",
@@ -4566,7 +4566,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE DL380 Gen10 NC 8SFF BC Svr.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE DL380 Gen10 NC 8SFF BC Svr.jpg",
     "intro": {
       "cn": "双路2U服务器，具备8个SFF硬盘位，适合虚拟化与企业应用",
       "en": "2U dual‑socket server with 8 SFF bays, ideal for virtualization and enterprise workloads",
@@ -4589,7 +4589,7 @@ products: [
     "brand": "HPE",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/HPE ProLiant DL380 Gen10 8 LFF NC CTO Server.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/HPE ProLiant DL380 Gen10 8 LFF NC CTO Server.jpg",
     "intro": {
       "cn": "可配置的2U服务器，支持8个LFF硬盘位，具备高性能与可扩展性。",
       "en": "Configurable 2U server with 8 LFF bays, offering strong performance and scalability.",
@@ -4611,7 +4611,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760XS 1235 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760XS 1235 Empty machine.jpg",
     "intro": {
       "cn": "DELL R760xs 2U空机箱，支持最多12个3.5寸硬盘，便于自定义配置。",
       "en": "Dell R760xs 2U chassis supports up to 12x3.5\" drives for flexible custom builds.",
@@ -4633,7 +4633,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 825 High power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 825 High power motherboard.jpg",
     "intro": {
       "cn": "高性能2U服务器，支持8个2.5硬盘，适用于虚拟化与高负载应用。",
       "en": "High‑performance 2U server with 8×2.5 bays for virtualization and heavy workloads.",
@@ -4647,7 +4647,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 1235 Low power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 1235 Low power motherboard.jpg",
     "intro": {
       "cn": "节能型2U服务器机箱，支持12个3.5硬盘，适合大容量存储场景。",
       "en": "Energy‑efficient 2U chassis with 12×3.5 bays, ideal for high‑capacity storage.",
@@ -4669,7 +4669,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 1235 High power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 1235 High power motherboard.jpg",
     "intro": {
       "cn": "2U服务器，支持12个3.5盘位与高性能主板，适合虚拟化及大数据等场景",
       "en": "2U server with 12x3.5 bays and high‑power motherboard for heavy data workloads",
@@ -4690,7 +4690,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 1625 Low power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 1625 Low power motherboard.jpg",
     "intro": {
       "cn": "节能型2U服务器主板，支持16个2.5英寸盘位，适合虚拟化与数据处理。",
       "en": "Energy‑efficient 2U server board with 16×2.5 bays, ideal for virtualization and data tasks.",
@@ -4712,7 +4712,7 @@ products: [
     "brand": "DELL",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 1625 High power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 1625 High power motherboard.jpg",
     "intro": {
       "cn": "高性能2U服务器机型，支持16个2.5英寸盘位，适用于虚拟化与AI等负载",
       "en": "High‑performance 2U server with 16×2.5\" bays, ideal for virtualization, AI and HPC",
@@ -4732,7 +4732,7 @@ products: [
     "brand": "DELL",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 2425 High power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 2425 High power motherboard.jpg",
     "intro": {
       "cn": "R760 2U服务器，支持24个2.5寸硬盘，高性能高扩展性。",
       "en": "R760 2U server with 24x2.5 bays, high performance and scalability.",
@@ -4754,7 +4754,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 1625SATASAS8NVME High power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 1625SATASAS8NVME High power motherboard.jpg",
     "intro": {
       "cn": "高性能2U服务器，支持16个SATA/SAS与8个NVMe，实现高速与大容量兼具。",
       "en": "High‑performance 2U server with 16 SATA/SAS and 8 NVMe bays for speed and capacity.",
@@ -4775,7 +4775,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760 8NVME8NVME.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760 8NVME8NVME.jpg",
     "intro": {
       "cn": "支持16个NVMe的高性能2U服务器，适用于HPC与AI等高负载场景",
       "en": "High‑performance 2U server with 16 NVMe for ultra‑fast data access in heavy workloads",
@@ -4796,7 +4796,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760XD2 2435 Low power motherboard.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760XD2 2435 Low power motherboard.jpg",
     "intro": {
       "cn": "高密度2U服务器，支持24个3.5硬盘，低功耗主板适合大容量存储。",
       "en": "High-density 2U server with 24×3.5 bays and low-power board for large storage.",
@@ -4816,7 +4816,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R7525 Empty machine 835.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R7525 Empty machine 835.jpg",
     "intro": {
       "cn": "2U空机箱，支持8个3.5硬盘位，兼容双路EPYC处理器，适合自定义配置。",
       "en": "2U empty chassis with 8×3.5 bays, supports dual EPYC CPUs, ideal for custom builds.",
@@ -4837,7 +4837,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R7525 Empty machine 1235.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R7525 Empty machine 1235.jpg",
     "intro": {
       "cn": "可定制的2U服务器机箱，支持12个3.5英寸盘位，适合大容量存储。",
       "en": "Customizable 2U chassis with 12×3.5-inch bays, ideal for high-capacity storage.",
@@ -4858,7 +4858,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R7525 Empty machine 2425.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R7525 Empty machine 2425.jpg",
     "intro": {
       "cn": "DELL R7525 2U空机箱，支持24个2.5寸盘位，可自由配置CPU与内存。",
       "en": "DELL R7525 2U bare chassis with 24×2.5 bays, fully customizable.",
@@ -4879,7 +4879,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL T150 E2324G8G1TNon-standard configuration.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL T150 E2324G8G1TNon-standard configuration.jpg",
     "intro": {
       "cn": "入门级塔式服务器，配Xeon E2324G、8GB内存与1TB硬盘，适合小型企业。",
       "en": "Entry-level tower server with Xeon E2324G, 8GB RAM and 1TB HDD for small business.",
@@ -4900,7 +4900,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL T440 835 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL T440 835 Empty machine.jpg",
     "intro": {
       "cn": "可扩展塔式服务器，仅机箱，无CPU、内存和硬盘，支持8个3.5寸硬盘位。",
       "en": "Expandable tower server chassis with 8×3.5 bays; no CPU, RAM, or drives included.",
@@ -4922,7 +4922,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL T640 835 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL T640 835 Empty machine.jpg",
     "intro": {
       "cn": "DELL T640塔式服务器空机箱，支持8个3.5寸盘位，灵活可扩展。",
       "en": "Dell T640 tower server chassis with 8x3.5 bays, flexible and scalable.",
@@ -4945,7 +4945,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL T550 835 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL T550 835 Empty machine.jpg",
     "intro": {
       "cn": "Dell T550空机箱，支持8个3.5硬盘，灵活配置CPU与内存。",
       "en": "Dell T550 chassis only, supports 8×3.5\" bays with flexible CPU and memory options.",
@@ -4969,7 +4969,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R250 E23148G1T235.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R250 E23148G1T235.jpg",
     "intro": {
       "cn": "DELL R250，1U服务器，配E2314、8G内存、1TB硬盘，支持2个3.5英寸盘位。",
       "en": "Dell R250 1U server with E2314 CPU, 8GB RAM, 1TB HDD and two 3.5-inch bays.",
@@ -4991,7 +4991,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R250 E23148G1T435.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R250 E23148G1T435.jpg",
     "intro": {
       "cn": "紧凑型1U服务器，配E2314、8GB内存、1TB硬盘与4个3.5寸盘位。",
       "en": "Compact 1U server with E2314 CPU, 8GB RAM, 1TB disk and four 3.5-inch bays.",
@@ -5013,7 +5013,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R350 E-2314.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R350 E-2314.jpg",
     "intro": {
       "cn": "紧凑1U服务器，搭载Xeon E-2314，适合中小企业基础业务。",
       "en": "Compact 1U server with Xeon E-2314 for SMB basic workloads.",
@@ -5034,7 +5034,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R350.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R350.jpg",
     "intro": {
       "cn": "紧凑可靠的1U服务器，适合中小企业与远程办公场景。",
       "en": "Compact and reliable 1U server ideal for small businesses and remote offices.",
@@ -5056,7 +5056,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R450 435 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R450 435 Empty machine.jpg",
     "intro": {
       "cn": "可扩展1U服务器，4个3.5盘位，空机型便于自选配置。",
       "en": "Scalable 1U server with four 3.5 bays; empty unit for custom configuration.",
@@ -5077,7 +5077,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R450 825 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R450 825 Empty machine.jpg",
     "intro": {
       "cn": "灵活的1U机架服务器，8个2.5盘位，空机型便于自定义配置",
       "en": "Flexible 1U server with 8×2.5 bays; empty configuration for full customization",
@@ -5100,7 +5100,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R550 835 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R550 835 Empty machine.jpg",
     "intro": {
       "cn": "DELL R550 2U机型，8个3.5盘位，空机配置便于灵活定制。",
       "en": "Dell R550 2U server with 8×3.5 bays; empty config allows flexible customization.",
@@ -5123,7 +5123,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R650XS 825 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R650XS 825 Empty machine.jpg",
     "intro": {
       "cn": "DELL R650XS 1U机型，8盘位，无CPU与内存，适合灵活自选配置。",
       "en": "DELL R650XS 1U chassis with 8 bays, sold barebone without CPU or RAM.",
@@ -5145,7 +5145,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R650 825 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R650 825 Empty machine.jpg",
     "intro": {
       "cn": "DELL R650 1U机型，支持8个2.5硬盘，空机可自选CPU与内存配置。",
       "en": "DELL R650 1U server with 8×2.5 bays; empty unit allows full CPU and RAM customization.",
@@ -5169,7 +5169,7 @@ products: [
     "brand": "DELL",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R660XS.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R660XS.jpg",
     "intro": {
       "cn": "经济型1U服务器，具备高性能、可扩展性与能效表现，适合虚拟化与云计算。",
       "en": "Cost‑optimized 1U server with high performance and scalability for virtualization and cloud.",
@@ -5183,7 +5183,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R660 825 High power motherboard Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R660 825 High power motherboard Empty machine.jpg",
     "intro": {
       "cn": "1U机架式空机箱，含高功率主板与8个2.5硬盘位，适合自定义高性能服务器。",
       "en": "1U chassis with high-power motherboard and 8×2.5 bays, ideal for custom high-performance builds.",
@@ -5208,7 +5208,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/Dell PowerEdge R660 10 x 25 Empty Chassis.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/Dell PowerEdge R660 10 x 25 Empty Chassis.jpg",
     "intro": {
       "cn": "Dell R660空机箱，可装10个2.5寸盘，适合自定义配置。",
       "en": "Dell R660 bare chassis with 10×2.5in bays, ideal for custom server builds.",
@@ -5231,7 +5231,7 @@ products: [
     "brand": "DELL",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R750 XS 835 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R750 XS 835 Empty machine.jpg",
     "intro": {
       "cn": "2U机箱，支持8个3.5硬盘，双电源，支持至强三代，无CPU内存硬盘。",
       "en": "2U chassis with 8×3.5 bays, dual PSU, supports 3rd‑Gen Xeon, no CPU/RAM/HDD.",
@@ -5252,7 +5252,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R750XS 1235 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R750XS 1235 Empty machine.jpg",
     "intro": {
       "cn": "2U机架式空载服务器，支持12个3.5英寸硬盘位，适合大容量存储场景。",
       "en": "2U rack chassis with 12×3.5in bays, ideal for cost‑efficient large‑capacity storage.",
@@ -5272,7 +5272,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R750 825 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R750 825 Empty machine.jpg",
     "intro": {
       "cn": "Dell R750 2U空机箱，支持8个2.5硬盘与双Xeon，可灵活自选配置。",
       "en": "Dell R750 2U chassis with 8x2.5 bays, dual Xeon support, fully customizable.",
@@ -5294,7 +5294,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R750 1235 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R750 1235 Empty machine.jpg",
     "intro": {
       "cn": "2U机架式R750空机箱，支持12个3.5硬盘，双路至强平台，可灵活自配。",
       "en": "2U R750 bare chassis with 12x3.5 bays, dual Xeon sockets and full customization.",
@@ -5317,7 +5317,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R750 1625 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R750 1625 Empty machine.jpg",
     "intro": {
       "cn": "DELL R750 2U机箱，支持16个2.5寸盘位，空机型可自由配置。",
       "en": "DELL R750 2U chassis with 16x2.5 bays, empty system for flexible configuration.",
@@ -5343,7 +5343,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R750 2425 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R750 2425 Empty machine.jpg",
     "intro": {
       "cn": "2U机架式R750裸机，支持24个2.5寸盘位与双路至强，灵活自定义配置",
       "en": "2U R750 bare chassis with 24×2.5 bays, dual‑socket Xeon support and full customizability",
@@ -5365,7 +5365,7 @@ products: [
     "brand": "Dell",
     "category": "Серверные платформы",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Серверные платформы/DELL R760XS 835 Empty machine.jpg",
+    "img": "/yufan_demo_website/products/Серверные платформы/DELL R760XS 835 Empty machine.jpg",
     "intro": {
       "cn": "2U机架式R760xs空机型，支持8个3.5硬盘，双路至强，灵活扩展。",
       "en": "2U R760xs empty chassis with 8×3.5 bays, dual Xeon support and flexible expansion.",
@@ -5388,7 +5388,7 @@ products: [
     "brand": "Fujitsu",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Fujitsu DX60S3.jpg",
+    "img": "/yufan_demo_website/products/СХД/Fujitsu DX60S3.jpg",
     "intro": {
       "cn": "面向中小企业的经济型入门级存储系统，提供基础数据保护与管理功能。",
       "en": "Entry-level affordable storage for SMBs with basic data protection and management.",
@@ -5402,7 +5402,7 @@ products: [
     "brand": "Fujitsu",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Fujitsu DX100S3.jpg",
+    "img": "/yufan_demo_website/products/СХД/Fujitsu DX100S3.jpg",
     "intro": {
       "cn": "面向SMB的经济型入门级存储，提供数据保护、管理与高可用。",
       "en": "Entry-level storage for SMB with data protection, management, and high availability.",
@@ -5426,7 +5426,7 @@ products: [
     "brand": "Fujitsu",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Fujitsu DX100S5.jpg",
+    "img": "/yufan_demo_website/products/СХД/Fujitsu DX100S5.jpg",
     "intro": {
       "cn": "DX100 S5 为中小企业提供高性能与可扩展的数据存储方案。",
       "en": "DX100 S5 delivers scalable, high‑performance storage for SMBs and branches.",
@@ -5451,7 +5451,7 @@ products: [
     "brand": "Fujitsu",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Fujitsu ETAEADU дисковая полка для  DX100DX200 S525inch.jpg",
+    "img": "/yufan_demo_website/products/СХД/Fujitsu ETAEADU дисковая полка для  DX100DX200 S525inch.jpg",
     "intro": {
       "cn": "适用于DX100/DX200 S5的2.5英寸24盘位扩展柜，具高可靠与易集成。",
       "en": "24‑bay 2.5-inch expansion shelf for Fujitsu DX100/DX200 S5 with high reliability.",
@@ -5476,7 +5476,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME5012 ISCSI 25G SFP2.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME5012 ISCSI 25G SFP2.jpg",
     "intro": {
       "cn": "面向SMB的高性能入门级存储，双25GbE iSCSI，可靠且可扩展。",
       "en": "Entry-level SMB storage with dual 25GbE iSCSI, reliable and scalable.",
@@ -5497,7 +5497,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME5012 10G electrical interface.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME5012 10G electrical interface.jpg",
     "intro": {
       "cn": "Dell ME5012是一款具备10G电口的高性能可扩展存储系统。",
       "en": "Dell ME5012 is a scalable high‑performance storage system with a 10G electrical interface.",
@@ -5516,7 +5516,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME412 1235.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME412 1235.jpg",
     "intro": {
       "cn": "Dell ME412：面向SMB的入门级存储系统，12盘位，可靠可扩展。",
       "en": "Dell ME412: entry-level SMB storage with 12 bays, reliable and scalable.",
@@ -5538,7 +5538,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME424 2425.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME424 2425.jpg",
     "intro": {
       "cn": "Dell ME424为中小企业提供高密度24盘位2.5寸入门级存储。",
       "en": "Dell ME424 is a 24‑bay 2.5-inch entry storage with high density for SMBs.",
@@ -5558,7 +5558,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL MD2412 1235.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL MD2412 1235.jpg",
     "intro": {
       "cn": "经济高效的12盘位3.5英寸企业级存储系统，适合中小企业与远程办公。",
       "en": "Cost‑efficient 12‑bay 3.5-inch storage system ideal for SMB and remote offices.",
@@ -5579,7 +5579,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME5024 FC 32GSFP4.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME5024 FC 32GSFP4.jpg",
     "intro": {
       "cn": "面向中小企业的高性能32Gb FC存储阵列，支持24盘位与虚拟化应用。",
       "en": "High‑performance 32Gb FC storage array with 24 bays, ideal for SMB and virtualization.",
@@ -5602,7 +5602,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME5012 FC 32GSFP4.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME5012 FC 32GSFP4.jpg",
     "intro": {
       "cn": "经济高效的ME5012，配备4个32Gb FC端口与12盘位，适合中小企业",
       "en": "Affordable ME5012 with four 32Gb FC ports and 12 bays for SMB storage needs",
@@ -5622,7 +5622,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/DELL ME5024 ISCSI 25G SFP2.jpg",
+    "img": "/yufan_demo_website/products/СХД/DELL ME5024 ISCSI 25G SFP2.jpg",
     "intro": {
       "cn": "高性能25GbE iSCSI存储，支持24盘位与可扩展架构。",
       "en": "High‑performance 25GbE iSCSI storage with 24 bays and scalable design.",
@@ -5644,7 +5644,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Dell Unity XT Hybrid New Solution.jpg",
+    "img": "/yufan_demo_website/products/СХД/Dell Unity XT Hybrid New Solution.jpg",
     "intro": {
       "cn": "企业级混合存储系统，融合SSD与HDD，具高性能与可扩展性。",
       "en": "Enterprise hybrid storage combining SSD and HDD with high performance and scalability.",
@@ -5666,7 +5666,7 @@ products: [
     "brand": "HPE",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/HPE MSA 2062 SFF.jpg",
+    "img": "/yufan_demo_website/products/СХД/HPE MSA 2062 SFF.jpg",
     "intro": {
       "cn": "HPE MSA 2062 SFF，混合存储，适合中小企业，支持SSD加速与扩展。",
       "en": "HPE MSA 2062 SFF hybrid storage for SMBs with SSD acceleration and expansion.",
@@ -5691,7 +5691,7 @@ products: [
     "brand": "Dell EMC",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Dell EMC PowerVault ME5024.jpg",
+    "img": "/yufan_demo_website/products/СХД/Dell EMC PowerVault ME5024.jpg",
     "intro": {
       "cn": "2U存储系统，支持24盘位，适合中小企业的高可用可扩展方案。",
       "en": "2U storage system with 24 bays, scalable and reliable for SMB workloads.",
@@ -5716,7 +5716,7 @@ products: [
     "brand": "Lenovo",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Lenovo TCH ThinkSystem DE4000H.jpg",
+    "img": "/yufan_demo_website/products/СХД/Lenovo TCH ThinkSystem DE4000H.jpg",
     "intro": {
       "cn": "混合存储，2U机型，支持SSD与HDD，适合中小企业，高性能易管理。",
       "en": "Hybrid 2U storage with SSD/HDD support, high performance and easy management for SMBs.",
@@ -5741,7 +5741,7 @@ products: [
     "brand": "Dell",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Dell ME5084.jpg",
+    "img": "/yufan_demo_website/products/СХД/Dell ME5084.jpg",
     "intro": {
       "cn": "Dell ME5084高密度可扩展存储系统，支持84盘位与多种RAID。",
       "en": "Dell ME5084 is a scalable high‑density storage system with up to 84 drives.",
@@ -5763,7 +5763,7 @@ products: [
     "brand": "HPE",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/HPE MSA 2060.jpg",
+    "img": "/yufan_demo_website/products/СХД/HPE MSA 2060.jpg",
     "intro": {
       "cn": "面向中小企业的2U闪存就绪存储，支持24个SFF，性能提升45%。",
       "en": "2U flash‑ready storage for SMB with up to 24 SFF drives and 45% performance boost.",
@@ -5785,7 +5785,7 @@ products: [
     "brand": "Lenovo",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Lenovo ThinkSystem DE240S.jpg",
+    "img": "/yufan_demo_website/products/СХД/Lenovo ThinkSystem DE240S.jpg",
     "intro": {
       "cn": "2U高密度企业级存储扩展柜，支持24个SFF盘，性能强、可扩展。",
       "en": "2U high‑density storage expansion shelf with up to 24 SFF drives; scalable and reliable.",
@@ -5807,7 +5807,7 @@ products: [
     "brand": "Huawei",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/Huawei OceanStor Dorado 5000 V6.jpg",
+    "img": "/yufan_demo_website/products/СХД/Huawei OceanStor Dorado 5000 V6.jpg",
     "intro": {
       "cn": "新一代全闪存存储，性能强劲、低时延，具备高可靠性与智能管理。",
       "en": "Next‑gen all‑flash storage with high performance, low latency, and enterprise reliability.",
@@ -5829,7 +5829,7 @@ products: [
     "brand": "NetApp",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/NetApp FAS8300 USED.jpg",
+    "img": "/yufan_demo_website/products/СХД/NetApp FAS8300 USED.jpg",
     "intro": {
       "cn": "企业级混合存储系统，支持NVMe/SSD/HDD，高性能可扩展。",
       "en": "Enterprise hybrid storage with NVMe/SSD/HDD support, high performance and scalable.",
@@ -5854,7 +5854,7 @@ products: [
     "brand": "NetApp",
     "category": "СХД",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/СХД/NetApp FAS8300 NEW.jpg",
+    "img": "/yufan_demo_website/products/СХД/NetApp FAS8300 NEW.jpg",
     "intro": {
       "cn": "NetApp FAS8300混合企业级存储，支持NVMe/SSD/HDD，高性能且可靠。",
       "en": "NetApp FAS8300 hybrid enterprise storage with NVMe/SSD/HDD support, fast and reliable.",
@@ -5876,7 +5876,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "Точки доступа",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Точки доступа/Точка доступа HPE JW811A  Aruba IAP315.jpg",
+    "img": "/yufan_demo_website/products/Точки доступа/Точка доступа HPE JW811A  Aruba IAP315.jpg",
     "intro": {
       "cn": "Aruba IAP315是一款支持802.11ac Wave 2的高性能企业级无线接入点。",
       "en": "Aruba IAP315 is a high‑performance 802.11ac Wave 2 access point for dense environments.",
@@ -5913,7 +5913,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "Точки доступа",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Точки доступа/Точка доступа HPE JZ320A  Aruba AP303.jpg",
+    "img": "/yufan_demo_website/products/Точки доступа/Точка доступа HPE JZ320A  Aruba AP303.jpg",
     "intro": {
       "cn": "HPE Aruba AP303 稳定高性能双频无线接入点，适合各类企业部署。",
       "en": "HPE Aruba AP303 is a reliable dual‑band access point built for fast, stable Wi‑Fi networks.",
@@ -5946,7 +5946,7 @@ products: [
     "brand": "HPE Aruba",
     "category": "Точки доступа",
     "price": "咨询获取",
-    "img": "/yufan_website_demo/products/Точки доступа/Точка доступа HPE-Aruba  JX936A.jpg",
+    "img": "/yufan_demo_website/products/Точки доступа/Точка доступа HPE-Aruba  JX936A.jpg",
     "intro": {
       "cn": "企业级Wi-Fi 6接入点，支持高密度、集中管理与WPA3安全。",
       "en": "Enterprise Wi-Fi 6 access point with high‑density support, centralized management, and WPA3.",

@@ -92,7 +92,7 @@
       </div>
     </section>
 
-    <section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
+<section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
       <div class="flex flex-col lg:flex-row justify-between items-end mb-20">
         <div>
           <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.3em]">{{ $t('homePage.products.title') }}</span>
@@ -118,12 +118,18 @@
               <span class="text-[9px] font-black px-4 py-1.5 rounded-full mb-6 inline-block uppercase tracking-[0.2em] bg-white text-blue-600 shadow-sm">
                 {{ product.brand }}
               </span>
-              <h3 class="text-4xl font-black italic mb-4 uppercase tracking-tighter leading-none text-gray-900">{{ product.name }}</h3>
+              <h3 class="text-4xl font-black italic mb-4 uppercase tracking-tighter leading-none text-gray-900 break-words max-w-[80%]">
+                {{ product.name }}
+              </h3>
               
-              <div class="flex flex-wrap gap-6 mt-8">
-                <div v-for="(v, k) in product.specs" :key="k" class="flex flex-col">
-                  <span class="text-[8px] uppercase opacity-40 font-black mb-1 tracking-widest text-gray-500">{{ k }}</span>
-                  <span class="text-[11px] font-black tracking-tight text-gray-900">{{ v }}</span>
+              <div class="flex flex-wrap gap-8 mt-8">
+                <div 
+                  v-for="(value, key) in Object.fromEntries(Object.entries(product.specs).slice(0, 2))" 
+                  :key="key" 
+                  class="flex flex-col"
+                >
+                  <span class="text-[8px] uppercase opacity-40 font-black mb-1 tracking-widest text-gray-500">{{ key }}</span>
+                  <span class="text-xs font-black tracking-tight text-gray-900">{{ value }}</span>
                 </div>
               </div>
             </div>
@@ -133,8 +139,8 @@
             <div class="z-10 flex justify-between items-end border-t border-gray-200 pt-8">
                <div class="flex flex-col">
                  <span class="text-[9px] font-black uppercase opacity-40 tracking-[0.3em] mb-2 text-gray-500">Status</span>
-                 <div class="text-2xl font-black tracking-tighter text-blue-600 uppercase">
-                    Check Availability
+                 <div class="text-2xl font-black tracking-tighter text-blue-600 uppercase flex items-center gap-2">
+                    Check Stock <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                  </div>
                </div>
                <button @click="$emit('openLead', product)" class="w-16 h-16 rounded-full border border-gray-900 text-gray-900 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all text-2xl">↗</button>
@@ -153,7 +159,6 @@
         </button>
       </div>
     </section>
-
     <section id="solutions" class="py-12 bg-white overflow-hidden">
       <div class="container-custom">
         <div class="bg-gray-100 rounded-[40px] p-6 lg:p-12 relative flex flex-col lg:flex-row items-center gap-8 lg:gap-8 border border-gray-200/50">
