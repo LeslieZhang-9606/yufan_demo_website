@@ -32,10 +32,10 @@ export default {
     telegramLink: 'https://t.me/+79336739973',
     
     phoneLabel: '中国总部 (WeChat)',
-    phone: '+86 185 6675 0494',
+    phone: '+86 18* **** ****',
     
     addressLabel: '总部地址',
-    addressText: '中国 · 深圳市南山区 (Shenzhen HQ)',
+    addressText: '中国 · 深圳市龙岗区 (Shenzhen HQ)',
     cta: '或者直接在线咨询'
   }
 }

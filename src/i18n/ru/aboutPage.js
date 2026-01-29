@@ -30,7 +30,7 @@ export default {
     phoneLabel: 'Штаб-квартира в Китае (WeChat)',
     phone: '+86 185 6675 0494',
     addressLabel: 'Адрес штаб-квартиры',
-    addressText: 'Китай, Шэньчжэнь, район Наньшань (Shenzhen HQ)',
+    addressText: 'Китай, Шэньчжэнь(Shenzhen HQ)',
     cta: 'Или проконсультируйтесь онлайн'
   }
 }

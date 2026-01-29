@@ -30,7 +30,7 @@ export default {
     phoneLabel: 'China HQ (WeChat)',
     phone: '+86 185 6675 0494',
     addressLabel: 'HQ Address',
-    addressText: 'Nanshan District, Shenzhen, China (Shenzhen HQ)',
+    addressText: 'Shenzhen, China (Shenzhen HQ)',
     cta: 'Or consult online directly'
   }
 }
