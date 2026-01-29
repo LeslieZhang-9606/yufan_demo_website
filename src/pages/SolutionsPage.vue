@@ -50,7 +50,7 @@
         <div class="lg:w-1/2 relative group">
           <div class="absolute -inset-4 bg-purple-100 rounded-[40px] rotate-2 transition-transform group-hover:rotate-0"></div>
           <img 
-            src="https://images.unsplash.com/photo-1558494949-ef2bb6db8744?auto=format&fit=crop&w=800&q=80" 
+            :src="`${basePath}images/compute_leasing.png`" 
             class="relative rounded-[32px] shadow-2xl w-full object-cover h-[400px]"
             alt="Compute Leasing"
           />
@@ -102,7 +102,7 @@
         <div class="lg:w-1/2 relative group">
           <div class="absolute -inset-4 bg-indigo-100 rounded-[40px] rotate-2 transition-transform group-hover:rotate-0"></div>
           <img 
-            src="https://images.unsplash.com/photo-1504384308090-c54be3855833?auto=format&fit=crop&w=800&q=80" 
+            :src="`${basePath}images/tech_support.png`" 
             class="relative rounded-[32px] shadow-2xl w-full object-cover h-[400px]"
             alt="Remote O&M"
           />
@@ -144,6 +144,9 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+// 修改点 1：定义与 HomePage 一致的基础路径获取逻辑
+const basePath = import.meta.env.BASE_URL
 
 const { tm } = useI18n()
 const emit = defineEmits(['openLead'])

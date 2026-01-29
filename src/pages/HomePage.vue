@@ -154,40 +154,46 @@
       </div>
     </section>
 
-    <div class="h-48 bg-gradient-to-b from-white via-white to-[#0052FF]"></div>
-
-    <section id="solutions" class="relative bg-[#0052FF] py-32 overflow-hidden text-white">
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.2)_0%,transparent_50%)]"></div>
-      </div>
-
-      <div class="container-custom relative z-10">
-        <div class="flex flex-col lg:flex-row gap-20 items-center">
-          <div class="lg:w-1/2">
-            <h2 class="text-5xl lg:text-7xl font-black uppercase mb-8 tracking-tighter leading-[0.9]">
+    <section id="solutions" class="py-12 bg-white overflow-hidden">
+      <div class="container-custom">
+        <div class="bg-gray-100 rounded-[40px] p-6 lg:p-12 relative flex flex-col lg:flex-row items-center gap-8 lg:gap-8 border border-gray-200/50">
+          
+          <div class="lg:w-[45%] relative z-10 text-left pl-2">
+            <h2 class="text-3xl lg:text-5xl font-black text-gray-900 mb-6 leading-[1.1] tracking-tight">
               {{ $t('homePage.solutionsTitle') }}
             </h2>
-            <p class="text-blue-100/80 text-lg leading-relaxed mb-12 max-w-md border-l border-blue-400 pl-6">
+            <p class="text-gray-600 text-base lg:text-lg mb-8 max-w-sm font-medium leading-relaxed">
               {{ $t('homePage.solutionsDesc') }}
             </p>
-            <div class="grid gap-4">
-              <div v-for="(item, idx) in ['INFINIBAND (IB) NETWORK DESIGN', 'ROCE V2 LOW LATENCY FABRIC']" :key="idx" 
-                   class="flex items-center gap-6 p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all cursor-pointer group">
-                <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-black italic shadow-lg">0{{idx+1}}</div>
-                <div class="text-sm font-black uppercase tracking-widest group-hover:translate-x-2 transition-transform">{{ item }}</div>
-              </div>
-            </div>
+            
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold text-sm uppercase tracking-wide transition-all shadow-lg hover:shadow-blue-500/30 flex items-center gap-3 group">
+              Select Project Server
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </button>
           </div>
 
-          <div class="lg:w-1/2 relative mt-16 lg:mt-0">
-            <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform duration-700">
-               <img :src="`${basePath}images/Server_render.png`" class="w-full h-auto opacity-90" />
-               <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl text-gray-900 max-w-[200px] hidden md:block">
-                  <div class="text-[10px] font-black text-blue-600 uppercase mb-2">Technical Core</div>
-                  <div class="text-xl font-black tracking-tighter">SLA 24/7 Guaranteed</div>
-               </div>
+          <div class="lg:w-[55%] relative w-full flex justify-center lg:justify-end pr-0 lg:pr-4">
+            <div class="relative w-full max-w-[500px]">
+               <img :src="`${basePath}images/Server_render.png`" class="w-full h-auto object-contain drop-shadow-2xl relative z-10" alt="Server Configuration" />
+               
+<div class="absolute top-[25%] right-[25%] z-20 animate-float duration-7000">
+  <div class="bg-[#1a202c] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-gray-700/50">
+    <span>4 or 8 GPU?</span>
+  </div>
+</div>
+
+<div class="absolute top-[50%] -translate-y-1/2 left-[2%] z-20 animate-float duration-6000 delay-1000">
+  <div class="bg-[#00C853] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg border-none">
+    <span>Add RAM?</span>
+  </div>
+</div>
+
+<div class="absolute top-[55%] right-[5%] z-20 animate-float duration-8000 delay-2000">
+  <div class="bg-[#2979FF] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg border-none">
+    <span>For AI & ML?</span>
+  </div>
+</div>
             </div>
-            <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-400/20 blur-[100px] rounded-full"></div>
           </div>
         </div>
       </div>
@@ -271,7 +277,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { siteData } from '../data/siteData.js'
 
-// 【关键修改】获取基础路径（自动适配本地和线上）
+// 获取基础路径（自动适配本地和线上）
 const basePath = import.meta.env.BASE_URL
 
 const emit = defineEmits(['openLead', 'goCatalog'])
@@ -297,7 +303,7 @@ const prevFeature = () => {
   featureIndex.value = featureIndex.value <= 0 ? max : featureIndex.value - 1
 }
 
-// --- 品牌墙逻辑 (UPDATED) ---
+// --- 品牌墙逻辑 ---
 const rawBrandNames = [
   'HUAWEI', 'xFusion', 'H3C', 'WUZHOU', 'Great Wall', 'Lenovo', 
   'KunLun', 'DELL', 'Changjiang', 'HP', 'IBM', 'Juniper',
@@ -306,7 +312,7 @@ const rawBrandNames = [
   'Seagate', 'Microsoft', 'ASUS', 'SAMSUNG', 'TOSHIBA', 'Inspur'
 ]
 
-// 【关键修改】自动生成图片路径，前面拼接了 basePath
+// 自动生成图片路径，前面拼接了 basePath
 const brandList = rawBrandNames.map(name => ({
   name: name,
   logo: `${basePath}logos/${name.toLowerCase().replace(/\s+/g, '')}.png`
@@ -367,7 +373,7 @@ const slides = [
   }
 ]
 
-// 【关键修改】数据数组里的本地图片，全都加上了 ${basePath}
+// 数据数组里的本地图片，全都加上了 ${basePath}
 const servicesLocal = [
   { 
     id: 'hardware', 
@@ -456,4 +462,25 @@ onUnmounted(() => {
   opacity: 0;
   transform: translateX(-20px);
 }
+
+/* 核心动画：慢速、微动悬浮 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* 仅移动10px，更稳重 */
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.duration-6000 { animation-duration: 6s; }
+.duration-7000 { animation-duration: 7s; }
+.duration-8000 { animation-duration: 8s; }
+
+.delay-1000 { animation-delay: 1s; }
+.delay-2000 { animation-delay: 2s; }
 </style>
