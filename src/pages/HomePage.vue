@@ -195,7 +195,7 @@
 
           <div class="lg:w-1/2 relative mt-16 lg:mt-0">
             <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform duration-700">
-               <img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=1200&q=80" class="w-full h-auto opacity-90" />
+               <img src="/yufan_demo_website/images/Server_render.png" class="w-full h-auto opacity-90" />
                <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl text-gray-900 max-w-[200px] hidden md:block">
                   <div class="text-[10px] font-black text-blue-600 uppercase mb-2">Technical Core</div>
                   <div class="text-xl font-black tracking-tighter">SLA 24/7 Guaranteed</div>
@@ -228,7 +228,7 @@
       </div>
     </section>
 
-    <!-- Partners Section (Unchanged) -->
+    <!-- Partners Section (UPDATED: Logo Wall) -->
     <section class="py-24 border-b border-gray-100 bg-white overflow-hidden">
       <div class="container-custom">
         <div class="flex justify-between items-end mb-12">
@@ -255,15 +255,20 @@
             <div :key="brandPage" class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-6">
               <div 
                 v-for="brand in visibleBrands" 
-                :key="brand" 
-                class="group flex flex-col items-center justify-center h-32 border border-gray-100 rounded-2xl hover:border-blue-200 hover:shadow-xl transition-all duration-500 cursor-pointer bg-white"
+                :key="brand.name" 
+                class="group flex flex-col items-center justify-center h-32 border border-gray-100 rounded-2xl hover:border-blue-200 hover:shadow-xl transition-all duration-500 cursor-pointer bg-white p-4"
               >
-                <div class="mb-3 opacity-20 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110 transform">
-                   <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/></svg>
-                </div>
+                <!-- Logo Image -->
+                <img 
+                  :src="brand.logo" 
+                  :alt="brand.name"
+                  class="w-full h-full object-contain opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110"
+                  @error="(e) => { e.target.style.display='none'; e.target.nextElementSibling.style.display='block'; }"
+                />
                 
-                <span class="text-xs font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors truncate w-3/4 text-center">
-                  {{ brand }}
+                <!-- Fallback Text (Hidden by default, shows if image fails) -->
+                <span class="hidden text-xs font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors truncate w-3/4 text-center">
+                  {{ brand.name }}
                 </span>
               </div>
             </div>
@@ -307,14 +312,20 @@ const prevFeature = () => {
   featureIndex.value = featureIndex.value <= 0 ? max : featureIndex.value - 1
 }
 
-// --- 品牌墙逻辑 ---
-const brandList = [
+// --- 品牌墙逻辑 (UPDATED) ---
+const rawBrandNames = [
   'HUAWEI', 'xFusion', 'H3C', 'WUZHOU', 'Great Wall', 'Lenovo', 
   'KunLun', 'DELL', 'Changjiang', 'HP', 'IBM', 'Juniper',
   'BIOBASE', 'PowerLeader', 'NVIDIA', 'Tongfang', 'AMD', 'Apple',
   'Intel', 'TianHui', 'KunTai', 'CISCO', 'Acer', 'BROADCOM', 
   'Seagate', 'Microsoft', 'ASUS', 'SAMSUNG', 'TOSHIBA', 'Inspur'
 ]
+
+// 自动生成图片路径：/logos/huawei.png
+const brandList = rawBrandNames.map(name => ({
+  name: name,
+  logo: `/yufan_demo_website/logos/${name.toLowerCase().replace(/\s+/g, '')}.png`
+}))
 
 const brandPage = ref(0)
 const itemsPerPage = 8 
@@ -335,11 +346,9 @@ const setBrandPage = (index) => {
   brandTimer = setInterval(nextBrandPage, 4000)
 }
 
-// --- Hero Banner 逻辑 (已更新) ---
-// 注意：这里的图片 URL 仅为示例，请替换为您 PPT 中的真实图片或本地资源
+// --- Hero Banner 逻辑 ---
 const slides = [
   { 
-    // Banner 1: 品牌形象 - 深色科技感世界地图
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop', 
     tagKey: 'homePage.hero.s1.tag', 
     title1Key: 'homePage.hero.s1.title1', 
@@ -348,7 +357,6 @@ const slides = [
     btnKey: 'homePage.hero.s1.btn' 
   },
   { 
-    // Banner 2: 核心硬件 - 芯片特写/服务器
     image: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=2070&auto=format&fit=crop', 
     tagKey: 'homePage.hero.s2.tag', 
     title1Key: 'homePage.hero.s2.title1', 
@@ -357,7 +365,6 @@ const slides = [
     btnKey: 'homePage.hero.s2.btn' 
   },
   { 
-    // Banner 3: 维修服务 - 实验室/显微镜
     image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=2070&auto=format&fit=crop', 
     tagKey: 'homePage.hero.s3.tag', 
     title1Key: 'homePage.hero.s3.title1', 
@@ -366,7 +373,6 @@ const slides = [
     btnKey: 'homePage.hero.s3.btn' 
   },
   { 
-    // Banner 4: 算力租赁 - 抽象数据流/云端
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=2070&auto=format&fit=crop', 
     tagKey: 'homePage.hero.s4.tag', 
     title1Key: 'homePage.hero.s4.title1', 
@@ -377,19 +383,18 @@ const slides = [
 ]
 
 const servicesLocal = [
-  { id: 'hardware', icon: 'GPU', image: 'https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.hardware.title', descKey: 'homePage.services.hardware.desc' },
-  { id: 'custom', icon: 'R&D', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.custom.title', descKey: 'homePage.services.custom.desc' },
+  { id: 'hardware', icon: 'GPU', image: '/yufan_demo_website/images/Parts_supply.png', titleKey: 'homePage.services.hardware.title', descKey: 'homePage.services.hardware.desc' },
+  { id: 'custom', icon: 'R&D', image: '/yufan_demo_website/images/H100_module.png', titleKey: 'homePage.services.custom.title', descKey: 'homePage.services.custom.desc' },
   { id: 'maintenance', icon: 'FIX', image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.maintenance.title', descKey: 'homePage.services.maintenance.desc' },
-  { id: 'solutions', icon: 'NET', image: 'https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.solutions.title', descKey: 'homePage.services.solutions.desc' },
+  { id: 'solutions', icon: 'NET', image: '/yufan_demo_website/images/Server_3D_render.jpg', titleKey: 'homePage.services.solutions.title', descKey: 'homePage.services.solutions.desc' },
 ]
 
 const currentSlide = ref(0)
 let timer = null
 
-// 重置计时器，防止手动切换后立即自动切换
 const resetTimer = () => {
   clearInterval(timer)
-  timer = setInterval(nextSlide, 6000) // 稍微延长一点自动轮播时间
+  timer = setInterval(nextSlide, 6000)
 }
 
 const nextSlide = () => { 
