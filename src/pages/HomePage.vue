@@ -372,14 +372,14 @@ const servicesLocal = [
   { 
     id: 'hardware', 
     icon: 'GPU', 
-    image: `${basePath}images/Parts_supply.png`, 
+    image: `${basePath}/images/Parts_supply.png`, 
     titleKey: 'homePage.services.hardware.title', 
     descKey: 'homePage.services.hardware.desc' 
   },
   { 
     id: 'custom', 
     icon: 'R&D', 
-    image: `${basePath}images/H100_module.png`, 
+    image: `${basePath}/images/H100_module.png`, 
     titleKey: 'homePage.services.custom.title', 
     descKey: 'homePage.services.custom.desc' 
   },
@@ -393,7 +393,7 @@ const servicesLocal = [
   { 
     id: 'solutions', 
     icon: 'NET', 
-    image: `${basePath}images/Server_3D_render.jpg`, 
+    image: `${basePath}/images/Server_3D_render.jpg`, 
     titleKey: 'homePage.services.solutions.title', 
     descKey: 'homePage.services.solutions.desc' 
   },
