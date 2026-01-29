@@ -195,7 +195,7 @@
 
           <div class="lg:w-1/2 relative mt-16 lg:mt-0">
             <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform duration-700">
-               <img src="images/Server_render.png" class="w-full h-auto opacity-90" />
+               <img src="/yufan_demo_website/images/Server_render.png" class="w-full h-auto opacity-90" />
                <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl text-gray-900 max-w-[200px] hidden md:block">
                   <div class="text-[10px] font-black text-blue-600 uppercase mb-2">Technical Core</div>
                   <div class="text-xl font-black tracking-tighter">SLA 24/7 Guaranteed</div>
@@ -317,7 +317,7 @@ const rawBrandNames = [
   'HUAWEI', 'xFusion', 'H3C', 'WUZHOU', 'Great Wall', 'Lenovo', 
   'KunLun', 'DELL', 'Changjiang', 'HP', 'IBM', 'Juniper',
   'BIOBASE', 'PowerLeader', 'NVIDIA', 'Tongfang', 'AMD', 'Apple',
-  'Intel', 'TianHui', 'KunTai', 'CISCO', 'Acer', 'BROADCOM', 
+  'Intel', 'KunTai', 'CISCO', 'Acer', 'BROADCOM', 
   'Seagate', 'Microsoft', 'ASUS', 'SAMSUNG', 'TOSHIBA', 'Inspur'
 ]
 
@@ -383,10 +383,10 @@ const slides = [
 ]
 
 const servicesLocal = [
-  { id: 'hardware', icon: 'GPU', image: 'images/Parts_supply.png', titleKey: 'homePage.services.hardware.title', descKey: 'homePage.services.hardware.desc' },
-  { id: 'custom', icon: 'R&D', image: 'images/H100_module.png', titleKey: 'homePage.services.custom.title', descKey: 'homePage.services.custom.desc' },
+  { id: 'hardware', icon: 'GPU', image: '/yufan_demo_website/images/Parts_supply.png', titleKey: 'homePage.services.hardware.title', descKey: 'homePage.services.hardware.desc' },
+  { id: 'custom', icon: 'R&D', image: '/yufan_demo_website/images/H100_module.png', titleKey: 'homePage.services.custom.title', descKey: 'homePage.services.custom.desc' },
   { id: 'maintenance', icon: 'FIX', image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=500&q=80', titleKey: 'homePage.services.maintenance.title', descKey: 'homePage.services.maintenance.desc' },
-  { id: 'solutions', icon: 'NET', image: '/images/Server_3D_render.jpg', titleKey: 'homePage.services.solutions.title', descKey: 'homePage.services.solutions.desc' },
+  { id: 'solutions', icon: 'NET', image: '/yufan_demo_website/images/Server_3D_render.jpg', titleKey: 'homePage.services.solutions.title', descKey: 'homePage.services.solutions.desc' },
 ]
 
 const currentSlide = ref(0)
