@@ -137,7 +137,7 @@
               <div class="aspect-[4/3] p-4 flex items-center justify-center bg-gray-50/50 rounded-t-2xl relative overflow-hidden">
                 <img 
                   v-if="product.img" 
-                  :src="product.img" 
+                  :src="product.img.startsWith('http') ? product.img : `${basePath}${product.img}`" 
                   :alt="product.name" 
                   loading="lazy"
                   class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105" 
@@ -192,7 +192,7 @@
               class="group flex flex-col sm:flex-row items-center gap-6 bg-white p-4 rounded-xl border border-gray-100 transition-all hover:shadow-lg hover:border-blue-200"
             >
               <div class="w-full sm:w-20 h-40 sm:h-20 shrink-0 bg-gray-50 rounded-lg flex items-center justify-center p-2">
-                 <img v-if="product.img" :src="product.img" class="max-w-full max-h-full object-contain"/>
+                 <img v-if="product.img" :src="product.img.startsWith('http') ? product.img : `${basePath}${product.img}`" class="max-w-full max-h-full object-contain"/>
               </div>
               
               <div class="flex-1 min-w-0 grid grid-cols-12 gap-4 sm:gap-6 items-center w-full">
@@ -299,6 +299,9 @@ import { siteData } from '../data/siteData.js';
 const { t, te } = useI18n();
 const emit = defineEmits(['openLead']);
 
+// 获取基础路径（自动适配域名根目录）
+const basePath = import.meta.env.BASE_URL
+
 const products = siteData.products || [];
 
 const viewMode = ref('grid');
@@ -307,7 +310,6 @@ const pageSize = 12;
 const filterType = ref('all');
 const filterValue = ref('All Hardware');
 const jumpPage = ref('');
-// 🔥 新增：控制手机端筛选栏显示
 const showMobileFilter = ref(false); 
 
 const brandList = computed(() => {
@@ -379,10 +381,8 @@ const currentItems = computed(() => {
   return filteredProducts.value.slice(start, start + pageSize);
 });
 
-// 监听筛选变化
 watch([filterType, filterValue], () => { 
   currentPage.value = 1; 
-  // 🔥 新增：在手机端，选中筛选项后自动关闭筛选抽屉
   showMobileFilter.value = false;
 });
 
