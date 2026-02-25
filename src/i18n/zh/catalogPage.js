@@ -1,81 +1,64 @@
-// src/locales/modules/catalogPage.js
+// src/locales/modules/catalogPage.js (ZH)
 export default {
   header: {
-    subTitle: 'Hardware Inventory',
-    mainTitle: '产品目录汇总',
-    description: '实时汇总全球主流算力硬件。价格随汇率波动，请点击“发起询价”获取最新 DDP/DAP 报价。',
-    synced: '已同步: {count} 型号'
+    subTitle: '硬件库存',
+    mainTitle: '产品目录',
+    description:
+      '实时聚合全球主流计算硬件。价格随汇率和市场波动，请点击「获取报价」查看最新 DDP / DAP 报价。',
+    synced: '已同步：{count} 款型号'
   },
+
   view: {
     grid: '网格',
     list: '列表'
   },
+
   filter: {
-    title: "筛选",
-    categories: '产品分类',
-    brands: '品牌筛选',
+    title: '筛选',
+    categories: '类目',
+    brands: '品牌',
     reset: '重置',
-    allHardware: '全部硬件' // 修复 image_cfbe50.png 中的大写 Key
+    allHardware: '全部硬件'
   },
+
   product: {
-    estPrice: '参考价:',
-    priceOnRequest: '咨询获取', // 修复 image_d01feb.png 中的缺失 Key
-    inquire: '发起询价',
-    inquireShort: '询价',
-    currency: '₽'
+    estPrice: '参考价：',
+    priceOnRequest: '价格面议',
+    inquire: '获取报价',
+    inquireShort: '报价',
+    currency: '¥' // 如果前端用美元，可改成 '$'
   },
+
   pagination: {
     prev: '上一页',
     next: '下一页',
-    showing: '显示 {start} - {end} 条，共 {total} 条' // 修复分页文案
+    showing: '当前显示 {start} - {end} ，共 {total} 条'
   },
-  empty: '暂无相关产品。',
 
-  // 🔥 核心：根据你文件夹名进行的映射 (image_da9bf9.png)
+  empty: '未找到符合条件的产品。',
+
+  /**
+   * 类目名称映射
+   *
+   * key 必须与 `siteData.products[*].category` 完全一致。
+   */
   categoryMap: {
-    'gpuvideo_cards': 'GPU 显卡',
-    'gpuвидеокарты': 'GPU 显卡',
-    'gpu servers': 'GPU 服务器',
-    'general servers': '通用服务器',
-    'kommutatory': '核心交换机',
-    'коммутаторы': '核心交换机',
-    'linejnye-karty': '线卡模块',
-    'линейные карты': '线卡模块',
-    'marshrutizatory': '企业级路由器',
-    'маршрутизаторы': '企业级路由器',
-    'vysokoproizvoditelnye-servery': '高性能服务器',
-    'Высокопроизводительные серверы': '高性能服务器',
-    'ВЫСОКОПРОИЗВОДИТЕЛЬНЫЕ СЕРВЕРЫ':'高性能服务器',
-    'wlan_controllers': 'WLAN 控制器',
-    'wlan контроллеры': 'WLAN 控制器',
-    'base_stations': '基站设备',
-    'базовые станции': '基站设备',
-    'power_units': '电源模块',
-    'блоки питания': '电源模块',
-    'used_equipment': '二手备件',
-    'бу оборудование': '二手备件',
-    'interface_modules': '接口模块',
-    'интерфейсные модули': '接口模块',
-    'tape_libraries': '磁带库',
-    'ленточные библиотеки': '磁带库',
-    'firewalls': '防火墙/安全',
-    'межсетевые экраны': '防火墙/安全',
-    'multiplexers': '多路复用器',
-    'мультиплексоры': '多路复用器',
-    'laptops_mobile_servers': '笔记本与移动服务器',
-    'ноутбукимобильные серверы': '笔记本与移动服务器',
-    'workstations': '工作站',
-    'рабочие станции': '工作站',
-    'server_platforms': '服务器准系统',
-    'серверные платформы': '服务器准系统',
-    'servers': '服务器',
-    'серверы': '服务器',
-    'san_storage': '存储系统/СХД',
-    'схд': '存储系统/СХД',
-    'access_points': '无线接入点',
-    'точки доступа': '无线接入点',
-    'высокопроизводительные серверы': '高性能服务器', 
-    // 备用修复：以防后端传回来的是下划线而不是连字符的拼音
-    'vysokoproizvoditelnye_servery': '高性能服务器',
+    'gpu-cards': 'GPU 加速卡',
+    'wlan-controllers': '无线控制器',
+    'base-stations': '基站与射频单元',
+    'power-supplies': '网络设备电源模块',
+    'high-performance-servers': '高性能 GPU 服务器',
+    'interface-modules': '接口模块 / 业务板卡',
+    'switches': '交换机',
+    'tape-libraries': '磁带库与磁带机',
+    'line-cards': '路由线卡',
+    'routers': '路由器',
+    'firewalls': '防火墙 / 安全网关',
+    'multiplexers': '复用设备',
+    'laptops-mobile-servers': '加固笔记本与移动服务器',
+    'workstations': '图形工作站',
+    'server-platforms': '通用服务器平台 / 裸机服务器',
+    'storage-systems': '存储系统与磁盘阵列',
+    'access-points': '无线接入点 AP'
   }
 }

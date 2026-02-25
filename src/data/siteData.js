@@ -21,7 +21,7 @@ export const siteData = {
 products: [
 {
     "id": 1001,
-    "name": "NVIDIA A100 40G YF PCIe",
+    "name": "NVIDIA YF A100 40G PCIe",
     "brand": "NVIDIA",
     "category": "gpu-cards",
     "price": "咨询获取",
@@ -67,7 +67,7 @@ products: [
   },
   {
     "id": 1003,
-    "name": "NVIDIA A100 96GB YF PCIE",
+    "name": "NVIDIA YF A100 96GB PCIE",
     "brand": "NVIDIA",
     "category": "gpu-cards",
     "price": "咨询获取",
