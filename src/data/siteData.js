@@ -21,7 +21,7 @@ export const siteData = {
 products: [
 {
     "id": 1001,
-    "name": "NVIDIA A100 40G OEM",
+    "name": "NVIDIA A100 40G YF PCIe",
     "brand": "NVIDIA",
     "category": "gpu-cards",
     "price": "咨询获取",
@@ -67,7 +67,7 @@ products: [
   },
   {
     "id": 1003,
-    "name": "NVIDIA A100 96GB OEM PCIE",
+    "name": "NVIDIA A100 96GB YF PCIE",
     "brand": "NVIDIA",
     "category": "gpu-cards",
     "price": "咨询获取",
@@ -131,7 +131,7 @@ products: [
   },
   {
     "id": 1006,
-    "name": "NVIDIA H100 80GB OEM PCIE",
+    "name": "NVIDIA H100 80GB YF PCIE",
     "brand": "NVIDIA",
     "category": "gpu-cards",
     "price": "咨询获取",
@@ -154,7 +154,7 @@ products: [
   },
   {
     "id": 1007,
-    "name": "NVIDIA A100 80GB OEM PCIE",
+    "name": "NVIDIA A100 80GB YF PCIE",
     "brand": "NVIDIA",
     "category": "gpu-cards",
     "price": "咨询获取",
