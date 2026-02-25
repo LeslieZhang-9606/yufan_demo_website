@@ -33,7 +33,7 @@ products: [
     },
     "specs": {
       "Architecture": "NVIDIA Ampere",
-      "Memory": "40GB HBM2e",
+      "Memory": "40GB HBM2",
       "Tensor_Cores": "3rd generation",
       "MIG_Support": "Yes",
       "NVLink": "Supported",
@@ -79,7 +79,7 @@ products: [
     },
     "specs": {
       "Architecture": "NVIDIA Ampere",
-      "Memory": "96GB HBM2e",
+      "Memory": "96GB HBM2",
       "Tensor_Cores": "3rd generation",
       "MIG_Support": "Yes",
       "Interface": "PCIe Gen4",
@@ -102,7 +102,7 @@ products: [
     },
     "specs": {
       "Architecture": "NVIDIA Ampere",
-      "Memory": "80GB HBM2e",
+      "Memory": "80GB HBM2",
       "Tensor_Cores": "3rd generation",
       "MIG_Support": "Yes",
       "Interface": "PCIe Gen4"
@@ -122,7 +122,7 @@ products: [
     },
     "specs": {
       "Architecture": "Ampere",
-      "Memory": "40GB HBM2e",
+      "Memory": "40GB HBM2",
       "Tensor_Cores": "3rd Generation",
       "MIG_Support": "Yes",
       "Use_Cases": "AI, Deep Learning, HPC",
@@ -168,7 +168,7 @@ products: [
       "Model": "NVIDIA A100 80GB OEM PCIe",
       "Architecture": "NVIDIA Ampere",
       "Memory Capacity": "80GB",
-      "Memory Type": "HBM2e",
+      "Memory Type": "HBM2",
       "Interface": "PCIe 4.0",
       "Tensor Cores": "Supported",
       "NVLink Support": "Yes",
