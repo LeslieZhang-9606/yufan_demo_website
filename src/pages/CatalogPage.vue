@@ -328,14 +328,9 @@ const resolveCategory = (catRaw) => {
   return te(i18nKey) ? t(i18nKey) : catRaw;
 };
 
+// ✅ 修改后的函数：不再裁掉品牌，直接返回完整 name
 const formatProductName = (product) => {
-  if (!product.name || !product.brand) return product.name;
-  const brand = product.brand.toLowerCase();
-  const name = product.name.toLowerCase();
-  if (name.startsWith(brand)) {
-    return product.name.slice(brand.length).trim(); 
-  }
-  return product.name;
+  return product && product.name ? product.name : '';
 };
 
 const filteredProducts = computed(() => {
