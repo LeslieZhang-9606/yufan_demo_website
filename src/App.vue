@@ -13,12 +13,15 @@ import CatalogPage from './pages/CatalogPage.vue'
 import ServicesPage from './pages/ServicesPage.vue'
 import AboutPage from './pages/AboutPage.vue'
 import SolutionsPage from './pages/SolutionsPage.vue'
+import ProductDetailPage from './pages/ProductDetailPage.vue'
+
 
 // 数据导入
 import { siteData } from './data/siteData'
 
 const { t, locale } = useI18n()
 const currentView = ref('home')
+const currentProductId = ref(null)  // 当前详情页展示的产品 ID
 const showLeadModal = ref(false)
 
 const viewMap = {
@@ -27,6 +30,7 @@ const viewMap = {
   'solutions': SolutionsPage,
   'services': ServicesPage,
   'about': AboutPage,
+  'product': ProductDetailPage,   // 新增
 }
 
 // --- 新增：动态标题逻辑 ---
@@ -60,20 +64,53 @@ watch(locale, () => {
 
 // --- 原有路由逻辑 ---
 
-function go(view) {
+function go(view, payload) {
   currentView.value = view
-  window.location.hash = view
+  if (view === 'product' && payload?.id) {
+    currentProductId.value = payload.id
+    window.location.hash = `product/${payload.id}`
+  } else {
+    currentProductId.value = null
+    window.location.hash = view
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function handleHashChange() {
-  const hash = window.location.hash.replace('#', '')
-  if (viewMap[hash]) {
-    currentView.value = hash
+  const raw = window.location.hash.replace('#', '') // e.g. 'catalog' 或 'product/1001'
+
+  if (!raw) {
+    currentView.value = 'home'
+    currentProductId.value = null
+    return
+  }
+
+  const [view, param] = raw.split('/')
+
+  if (view === 'product' && param) {
+    const id = Number(param)
+    const exists = siteData.products.some(p => p.id === id)
+
+    if (exists) {
+      currentView.value = 'product'
+      currentProductId.value = id
+      return
+    } else {
+      currentView.value = 'catalog'
+      currentProductId.value = null
+      return
+    }
+  }
+
+  if (viewMap[view]) {
+    currentView.value = view
+    currentProductId.value = null
   } else {
     currentView.value = 'home'
+    currentProductId.value = null
   }
 }
+
 
 onMounted(() => {
   handleHashChange()
@@ -113,35 +150,52 @@ function submitLeadDemo() {
       @navigate="go" 
     />
 
-    <main>
-      <HomePage
-        v-if="currentView === 'home'"
-        :vps="siteData.vps"
-        :quickCats="siteData.quickCats"
-        :services="siteData.services"
-        @goCatalog="go('catalog')"
-        @openLead="openLeadModal"
-      />
+<main>
+  <!-- 首页 -->
+  <HomePage
+    v-if="currentView === 'home'"
+    :vps="siteData.vps"
+    :quickCats="siteData.quickCats"
+    :services="siteData.services"
+    @goCatalog="go('catalog')"
+    @openLead="openLeadModal"
+  />
 
-      <CatalogPage
-        v-else-if="currentView === 'catalog'"
-        :products="siteData.products"
-        @openLead="openLeadModal"
-      />
-      
-      <SolutionsPage
-        v-else-if="currentView === 'solutions'"
-        @openLead="openLeadModal"
-      />
+  <!-- 产品目录 -->
+  <CatalogPage
+    v-else-if="currentView === 'catalog'"
+    :products="siteData.products"
+    @openLead="openLeadModal"
+    @openProduct="id => go('product', { id })"
+  />
+  
+  <!-- 解决方案 -->
+  <SolutionsPage
+    v-else-if="currentView === 'solutions'"
+    @openLead="openLeadModal"
+  />
 
-      <ServicesPage
-        v-else-if="currentView === 'services'"
-        @openLead="openLeadModal"
-      />
+  <!-- 服务 -->
+  <ServicesPage
+    v-else-if="currentView === 'services'"
+    @openLead="openLeadModal"
+  />
 
-      <AboutPage v-else-if="currentView === 'about'" />
-      
-    </main>
+  <!-- 关于我们 -->
+  <AboutPage
+    v-else-if="currentView === 'about'"
+  />
+
+  <!-- 产品详情页 -->
+  <ProductDetailPage
+    v-else-if="currentView === 'product'"
+    :products="siteData.products"
+    :productId="currentProductId"
+    @openLead="openLeadModal"
+    @backToCatalog="go('catalog')"
+  />
+</main>
+
 
     <LeadFormSection
       v-if="showInlineLeadForm"

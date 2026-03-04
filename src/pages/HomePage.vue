@@ -19,7 +19,7 @@
             
             <h1 class="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[1.1] mb-6 animate-fade-in-up delay-100 break-words w-full shadow-black drop-shadow-lg">
               {{ $t(slide.title1Key) }} <br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white italic">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white italic box-decoration-clone pr-[0.5em]">
                 {{ $t(slide.title2Key) }}
               </span>
             </h1>
@@ -92,7 +92,7 @@
       </div>
     </section>
 
-<section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
+    <section id="products" class="container-custom pt-24 pb-48 overflow-hidden bg-white">
       <div class="flex flex-col lg:flex-row justify-between items-end mb-20">
         <div>
           <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.3em]">{{ $t('homePage.products.title') }}</span>
@@ -159,6 +159,7 @@
         </button>
       </div>
     </section>
+    
     <section id="solutions" class="py-12 bg-white overflow-hidden">
       <div class="container-custom">
         <div class="bg-gray-100 rounded-[40px] p-6 lg:p-12 relative flex flex-col lg:flex-row items-center gap-8 lg:gap-8 border border-gray-200/50">
@@ -181,23 +182,23 @@
             <div class="relative w-full max-w-[500px]">
                <img :src="`${basePath}images/Server_render.png`" class="w-full h-auto object-contain drop-shadow-2xl relative z-10" alt="Server Configuration" />
                
-<div class="absolute top-[25%] right-[25%] z-20 animate-float duration-7000">
-  <div class="bg-[#1a202c] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-gray-700/50">
-    <span>4 or 8 GPU?</span>
-  </div>
-</div>
+              <div class="absolute top-[25%] right-[25%] z-20 animate-float duration-7000">
+                <div class="bg-[#1a202c] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-gray-700/50">
+                  <span>4 or 8 GPU?</span>
+                </div>
+              </div>
 
-<div class="absolute top-[50%] -translate-y-1/2 left-[2%] z-20 animate-float duration-6000 delay-1000">
-  <div class="bg-[#00C853] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg border-none">
-    <span>Add RAM?</span>
-  </div>
-</div>
+              <div class="absolute top-[50%] -translate-y-1/2 left-[2%] z-20 animate-float duration-6000 delay-1000">
+                <div class="bg-[#00C853] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg border-none">
+                  <span>Add RAM?</span>
+                </div>
+              </div>
 
-<div class="absolute top-[55%] right-[5%] z-20 animate-float duration-8000 delay-2000">
-  <div class="bg-[#2979FF] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg border-none">
-    <span>For AI & ML?</span>
-  </div>
-</div>
+              <div class="absolute top-[55%] right-[5%] z-20 animate-float duration-8000 delay-2000">
+                <div class="bg-[#2979FF] text-white text-[10px] lg:text-xs font-bold px-4 py-2 rounded-full shadow-lg border-none">
+                  <span>For AI & ML?</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
