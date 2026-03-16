@@ -134,7 +134,10 @@
               :key="product.id"
               class="group flex flex-col bg-white rounded-2xl border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1"
             >
-              <div class="aspect-[4/3] p-4 flex items-center justify-center bg-gray-50/50 rounded-t-2xl relative overflow-hidden">
+              <div 
+                @click="$emit('openProduct', product.id)"
+                class="aspect-[4/3] p-4 flex items-center justify-center bg-gray-50/50 rounded-t-2xl relative overflow-hidden cursor-pointer"
+              >
                 <img 
                   v-if="product.img" 
                   :src="product.img.trim().startsWith('http') ? product.img.trim() : (basePath + '/' + product.img.trim()).replace(/\/+/g, '/')" 
@@ -153,7 +156,11 @@
 
               <div class="p-4 flex flex-col flex-1">
                 <div class="mb-3">
-                  <h3 class="text-sm font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[2.5em]" :title="product.name">
+                  <h3 
+                    @click="$emit('openProduct', product.id)"
+                    class="text-sm font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[2.5em] cursor-pointer" 
+                    :title="product.name"
+                  >
                     {{ formatProductName(product) }}
                   </h3>
                 </div>
@@ -191,14 +198,22 @@
               :key="product.id"
               class="group flex flex-col sm:flex-row items-center gap-6 bg-white p-4 rounded-xl border border-gray-100 transition-all hover:shadow-lg hover:border-blue-200"
             >
-              <div class="w-full sm:w-20 h-40 sm:h-20 shrink-0 bg-gray-50 rounded-lg flex items-center justify-center p-2">
+              <div 
+                @click="$emit('openProduct', product.id)"
+                class="w-full sm:w-20 h-40 sm:h-20 shrink-0 bg-gray-50 rounded-lg flex items-center justify-center p-2 cursor-pointer"
+              >
                  <img v-if="product.img" :src="product.img.trim().startsWith('http') ? product.img.trim() : (basePath + '/' + product.img.trim()).replace(/\/+/g, '/')" class="max-w-full max-h-full object-contain"/>
               </div>
               
               <div class="flex-1 min-w-0 grid grid-cols-12 gap-4 sm:gap-6 items-center w-full">
                 <div class="col-span-12 sm:col-span-4">
                    <div class="text-[10px] font-bold text-blue-600 uppercase mb-0.5">{{ product.brand }}</div>
-                   <h3 class="text-base font-bold text-gray-900 truncate">{{ formatProductName(product) }}</h3>
+                   <h3 
+                     @click="$emit('openProduct', product.id)"
+                     class="text-base font-bold text-gray-900 truncate cursor-pointer hover:text-blue-600 transition-colors"
+                   >
+                     {{ formatProductName(product) }}
+                   </h3>
                 </div>
                 
                 <div class="col-span-12 sm:col-span-4 flex flex-wrap gap-x-4 gap-y-1">
@@ -297,7 +312,7 @@ import { useI18n } from 'vue-i18n';
 import { siteData } from '../data/siteData.js'; 
 
 const { t, te } = useI18n();
-const emit = defineEmits(['openLead']);
+const emit = defineEmits(['openLead', 'openProduct']);
 
 const basePath = import.meta.env.BASE_URL
 
@@ -328,7 +343,6 @@ const resolveCategory = (catRaw) => {
   return te(i18nKey) ? t(i18nKey) : catRaw;
 };
 
-// ✅ 修改后的函数：不再裁掉品牌，直接返回完整 name
 const formatProductName = (product) => {
   return product && product.name ? product.name : '';
 };
