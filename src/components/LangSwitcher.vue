@@ -65,7 +65,7 @@ const toggleDropdown = () => {
 
 const switchLang = (code) => {
   locale.value = code
-  localStorage.setItem('user-locale', code)
+  localStorage.setItem('locale', code)
   isOpen.value = false
 }
 
