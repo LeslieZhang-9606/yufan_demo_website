@@ -59,6 +59,9 @@ export default {
     'workstations': 'Рабочие станции',
     'server-platforms': 'Серверные платформы (barebone)',
     'storage-systems': 'Системы хранения данных',
-    'access-points': 'Точки доступа Wi‑Fi'
+    'access-points': 'Точки доступа Wi‑Fi',
+    'components-cpu': 'Процессоры (CPU)',
+    'components-ram': 'Оперативная память (RAM-модули)',
+    'components-ssd': 'Накопители SSD и NVMe'
   }
 }

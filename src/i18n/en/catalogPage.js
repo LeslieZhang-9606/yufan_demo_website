@@ -60,6 +60,9 @@ export default {
     'workstations': 'Workstations',
     'server-platforms': 'Server Platforms (Barebone)',
     'storage-systems': 'Storage Systems & Disk Arrays',
-    'access-points': 'Wireless Access Points'
+    'access-points': 'Wireless Access Points',
+    'components-cpu': 'CPU Components',
+    'components-ram': 'Memory (RAM Modules)',
+    'components-ssd': 'SSD & NVMe Storage'
   }
 }

@@ -1,4 +1,3 @@
-import { importedProducts } from './importedProducts.js'
 export const siteData = {
   vps: [
     { ru: 'ГТД / НДС 20%', cn: '合规报关与增值税发票' },
@@ -5968,9 +5967,7 @@ products: [
       "Compatibility": "Aruba 7000/7200 controllers, Aruba ESP",
       "Use_Cases": "Offices, education, hotels, industrial IoT"
     }
-  },
-  ... importedProducts
-],
+  }],
 footerCols: [
     { 
       title: 'NAVIGATION', 

@@ -59,6 +59,9 @@ export default {
     'workstations': '图形工作站',
     'server-platforms': '通用服务器平台 / 裸机服务器',
     'storage-systems': '存储系统与磁盘阵列',
-    'access-points': '无线接入点 AP'
+    'access-points': '无线接入点 AP',
+    'components-cpu': '处理器 / CPU',
+    'components-ram': '内存 / RAM 条',
+    'components-ssd': 'SSD / NVMe 固态硬盘'
   }
 }
