@@ -209,8 +209,8 @@ input:focus, textarea:focus { border-color: #5136e5; box-shadow: inset 0 0 0 1px
 .results { margin-top: 48px; }
 .results-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 0 16px; }
 .results-heading h2 { margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase; }
-.export-button { min-height: 46px; padding: 0 20px; color: #fff; background: #5136e5; border: 0; border-radius: 0; font-size: 12px; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background-color .2s ease; }
-.export-button:hover { background: #3f28c7; }
+.export-button { min-height: 46px; padding: 0 20px; color: #fff; background: #2563eb; border: 0; border-radius: 0; font-size: 12px; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: background-color .2s ease; }
+.export-button:hover, .export-button:focus-visible { background: #1d4ed8; }
 .result-table { border-top: 1px solid #aeb1b7; border-right: 1px solid #aeb1b7; border-left: 1px solid #aeb1b7; }
 .result-row { display: grid; grid-template-columns: minmax(260px, 1.4fr) 1fr 1fr; column-gap: 22px; align-items: center; min-height: 62px; padding: 0 18px; border-bottom: 1px solid #aeb1b7; font-size: 13px; }
 .result-header { min-height: 42px; color: #111827; font-size: 11px; font-weight: 800; text-transform: uppercase; }
