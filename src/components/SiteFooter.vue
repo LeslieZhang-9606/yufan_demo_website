@@ -23,9 +23,9 @@
               {{ $t('siteFooter.sections.hardware') }}
             </h4>
             <ul class="space-y-2 text-[11px] font-bold text-gray-500 uppercase">
-              <li><a href="#catalog" class="hover:text-blue-500 transition-colors">GPU Servers</a></li>
-              <li><a href="#catalog" class="hover:text-blue-500 transition-colors">Networking</a></li>
-              <li><a href="#catalog" class="hover:text-blue-500 transition-colors">Workstations</a></li>
+              <li><a href="/catalog" @click.prevent="navigate('catalog')" class="hover:text-blue-500 transition-colors">GPU Servers</a></li>
+              <li><a href="/catalog" @click.prevent="navigate('catalog')" class="hover:text-blue-500 transition-colors">Networking</a></li>
+              <li><a href="/catalog" @click.prevent="navigate('catalog')" class="hover:text-blue-500 transition-colors">Workstations</a></li>
             </ul>
           </div>
           <div class="space-y-4">
@@ -33,9 +33,9 @@
               {{ $t('siteFooter.sections.solutions') }}
             </h4>
             <ul class="space-y-2 text-[11px] font-bold text-gray-500 uppercase">
-              <li><a href="#solutions" class="hover:text-blue-500 transition-colors">Leasing</a></li>
-              <li><a href="#solutions" class="hover:text-blue-500 transition-colors">Maintenance</a></li>
-              <li><a href="#solutions" class="hover:text-blue-500 transition-colors">Custom R&D</a></li>
+              <li><a href="/solutions" @click.prevent="navigate('solutions')" class="hover:text-blue-500 transition-colors">Leasing</a></li>
+              <li><a href="/solutions" @click.prevent="navigate('solutions')" class="hover:text-blue-500 transition-colors">Maintenance</a></li>
+              <li><a href="/solutions" @click.prevent="navigate('solutions')" class="hover:text-blue-500 transition-colors">Custom R&D</a></li>
             </ul>
           </div>
         </div>
@@ -85,8 +85,8 @@
               {{ $t('siteFooter.legalNotice') }}
             </p>
             <div class="flex lg:justify-end gap-6 text-[9px] font-black text-gray-500 uppercase tracking-widest">
-              <a href="#" class="hover:text-blue-500 transition-colors">{{ $t('siteFooter.links.privacy') }}</a>
-              <a href="#" class="hover:text-blue-500 transition-colors">{{ $t('siteFooter.links.terms') }}</a>
+              <span>{{ $t('siteFooter.links.privacy') }}</span>
+              <span>{{ $t('siteFooter.links.terms') }}</span>
             </div>
           </div>
         </div>
@@ -96,7 +96,11 @@
 </template>
 
 <script setup>
-// 无需额外逻辑，通过 i18n 驱动
+const emit = defineEmits(['navigate'])
+
+function navigate(view) {
+  emit('navigate', view)
+}
 </script>
 
 <style scoped>

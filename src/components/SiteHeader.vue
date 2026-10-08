@@ -3,15 +3,15 @@
     <div class="container-custom h-20 flex items-center justify-between">
       
       <nav class="hidden lg:flex space-x-12 text-[12px] font-bold uppercase tracking-widest text-gray-500 w-[40%] justify-start">
-        <a href="#catalog" @click.prevent="switchPage('catalog')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'catalog' }">
+        <a href="/catalog" @click.prevent="switchPage('catalog')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'catalog' }">
           {{ $t('siteHeader.nav.products') }}
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
         </a>
-        <a href="#solutions" @click.prevent="switchPage('solutions')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'solutions' }">
+        <a href="/solutions" @click.prevent="switchPage('solutions')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'solutions' }">
           {{ $t('siteHeader.nav.solutions') }}
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
         </a>
-        <a href="#warranty" @click.prevent="switchPage('warranty')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'warranty' }">
+        <a href="/warranty" @click.prevent="switchPage('warranty')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'warranty' }">
           {{ $t('siteHeader.nav.warranty') }}
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
         </a>
@@ -23,10 +23,10 @@
       </div>
 
       <nav class="hidden lg:flex space-x-12 text-[12px] font-bold uppercase tracking-widest text-gray-500 w-[40%] justify-end items-center">
-        <a href="#services" @click.prevent="switchPage('services')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'services' }">
+        <a href="/services" @click.prevent="switchPage('services')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'services' }">
           {{ $t('siteHeader.nav.services') }}
         </a>
-        <a href="#about" @click.prevent="switchPage('about')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'about' }">
+        <a href="/about" @click.prevent="switchPage('about')" class="hover:text-blue-600 transition-colors relative group" :class="{ 'text-blue-600': currentView === 'about' }">
           {{ $t('siteHeader.nav.about') }}
         </a>
         <div class="border-l border-gray-200 pl-6 ml-2">
@@ -56,11 +56,11 @@
     >
       <div v-if="isMenuOpen" class="lg:hidden bg-white border-b border-gray-100 shadow-xl">
         <div class="flex flex-col space-y-4 px-8 py-8 font-bold uppercase text-[12px] tracking-widest text-gray-500">
-          <a href="#catalog" @click.prevent="switchPage('catalog')" class="py-2" :class="{ 'text-blue-600': currentView === 'catalog' }">{{ $t('siteHeader.nav.products') }}</a>
-          <a href="#solutions" @click.prevent="switchPage('solutions')" class="py-2" :class="{ 'text-blue-600': currentView === 'solutions' }">{{ $t('siteHeader.nav.solutions') }}</a>
-          <a href="#warranty" @click.prevent="switchPage('warranty')" class="py-2" :class="{ 'text-blue-600': currentView === 'warranty' }">{{ $t('siteHeader.nav.warranty') }}</a>
-          <a href="#services" @click.prevent="switchPage('services')" class="py-2" :class="{ 'text-blue-600': currentView === 'services' }">{{ $t('siteHeader.nav.services') }}</a>
-          <a href="#about" @click.prevent="switchPage('about')" class="py-2" :class="{ 'text-blue-600': currentView === 'about' }">{{ $t('siteHeader.nav.about') }}</a>
+          <a href="/catalog" @click.prevent="switchPage('catalog')" class="py-2" :class="{ 'text-blue-600': currentView === 'catalog' }">{{ $t('siteHeader.nav.products') }}</a>
+          <a href="/solutions" @click.prevent="switchPage('solutions')" class="py-2" :class="{ 'text-blue-600': currentView === 'solutions' }">{{ $t('siteHeader.nav.solutions') }}</a>
+          <a href="/warranty" @click.prevent="switchPage('warranty')" class="py-2" :class="{ 'text-blue-600': currentView === 'warranty' }">{{ $t('siteHeader.nav.warranty') }}</a>
+          <a href="/services" @click.prevent="switchPage('services')" class="py-2" :class="{ 'text-blue-600': currentView === 'services' }">{{ $t('siteHeader.nav.services') }}</a>
+          <a href="/about" @click.prevent="switchPage('about')" class="py-2" :class="{ 'text-blue-600': currentView === 'about' }">{{ $t('siteHeader.nav.about') }}</a>
         </div>
       </div>
     </transition>

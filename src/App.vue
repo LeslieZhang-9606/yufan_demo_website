@@ -69,22 +69,23 @@ watch(locale, () => {
   updatePageTitle()
 })
 
-// --- 原有路由逻辑 ---
+// 路径路由：对外使用 /warranty、/catalog 等可印刷地址。
 
 function go(view, payload) {
   currentView.value = view
+  let nextPath = view === 'home' ? '/' : `/${view}`
   if (view === 'product' && payload?.id) {
     currentProductId.value = payload.id
-    window.location.hash = `product/${payload.id}`
+    nextPath = `/product/${payload.id}`
   } else {
     currentProductId.value = null
-    window.location.hash = view
   }
+  window.history.pushState({}, '', nextPath)
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-function handleHashChange() {
-  const raw = window.location.hash.replace('#', '') // e.g. 'catalog' 或 'product/1001'
+function handleRouteChange() {
+  const raw = window.location.pathname.replace(/^\/+|\/+$/g, '')
 
   if (!raw) {
     currentView.value = 'home'
@@ -105,6 +106,7 @@ function handleHashChange() {
     } else {
       currentView.value = 'catalog'
       currentProductId.value = null
+      window.history.replaceState({}, '', '/catalog')
       return
     }
   }
@@ -115,12 +117,13 @@ function handleHashChange() {
   } else {
     currentView.value = 'home'
     currentProductId.value = null
+    window.history.replaceState({}, '', '/')
   }
 }
 
 
 onMounted(async () => {
-  // 加载闸门: 产品数据就绪后再解析初始 hash, 避免深链 #product/xxx 查不到
+  // 产品数据就绪后再解析初始路径，避免产品深链提前判定为不存在。
   try {
     await ensureProductsLoaded()
     productsReady.value = true
@@ -128,13 +131,13 @@ onMounted(async () => {
     productsError.value = err?.message || String(err)
     productsReady.value = true // 放行, 页面显示空/错误由各页兜底
   }
-  handleHashChange()
+  handleRouteChange()
   updatePageTitle() // 初始化时执行一次标题设置
-  window.addEventListener('hashchange', handleHashChange)
+  window.addEventListener('popstate', handleRouteChange)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('hashchange', handleHashChange)
+  window.removeEventListener('popstate', handleRouteChange)
 })
 
 function openLeadModal() {
@@ -145,8 +148,8 @@ function closeLeadModal() {
   showLeadModal.value = false
 }
 
-function handleFooterNav(label) {
-  go('contact') 
+function handleFooterNav(view) {
+  go(view)
 }
 
 const showInlineLeadForm = computed(() =>
