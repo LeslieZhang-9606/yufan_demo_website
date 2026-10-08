@@ -6,7 +6,7 @@ export default {
     singlePlaceholder: 'Введите серийный номер', batchPlaceholder: 'Введите по одному серийному номеру в каждой строке',
     check: 'Проверить', checkBatch: 'Проверить список', checking: 'Проверка…',
   },
-  result: { title: 'Сведения о гарантии', export: 'Экспорт', sn: 'Серийный номер', status: 'Тип RMA', end: 'Дата окончания' },
+  result: { title: 'Сведения о гарантии', export: 'Экспорт', sn: 'Серийный номер', pn: 'PN', status: 'Тип RMA', end: 'Дата окончания' },
   status: { under_warranty: 'На гарантии', expired: 'Гарантия истекла', pending: 'Ожидает активации', contact_support: 'Обратитесь в поддержку', not_found: 'Не найдено' },
   errors: {
     required: 'Введите хотя бы один серийный номер.', invalid: 'Один или несколько серийных номеров введены неверно.',

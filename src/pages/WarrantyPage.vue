@@ -139,8 +139,8 @@ function csvCell(value) {
 
 function exportResults() {
   const rows = [
-    [t('warrantyPage.result.sn'), t('warrantyPage.result.status'), t('warrantyPage.result.end')],
-    ...results.value.map((item) => [item.sn, statusText(item.status), item.warranty_end || '']),
+    [t('warrantyPage.result.sn'), t('warrantyPage.result.pn'), t('warrantyPage.result.status'), t('warrantyPage.result.end')],
+    ...results.value.map((item) => [item.sn, item.pn || '', statusText(item.status), item.warranty_end || '']),
   ]
   const csv = '\uFEFF' + rows.map((row) => row.map(csvCell).join(',')).join('\r\n')
   const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }))
