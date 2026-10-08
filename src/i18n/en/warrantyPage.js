@@ -6,7 +6,7 @@ export default {
     singlePlaceholder: 'Enter serial number', batchPlaceholder: 'Enter one serial number per line',
     check: 'Verify', checkBatch: 'Verify batch', checking: 'Checking…',
   },
-  result: { title: 'Coverage details', count: '{count} result | {count} results', sn: 'Serial number', status: 'Status', term: 'Warranty term', start: 'Start date', end: 'Expiration date' },
+  result: { title: 'Coverage details', export: 'Export', sn: 'Serial number', status: 'RMA type', end: 'Expiration date' },
   status: { under_warranty: 'Under warranty', expired: 'Expired', pending: 'Pending', contact_support: 'Contact support', not_found: 'Not found' },
   errors: {
     required: 'Enter at least one serial number.', invalid: 'One or more serial numbers are invalid.',

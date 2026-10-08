@@ -48,24 +48,20 @@
 
       <section v-if="results.length" class="results" aria-live="polite">
         <div class="results-heading">
-          <h2>{{ $t('warrantyPage.result.title') }}</h2>
-          <span>{{ $t('warrantyPage.result.count', { count: results.length }) }}</span>
+          <h2>{{ $t('warrantyPage.result.title') }} ({{ results.length }})</h2>
+          <button type="button" class="export-button" @click="exportResults">{{ $t('warrantyPage.result.export') }}</button>
         </div>
         <div class="result-table">
           <div class="result-row result-header" aria-hidden="true">
             <span>{{ $t('warrantyPage.result.sn') }}</span>
             <span>{{ $t('warrantyPage.result.status') }}</span>
-            <span>{{ $t('warrantyPage.result.term') }}</span>
-            <span>{{ $t('warrantyPage.result.start') }}</span>
             <span>{{ $t('warrantyPage.result.end') }}</span>
           </div>
           <div v-for="(item, index) in results" :key="`${item.sn}-${index}`" class="result-row">
             <div data-label="SN"><strong>{{ item.sn }}</strong></div>
-            <div :data-label="$t('warrantyPage.result.status')" class="status-text" :class="statusClass(item.status)">
-              {{ statusText(item.status) }}
+            <div :data-label="$t('warrantyPage.result.status')">
+              <span class="status-text" :class="statusClass(item.status)">{{ statusText(item.status) }}</span>
             </div>
-            <div :data-label="$t('warrantyPage.result.term')">{{ item.warranty_term || '—' }}</div>
-            <div :data-label="$t('warrantyPage.result.start')">{{ item.warranty_start || '—' }}</div>
             <div :data-label="$t('warrantyPage.result.end')">{{ item.warranty_end || '—' }}</div>
           </div>
         </div>
@@ -137,6 +133,24 @@ function errorMessage(code) {
   return t('warrantyPage.errors.unavailable')
 }
 
+function csvCell(value) {
+  return `"${String(value ?? '').replace(/"/g, '""')}"`
+}
+
+function exportResults() {
+  const rows = [
+    [t('warrantyPage.result.sn'), t('warrantyPage.result.status'), t('warrantyPage.result.end')],
+    ...results.value.map((item) => [item.sn, statusText(item.status), item.warranty_end || '']),
+  ]
+  const csv = '\uFEFF' + rows.map((row) => row.map(csvCell).join(',')).join('\r\n')
+  const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }))
+  const link = document.createElement('a')
+  link.href = url
+  link.download = 'warranty-results.csv'
+  link.click()
+  URL.revokeObjectURL(url)
+}
+
 async function submit() {
   if (loading.value) return
   results.value = []
@@ -193,16 +207,16 @@ input:focus, textarea:focus { border-color: #5136e5; box-shadow: inset 0 0 0 1px
 .batch-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
 .message { margin: 24px 0 0; padding: 15px 18px; border-left: 3px solid #c33; background: #fff7f7; color: #8f2424; font-size: 14px; }
 .results { margin-top: 48px; }
-.results-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 14px; border-bottom: 2px solid #11131f; }
+.results-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 0 16px; }
 .results-heading h2 { margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase; }
-.results-heading span { color: #727681; font-size: 12px; }
-.result-row { display: grid; grid-template-columns: minmax(210px, 1.5fr) 1fr .85fr .85fr .85fr; column-gap: 22px; align-items: center; min-height: 70px; border-bottom: 1px solid #dfe1e6; font-size: 13px; }
-.result-header { min-height: 46px; color: #777b86; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.export-button { min-height: 46px; padding: 0 20px; color: #111; background: #68c900; border: 0; border-radius: 0; font-size: 12px; font-weight: 800; text-transform: uppercase; cursor: pointer; }
+.result-table { border-top: 1px solid #aeb1b7; border-right: 1px solid #aeb1b7; border-left: 1px solid #aeb1b7; }
+.result-row { display: grid; grid-template-columns: minmax(260px, 1.4fr) 1fr 1fr; column-gap: 22px; align-items: center; min-height: 62px; padding: 0 18px; border-bottom: 1px solid #aeb1b7; font-size: 13px; }
+.result-header { min-height: 42px; color: #111827; font-size: 11px; font-weight: 800; text-transform: uppercase; }
 .result-row strong { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; overflow-wrap: anywhere; }
-.status-text { font-weight: 800; }
-.status-text.valid { color: #08783e; }
-.status-text.expired, .status-text.not-found { color: #a02b2b; }
-.status-text.attention { color: #8b5b00; }
+.status-text { display: inline-block; min-width: 100px; padding: 7px 14px; border-radius: 999px; background: #f0f1f3; color: #1d2430; font-size: 11px; font-weight: 800; text-align: center; }
+.status-text.expired, .status-text.not-found { color: #9f2020; }
+.status-text.attention { color: #7a5200; }
 .privacy-note { max-width: 760px; margin: 40px 0 0; color: #858996; font-size: 12px; line-height: 1.8; }
 @media (max-width: 760px) {
   .warranty-wrap { width: min(100% - 32px, 1180px); }

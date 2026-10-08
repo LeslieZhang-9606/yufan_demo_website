@@ -6,7 +6,7 @@ export default {
     singlePlaceholder: '请输入序列号', batchPlaceholder: '每行输入一个序列号',
     check: '查询', checkBatch: '批量查询', checking: '查询中…',
   },
-  result: { title: '保修信息', count: '共 {count} 条', sn: '序列号', status: '保修状态', term: '保修期限', start: '开始日期', end: '结束日期' },
+  result: { title: '覆盖范围详情', export: '导出', sn: '序列号', status: 'RMA类型', end: '截止日期' },
   status: { under_warranty: '保修期内', expired: '已过保', pending: '待生效', contact_support: '请联系售后', not_found: '未查询到' },
   errors: {
     required: '请至少输入一个序列号。', invalid: '一个或多个序列号格式不正确。',
