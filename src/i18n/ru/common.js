@@ -1,4 +1,5 @@
 export default {
+  loading: 'Загрузка',
   action: {
     quote: 'Запрос КП',
     search: 'Поиск',

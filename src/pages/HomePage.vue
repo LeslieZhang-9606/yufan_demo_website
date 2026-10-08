@@ -282,6 +282,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { siteData } from '../data/siteData.js'
+import { useProducts } from '../data/productService.js'
 
 // 获取基础路径（自动适配本地和线上）
 const basePath = import.meta.env.BASE_URL
@@ -289,10 +290,12 @@ const basePath = import.meta.env.BASE_URL
 const emit = defineEmits(['openLead', 'goCatalog'])
 
 // --- 联动逻辑：旗舰库存 ---
-const products = siteData.products
+// App.vue 加载闸门保证挂载时产品数据已就绪
+const { products } = useProducts()
+const productList = products.value
 const featuredProducts = computed(() => {
   return siteData.featuredIds
-    .map(id => products.find(p => p.id === id))
+    .map(id => productList.find(p => p.id === id))
     .filter(Boolean)
 })
 

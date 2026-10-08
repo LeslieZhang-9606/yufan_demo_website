@@ -14,15 +14,21 @@ import ServicesPage from './pages/ServicesPage.vue'
 import AboutPage from './pages/AboutPage.vue'
 import SolutionsPage from './pages/SolutionsPage.vue'
 import ProductDetailPage from './pages/ProductDetailPage.vue'
+import WarrantyPage from './pages/WarrantyPage.vue'
 
 
 // 数据导入
 import { siteData } from './data/siteData'
+import { ensureProductsLoaded, useProducts } from './data/productService'
 
 const { t, locale } = useI18n()
 const currentView = ref('home')
 const currentProductId = ref(null)  // 当前详情页展示的产品 ID
 const showLeadModal = ref(false)
+const productsReady = ref(false)
+const productsError = ref('')
+
+const { products } = useProducts()
 
 const viewMap = {
   'home': HomePage,
@@ -31,6 +37,7 @@ const viewMap = {
   'services': ServicesPage,
   'about': AboutPage,
   'product': ProductDetailPage,   // 新增
+  'warranty': WarrantyPage,       // 保修查询
 }
 
 // --- 新增：动态标题逻辑 ---
@@ -89,7 +96,7 @@ function handleHashChange() {
 
   if (view === 'product' && param) {
     const id = Number(param)
-    const exists = siteData.products.some(p => p.id === id)
+    const exists = products.value.some(p => p.id === id)
 
     if (exists) {
       currentView.value = 'product'
@@ -112,7 +119,15 @@ function handleHashChange() {
 }
 
 
-onMounted(() => {
+onMounted(async () => {
+  // 加载闸门: 产品数据就绪后再解析初始 hash, 避免深链 #product/xxx 查不到
+  try {
+    await ensureProductsLoaded()
+    productsReady.value = true
+  } catch (err) {
+    productsError.value = err?.message || String(err)
+    productsReady.value = true // 放行, 页面显示空/错误由各页兜底
+  }
   handleHashChange()
   updatePageTitle() // 初始化时执行一次标题设置
   window.addEventListener('hashchange', handleHashChange)
@@ -151,9 +166,17 @@ function submitLeadDemo() {
     />
 
 <main>
+  <!-- 产品数据加载中(仅首屏一次, 本地/线上均毫秒级) -->
+  <div v-if="!productsReady" class="flex items-center justify-center py-40">
+    <div class="flex flex-col items-center gap-3 text-gray-400">
+      <div class="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+      <span class="text-xs tracking-widest uppercase">{{ $t('common.loading') }}</span>
+    </div>
+  </div>
+
   <!-- 首页 -->
   <HomePage
-    v-if="currentView === 'home'"
+    v-else-if="currentView === 'home'"
     :vps="siteData.vps"
     :quickCats="siteData.quickCats"
     :services="siteData.services"
@@ -164,11 +187,11 @@ function submitLeadDemo() {
   <!-- 产品目录 -->
   <CatalogPage
     v-else-if="currentView === 'catalog'"
-    :products="siteData.products"
+    :products="products"
     @openLead="openLeadModal"
     @openProduct="id => go('product', { id })"
   />
-  
+
   <!-- 解决方案 -->
   <SolutionsPage
     v-else-if="currentView === 'solutions'"
@@ -189,10 +212,15 @@ function submitLeadDemo() {
   <!-- 产品详情页 -->
   <ProductDetailPage
     v-else-if="currentView === 'product'"
-    :products="siteData.products"
+    :products="products"
     :productId="currentProductId"
     @openLead="openLeadModal"
     @backToCatalog="go('catalog')"
+  />
+
+  <!-- 保修查询 -->
+  <WarrantyPage
+    v-else-if="currentView === 'warranty'"
   />
 </main>
 

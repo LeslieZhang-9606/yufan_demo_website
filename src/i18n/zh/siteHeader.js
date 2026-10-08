@@ -4,5 +4,6 @@ export default {
     solutions: '解决方案',
     services: '售后服务',
     about: '关于宇凡',
+    warranty: '保修查询',
   }
 }

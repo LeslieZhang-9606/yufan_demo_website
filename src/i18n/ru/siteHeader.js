@@ -4,5 +4,6 @@ export default {
     solutions: 'Решения',
     services: 'Сервис',
     about: 'О компании',
+    warranty: 'Гарантия',
   }
 }

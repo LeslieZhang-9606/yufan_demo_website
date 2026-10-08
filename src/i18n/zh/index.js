@@ -7,6 +7,7 @@ import catalogPage from './catalogPage'
 import solutionsPage from './solutionsPage'
 import servicesPage from './servicesPage'
 import aboutPage from './aboutPage'
+import warrantyPage from './warrantyPage'
 
 export default {
   // $t('common.action.quote')
@@ -22,6 +23,7 @@ export default {
   catalogPage,
   solutionsPage,
   servicesPage,
-  aboutPage
+  aboutPage,
+  warrantyPage,
 
 }

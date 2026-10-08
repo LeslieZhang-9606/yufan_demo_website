@@ -4,5 +4,6 @@ export default {
     solutions: 'Solutions',
     services: 'Services',
     about: 'About',
+    warranty: 'Warranty',
   }
 }

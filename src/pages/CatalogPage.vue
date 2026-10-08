@@ -309,14 +309,15 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { siteData } from '../data/siteData.js'; 
+import { useProducts } from '../data/productService.js';
 
 const { t, te } = useI18n();
 const emit = defineEmits(['openLead', 'openProduct']);
 
 const basePath = import.meta.env.BASE_URL
 
-const products = siteData.products || [];
+// App.vue 加载闸门保证挂载时产品数据已就绪
+const products = useProducts().products.value || [];
 
 const viewMode = ref('grid');
 const currentPage = ref(1);

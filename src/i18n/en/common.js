@@ -1,4 +1,5 @@
 export default {
+  loading: 'Loading',
   action: {
     quote: 'Get Quote',
     search: 'Search',
